@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate__tada {
+    animation-name: tada;
+  }
+}
+
 html,
 body {
   padding: 0;

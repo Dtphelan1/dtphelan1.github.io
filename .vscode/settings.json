@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
