@@ -14,7 +14,7 @@ const MAXACCELERATION = 0.00075;
 const FADESPEED = 1;
 const FADEINSPEED = 5;
 // Really don't know why I need this, but the colors flicker without it
-const MINALPHA = 15;
+const MINALPHA = 20;
 const MAXALPHA = 255;
 const PALETTE = [
   "#582f0e",
