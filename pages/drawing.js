@@ -1,11 +1,3 @@
-import {
-  GitHub,
-  Linkedin,
-  Instagram,
-  Twitter,
-  Disc,
-  Mail,
-} from "react-feather";
 import Canvas from "../components/Canvas";
 import PageLayout from "../components/PageLayout";
 
