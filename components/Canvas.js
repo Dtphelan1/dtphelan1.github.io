@@ -1,7 +1,7 @@
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { Settings } from "react-feather";
 
-const SPAWNFREQUENCY = 2000;
+const SPAWNFREQUENCY = 3000;
 let LASTDRAW = 0;
 const ELEMENTSEACHFRAME = 80;
 const MAXELEMENTS = 80;
@@ -104,7 +104,6 @@ export default function Canvas({ className }) {
         MINACCELERATION / 1000,
         maxAcceleration / 1000
       );
-      console.log(maxAcceleration);
       const ySpeed = randomPoint(MINSPEED, MAXSPEED);
       const yDirection = Math.random() > 0.5 / 2 ? -1 : 1;
       const yAcceleration = randomPoint(
@@ -180,7 +179,6 @@ export default function Canvas({ className }) {
       MINACCELERATION / 1000,
       maxAcceleration / 1000
     );
-    console.log(maxAcceleration);
     const ySpeed = randomPoint(MINSPEED, MAXSPEED);
     const yDirection = Math.random() > 0.5 / 2 ? -1 : 1;
     const yAcceleration = randomPoint(
@@ -272,16 +270,15 @@ export default function Canvas({ className }) {
         id="html-canvas"
         ref={canvasRef}
       />
-
-      <div className="w-full h-0 relative">
+      <div className={`w-full h-0 relative ${className}`}>
         <button
-          className="absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-bg-main w-6 h-6 flex justify-center items-center"
+          className="absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-6 h-6 flex justify-center items-center"
           onClick={() => setShowSettings(!showSettings)}
         >
           <Settings size={16} />
         </button>
         <article
-          className={`bottom-9 right-1 border-black border mr-2 rounded-lg bg-bg-main h-96 w-56 p-4 animate__animated absolute ${
+          className={`bottom-9 right-1 border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 p-4 animate__animated absolute ${
             showSettings ? " animate__fadeIn" : " animate__fadeOut hidden"
           }`}
         >

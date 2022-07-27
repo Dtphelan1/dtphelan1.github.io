@@ -20,7 +20,7 @@ export default function PageLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen w-screen flex flex-col sm:flex-row bg-black p-2 ">
-        <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-bg-main px-4 pt-4 flex flex-col justify-between">
+        <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
           <div id="top-nav" className="">
             <h1 className="text-2xl animate__animated animate__fadeInDown">
               Dylan Phelan //
@@ -59,7 +59,7 @@ export default function PageLayout({ children }) {
             </div>
           </div>
         </div>
-        <main className="basis-4/5 bg-bg-main ">{children}</main>
+        <main className="basis-4/5 bg-neutral-main ">{children}</main>
       </main>
 
       <footer className={styles.footer}>
