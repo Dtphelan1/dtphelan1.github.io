@@ -1,3 +1,6 @@
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import {
   GitHub,
   Linkedin,
@@ -6,8 +9,6 @@ import {
   Disc,
   Mail,
 } from "react-feather";
-import Head from "next/head";
-import Image from "next/image";
 import Canvas from "../components/Canvas";
 import styles from "../styles/PageLayout.module.css";
 
@@ -26,11 +27,11 @@ export default function PageLayout({ children }) {
               Dylan Phelan //
             </h1>
             <nav className="flex flex-col animate__animated animate__fadeInDown">
-              <a>Projects</a>
-              <a>About</a>
-              <a>Photos</a>
-              <a href="/resume">Resume</a>
-              <a>Random Fact</a>
+              <Link href="/">Home</Link>
+              {/* <Link>About</Link> */}
+              {/* <Link>Photos</Link> */}
+              <Link href="/resume">Resume</Link>
+              {/* <Link>Random Fact</Link> */}
               {/* What are you doing here? This wasn't meant for your eyes /bonus */}
             </nav>
           </div>
