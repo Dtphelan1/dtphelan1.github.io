@@ -66,7 +66,11 @@ export default function Resume() {
                 {links.map((link, i) => (
                   <li className="flex items-center mx-2 my-1" key={link.id}>
                     <link.Icon size={16} className="inline mr-2" />
-                    <a target="_blank" href={link.link}>
+                    <a
+                      target="_blank"
+                      href={link.link}
+                      rel="noopener noreferrer"
+                    >
                       {link.display}
                     </a>
                   </li>
