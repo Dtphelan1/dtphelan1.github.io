@@ -10,13 +10,13 @@ let FADINGELEMENTS = [];
 const MINRAD = 5;
 const MAXRAD = 20;
 const MINSPEED = 0.1;
-const MAXSPEED = 1.25;
+const MAXSPEED = 0.65;
 // per second
 const MINACCELERATION = 0.1;
 // per second
-const MAXACCELERATION = 0.75;
-const FADEOUTSPEED = 1;
-const FADEINSPEED = 2;
+const MAXACCELERATION = 0.3;
+const FADEOUTSPEED = 2;
+const FADEINSPEED = 3;
 // Really don't know why I need this, but the colors flicker without it
 const MINALPHA = 15;
 const MAXALPHA = 255;
