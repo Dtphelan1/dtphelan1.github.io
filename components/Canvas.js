@@ -1,7 +1,8 @@
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { Settings } from "react-feather";
 
-const SPAWNFREQUENCY = 3000;
+// ms freq
+const SPAWNFREQUENCY = 5000;
 let LASTDRAW = 0;
 const ELEMENTSEACHFRAME = 80;
 const MAXELEMENTS = 80;
@@ -9,16 +10,15 @@ const ELEMENTS = [];
 let FADINGELEMENTS = [];
 const MINRAD = 5;
 const MAXRAD = 20;
-const MINSPEED = 0.1;
+const MINSPEED = 0.01;
 const MAXSPEED = 0.65;
 // per second
-const MINACCELERATION = 0.1;
+const MINACCELERATION = 0.05;
 // per second
-const MAXACCELERATION = 0.3;
-const FADEOUTSPEED = 2;
-const FADEINSPEED = 3;
-// Really don't know why I need this, but the colors flicker without it
-const MINALPHA = 15;
+const MAXACCELERATION = 0.1;
+const FADEOUTSPEED = 1;
+const FADEINSPEED = 2;
+const MINALPHA = 0;
 const MAXALPHA = 255;
 // Based on colors generated using coolors.com
 const PALETTE = [
@@ -46,7 +46,6 @@ export default function Canvas({ className }) {
 
     // Need to align canvas size with window
     const handleResize = (e) => {
-      console.log(canvas.parentElement);
       context.canvas.height = canvas.parentElement.offsetHeight;
       context.canvas.width = canvas.parentElement.offsetWidth;
     };
@@ -54,6 +53,7 @@ export default function Canvas({ className }) {
     document.addEventListener("DOMContentLoaded", handleResize, false);
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.addEventListener;
     };
   }, []);
   // useEffect for all canvas updates
@@ -255,7 +255,9 @@ export default function Canvas({ className }) {
 
   // Convert alpha to hex
   function alphaToHex(alpha) {
-    return alpha.toString(16);
+    const hex = alpha.toString(16);
+    const pad = alpha <= 15 ? "0" : "";
+    return pad + hex;
   }
 
   // Randomly generate a real number between a min and a max
