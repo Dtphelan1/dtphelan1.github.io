@@ -1,21 +1,22 @@
 import { Star } from "react-feather";
+import { skillLevels } from "../lib/skillLevel";
 
-export default function SkillLevel({ level }) {
+export default function SkillLevel({ level, className }) {
   const levelArray = [false, false, false, false, false];
-  const levelDescriptions = [
-    "Used the technology on at least one project before",
-    "6+ months experience, developing while referencing documentation frequently",
-    "1+ year experience, comfortable with fundamentals, using documentation for complex tasks",
-    "2+ year experience, developing comfortably without SlackOverflow",
-    "4+ year experience, confident mentoring junior developers on fundamentals",
-  ];
   levelArray.fill(true, 0, level);
   return (
-    <div title={levelDescriptions[level - 1]}>
+    <div
+      // NOTE: Skill levels doesn't have a defined value for L1
+      title={
+        skillLevels.find((levelObj) => levelObj.level === level)?.long || ""
+      }
+      className={className}
+    >
       {levelArray.map((levelMet) => {
         return (
           <Star
-            size={16}
+            size={14}
+            key={levelMet}
             className={`text-primary inline ${levelMet ? "fill-primary" : ""}`}
           />
         );

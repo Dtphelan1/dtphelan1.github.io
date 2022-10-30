@@ -59,7 +59,6 @@ export default function Canvas({ className }) {
   // useEffect for all canvas updates
   useEffect(() => {
     const canvas = canvasRef.current;
-    console.log(canvas);
     const context = canvas.getContext("2d");
     // Repeats to handle redraws
     function redrawFn(timestamp) {
@@ -128,6 +127,9 @@ export default function Canvas({ className }) {
 
   // Update all the elements on the canvas
   function updateElements(canvas, context) {
+    // always update the canvas based on size
+    context.canvas.height = canvas.parentElement.offsetHeight;
+    context.canvas.width = canvas.parentElement.offsetWidth;
     const w = canvas.width;
     const h = canvas.height;
     if (ELEMENTS.length > MAXELEMENTS) {

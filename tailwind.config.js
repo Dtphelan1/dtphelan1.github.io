@@ -1,3 +1,5 @@
+const paperSize = "8.5in";
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -5,6 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        resume: paperSize,
+      },
+      height: {
+        resume: "11in",
+      },
+      maxWidth: {
+        resume: paperSize,
+      },
+      maxHeight: {
+        resume: "11in",
+      },
+      screens: {
+        paper: paperSize,
+      },
       colors: {
         "neutral-main": "#F3EDE1",
         primary: "#333d29",
