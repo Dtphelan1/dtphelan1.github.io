@@ -1,4 +1,4 @@
-import { useEffect, useRef, useLayoutEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Settings } from "react-feather";
 
 // ms freq
@@ -39,11 +39,10 @@ export default function Canvas({ className }) {
   const [showSettings, setShowSettings] = useState(false);
   const [fadeSpeed, setFadeSpeed] = useState(FADEOUTSPEED);
   const [maxAcceleration, setMaxAcceleration] = useState(MAXACCELERATION);
-  // useLayoutEffect for resizing
-  useLayoutEffect(() => {
+  // useEffect for all canvas updates
+  useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-
     // Need to align canvas size with window
     const handleResize = (e) => {
       context.canvas.height = canvas.parentElement.offsetHeight;
@@ -51,15 +50,7 @@ export default function Canvas({ className }) {
     };
     window.addEventListener("resize", handleResize);
     document.addEventListener("DOMContentLoaded", handleResize, false);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      document.addEventListener;
-    };
-  }, []);
-  // useEffect for all canvas updates
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
+    handleResize();
     // Repeats to handle redraws
     function redrawFn(timestamp) {
       if (LASTDRAW === 0) {
@@ -83,6 +74,8 @@ export default function Canvas({ className }) {
     animationFrameId = requestAnimationFrame(redrawFn);
 
     return () => {
+      window.removeEventListener("resize", handleResize);
+      document.addEventListener;
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -272,6 +265,8 @@ export default function Canvas({ className }) {
       <canvas
         className={`w-full h-full ${className}`}
         id="html-canvas"
+        width={1000}
+        height={1000}
         ref={canvasRef}
       />
       <div className={`w-full h-0 relative ${className}`}>
