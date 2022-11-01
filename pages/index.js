@@ -37,7 +37,7 @@ export default function Resume() {
   const aboutMe = {
     name: "Dylan Phelan",
     title: "Lead Frontend Engineer @ MITRE",
-    elevatorPitch: `I'm a Frontend Engineer with 6+ years experience working on healthcare, psephology, ai ethics, and benefit delivery projects.  I've created UI's using React and Vue, CLI's and API's using Node.js, ML models using python, and architecture diagrams/roadmaps to support projects as a technical lead. Seeking Boston/remote Frontend Developer positions.`,
+    elevatorPitch: `Hi, I'm Dylan! I'm a frontend/web engineer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLI's and API's using Node.js, ML models using python, and architecture diagrams/roadmaps to support projects as a technical lead. Seeking Boston/remote frontend positions.`,
     links: [
       {
         id: "website",
@@ -83,12 +83,14 @@ export default function Resume() {
         },
       ],
       date: "2016 - Now",
-      elevatorPitch: "Technical lead, intern program co-lead, ",
+      elevatorPitch:
+        "Technical lead, developer, intern lead, dept. brown-bag coordinator",
       bullets: [
-        "Technical lead for one arm of MITRE's oncology moonshot, accelerating the adoption of MITRE's mCODE standard",
-        "Coordinator for department brownbag series (3+ yr), attracting dozens of project presentations, feedback sessions, and team collaborations",
-        "Co-led department internship program for cohort of 8+ interns 2 years running",
-        "Presented EOY moonshot updates to MITRE's C-Suite/SVPs",
+        "Current technical lead & developer on MITRE's oncology moonshot, creating tools that accelerate the adoption of data standards in cancer care",
+        "Technical lead for 3+ software teams at MITRE, owning the development of data visualization applications, CLI tools for data extraction, rich-text based data capture applications, multiphase form applications, and other technologies",
+        "Developed software for dozens of MITRE projects across domains in oncology, COVID-19, social justice, ai ethics, & benefits delivery",
+        "Coordinator for department brownbag series, attracting dozens of project presentations, feedback sessions, and team collaborations",
+        "Co-leading department internship program, mentoring 12+ interns with considerable full time conversions",
       ],
       tags: [],
     },
@@ -115,14 +117,14 @@ export default function Resume() {
       bullets: [
         "Conducted stakeholder interview and landscape assessment of similar artists websites",
         "Solicited feedback on designs and mockups before executing final product",
-        "Rapidly implemented and deployed website (48hrs) time for upcoming music/merch launch",
+        "Implemented and deployed website rapidly (48hrs) in-time for upcoming launches",
       ],
-      tags: ["Balsamiq", "HTML", "jQuery", "Tailwind", "Vercel"],
+      tags: ["HTML", "jQuery", "Tailwind", "Vercel"],
     },
     {
       title: "Vote Smart Arlington",
       role: "Lead Designer & Frontend Dev",
-      date: "Apr 2021 ",
+      date: "Apr 2020 ",
       links: [
         {
           url: "https://www.votesmartarlington.com/#/ ",
@@ -140,7 +142,7 @@ export default function Resume() {
       bullets: [
         "Built and led team of three devs to volunteer their time to build this application",
         "Visualized voting history of 100+ town representatives on ballot measures",
-        "Generated >1000 visits, garnered praise from multiple local representatives",
+        "Garnered appreciation from multiple local representatives, >1000 visits during election week",
       ],
       tags: ["Sketch", "React", "Bootstrap", "Node"],
     },
@@ -167,9 +169,10 @@ export default function Resume() {
       ],
       elevatorPitch: "Converting hospital cancer data to FHIR's mCODE standard",
       bullets: [
-        "Built Node command line tool for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
-        "Architected framework for modularity across data sources and usecase extensibility ",
-        "Led the development of 6+ github repositories leveraging the MEF in 2+ applications",
+        "Built Node CLI for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
+        // "Prototyped electron UI app",
+        "Implemented an architecture enabling modularity across data sources and usecase extensibility ",
+        "Led creation and maintenance of 6+ github repositories in support of several usecases",
         "Enabled MITRE's ICAREdata clinical trial data analysis with data extracted by MEF",
       ],
       tags: ["FHIR", "Node", "Electron", "React", "Bootstrap"],
@@ -195,8 +198,10 @@ export default function Resume() {
           Icon: GitHub,
         },
       ],
-      elevatorPitch: "Converting hospital cancer data to FHIR's mCODE standard",
+      elevatorPitch:
+        "Creating a UI to empower discussion about radiation data standards with clinical, non-technical experts",
       bullets: [
+        "Coordinated with Radiation Therapy Treatment Data (RTTD) ",
         "Built Node command line tool for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
         "Architected framework for modularity across data sources and usecase extensibility ",
         "Led the development of 6+ github repositories leveraging the MEF in 2+ applications",
@@ -226,11 +231,11 @@ export default function Resume() {
   const skills = [
     { name: "HTML", level: 5 },
     { name: "React", level: 5 },
-    { name: "Vue", level: 4 },
+    // { name: "Vue", level: 4 },
     { name: "Next.js", level: 4 },
-    { name: "Nuxt.js", level: 3 },
-    { name: "Create React App (CRA)", level: 5 },
-    { name: "React Router", level: 4 },
+    // { name: "Nuxt.js", level: 3 },
+    // { name: "Create React App (CRA)", level: 5 },
+    // { name: "React Router", level: 4 },
     { name: "Bootstrap", level: 4 },
     { name: "Material UI", level: 3 },
     { name: "CSS", level: 5 },
@@ -241,18 +246,25 @@ export default function Resume() {
     { name: "Python", level: 4 },
     { name: "Flask", level: 2 },
     { name: "HL7's FHIR", level: 4 },
-    { name: "Vercel", level: 2 },
-    { name: "Heroku", level: 3 },
     { name: "GitHub Pages", level: 4 },
-    { name: "GitHub Workflows", level: 3 },
+    // { name: "Heroku", level: 3 },
+    { name: "Vercel", level: 2 },
     { name: "Docker", level: 3 },
+    { name: "CI/CD Automation", level: 4 },
+    // { name: "GitHub Workflows", level: 3 },
     { name: "Eslint/Prettier", level: 3 },
-    { name: "Sketch", level: 3 },
     { name: "Balsamiq", level: 3 },
+    // { name: "Sketch", level: 2 },
   ];
   const componentRef = useRef();
+  const today = new Date();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
+    documentTitle: `${[
+      today.getDate(),
+      today.getMonth() + 1,
+      today.getFullYear(),
+    ].join("-")}-Dylan-Phelan-Resume`,
   });
 
   return (
@@ -264,10 +276,10 @@ export default function Resume() {
         width={"100px"}
         // height={"100%"}
       /> */}
-      <div ref={componentRef} className="overflow-clip mx-auto">
+      <div ref={componentRef} className="relative overflow-clip mx-auto">
         <div
           id="contact-and-high-level "
-          className="flex flex-wrap p-4 max-w-screen-xl mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
+          className="max-w-screen-xl flex flex-wrap px-4 my-0 py-4 xl:my-4 xl:py-0  mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
         >
           <div className="flex flex-wrap flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
             <div className="max-h-48 max-w-[10rem] mx-auto">
@@ -278,7 +290,7 @@ export default function Resume() {
               />
             </div>
             <button
-              className="flex items-center justify-center mx-auto  rounded border bg-primary  xl:border-0 border-neutral-main text-neutral-main p-1 mt-2 print:hidden"
+              className="absolute right-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
               onClick={handlePrint}
             >
               <Printer size={12} className="mr-1" /> Print or PDF
@@ -294,7 +306,10 @@ export default function Resume() {
               <address id="links" className="text-xs basis-1/2">
                 <ul className="flex flex-row flex-wrap justify-between">
                   {aboutMe.links.map((link, i) => (
-                    <li className="flex items-center mx-2 my-1" key={link.id}>
+                    <li
+                      className="flex items-center px-2 py-1 basis-1/2"
+                      key={link.id}
+                    >
                       <link.Icon size={16} className="inline mr-2" />
                       <a
                         target="_blank"
@@ -314,14 +329,17 @@ export default function Resume() {
         </div>
         <div
           id="content"
-          className="flex flex-wrap-reverse p-4 max-w-screen-xl mx-auto  text-primary bg-neutral-main"
+          className=" max-w-screen-xl flex flex-wrap-reverse px-4 my-4 mx-auto text-primary bg-neutral-main"
         >
-          <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-wrap">
-            <div className="basis-full pr-0 sm:basis-1/2 sm:pr-4 xl:basis-full xl:pr-0 print:!basis-full print:pr-0">
+          <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-col sm:flex-row xl:flex-col print:!flex-col">
+            <div className="pr-0 sm:pr-4 xl:pr-0 print:!pr-0 basis-auto sm:basis-1/2 xl:basis-auto print:!basis-auto">
               <h2 className="text-xl font-bold ">Education</h2>
               <hr className="w-full border-primary pb-4" />
               {education.map((edu) => (
-                <article className="mb-4">
+                <article
+                  key={[edu.degree, edu.school].join("-")}
+                  className="mb-4"
+                >
                   <h3 className="text-base font-bold">
                     {edu.degree}, {edu.school}
                   </h3>
@@ -333,7 +351,7 @@ export default function Resume() {
                 </article>
               ))}
             </div>
-            <div className="basis-full sm:basis-1/2 xl:basis-full print:!pointer-events-nonebasis-full">
+            <div className="sm:basis-1/2 xl:basis-auto print:!basis-auto">
               <h2 className="text-xl font-bold ">Skills</h2>
               <hr className="w-full border-primary pb-4" />
               <SkillLevelLegend />
@@ -345,6 +363,7 @@ export default function Resume() {
                   >
                     <p className="basis-1/2 text-sm">{skill.name}</p>
                     <SkillLevel
+                      skill={skill.name}
                       className="basis-1/2 text-right"
                       level={skill.level}
                     />
@@ -366,7 +385,7 @@ export default function Resume() {
                   >
                     <header>
                       <div className="w-full flex flex-row items-start justify-between">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col flex-1">
                           <h3 className="text-base font-bold mr-2">
                             {job.title}
                           </h3>
@@ -374,25 +393,9 @@ export default function Resume() {
                             {job.elevatorPitch}
                           </p>
                         </div>
-                        <p className="text-base text-right">
+                        <p className="text-base text-right flex-1 ">
                           {jobMetadata(job)}
                         </p>
-                      </div>
-                      {/* Tags */}
-                      <div className="w-full flex flex-row justify-between items-center">
-                        <div className="flex flex-1 flex-row justify-end">
-                          {job.tags.map((tag) => {
-                            return (
-                              <p
-                                id={tag}
-                                key={tag}
-                                className="inline px-2 py-1 mx-1 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
-                              >
-                                {tag}
-                              </p>
-                            );
-                          })}
-                        </div>
                       </div>
                     </header>
                     {/* Bullets */}

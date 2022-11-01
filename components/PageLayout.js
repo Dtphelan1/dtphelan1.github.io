@@ -35,7 +35,7 @@ export default function PageLayout({ children }) {
               {/* What are you doing here? This wasn't meant for your eyes /bonus */}
             </nav>
           </div>
-          <Canvas className="animate__animated animate__fadeIn animate__slow h-full hidden sm:block" />
+          <Canvas className="h-full hidden sm:block" />
           <div
             id="contact-info"
             className="flex flex-row flex-wrap justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
