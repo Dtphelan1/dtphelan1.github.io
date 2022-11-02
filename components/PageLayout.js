@@ -47,7 +47,25 @@ export default function PageLayout({ children }) {
           property="twitter:image"
           content="/business-card-meta-image.png"
         />
-        <link rel="icon" href="/favicon.ico" />
+        {/* Favicon */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row bg-black p-2 text-primary">
         <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
