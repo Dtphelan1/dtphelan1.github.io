@@ -17,7 +17,7 @@ export default function PageLayout({ children }) {
     <>
       <Head>
         {/* <!-- Primary Meta Tags --> */}
-        <title>Dylan Phelan's Portfolio </title>
+        <title>Dylan Phelan&apos;s Portfolio </title>
         <meta name="title" content="Dylan Phelan's Personal Website" />
         <meta
           name="description"
