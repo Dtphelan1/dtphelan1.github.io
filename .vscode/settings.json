@@ -3,5 +3,8 @@
   "css.validate": false,
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "cSpell.words": [
+    "Phelan"
+  ]
 }

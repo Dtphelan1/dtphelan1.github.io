@@ -7,6 +7,7 @@ import CircleLeft from "../public/circle-left.svg";
 import CircleRight from "../public/circle-right.svg";
 import WaveLeft from "../public/wave-left.svg";
 import WaveRight from "../public/wave-right.svg";
+import PageFadeWrapper from "../components/PageFadeWrapper";
 import SkillLevel from "../components/SkillLevel";
 import SkillLevelLegend from "../components/SkillLevelLegend";
 
@@ -36,8 +37,8 @@ function jobMetadata(job) {
 export default function Resume() {
   const aboutMe = {
     name: "Dylan Phelan",
-    title: "Lead Frontend Engineer @ MITRE",
-    elevatorPitch: `Hi, I'm Dylan! I'm a frontend/web engineer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLI's and API's using Node.js, ML models using python, and architecture diagrams/roadmaps to support projects as a technical lead. Seeking Boston/remote frontend positions.`,
+    title: "Lead Web Developer @ MITRE",
+    elevatorPitch: `Hi, I'm Dylan! I'm a web developer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLI's and API's using Node.js, ML models using python, and architecture diagrams/roadmaps to support projects as a technical lead. Seeking Boston/remote web developer positions.`,
     links: [
       {
         id: "website",
@@ -70,15 +71,15 @@ export default function Resume() {
       title: "MITRE Corporation",
       roleList: [
         {
-          title: "Lead Frontend Engineer",
+          title: "Lead Web Developer",
           date: "2021 - Now",
         },
         {
-          title: "Senior Frontend Engineer",
+          title: "Senior Web Developer",
           date: "2018 - 2021",
         },
         {
-          title: "Frontend Engineer",
+          title: "Web Developer",
           date: "2016 - 2018",
         },
       ],
@@ -123,7 +124,7 @@ export default function Resume() {
     },
     {
       title: "Vote Smart Arlington",
-      role: "Lead Designer & Frontend Dev",
+      role: "Lead Designer & Web Dev",
       date: "Apr 2020 ",
       links: [
         {
@@ -256,8 +257,12 @@ export default function Resume() {
     { name: "Balsamiq", level: 3 },
     // { name: "Sketch", level: 2 },
   ];
+  // Printing logic
+  // Ref of the component to print
   const componentRef = useRef();
+  // Date for file-name time stamping
   const today = new Date();
+  // Set up printing hook
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     documentTitle: `${[
@@ -268,219 +273,221 @@ export default function Resume() {
   });
 
   return (
-    <div className="h-screen md:h-auto md:max-h-[97vh] w-full overflow-auto text-sm">
-      {/* <Image
+    <PageFadeWrapper>
+      <div className="h-screen md:h-auto md:max-h-[97vh] w-full overflow-auto text-sm">
+        {/* <Image
         src={WaveLeft}
         className="h-full"
         fill
         width={"100px"}
         // height={"100%"}
       /> */}
-      <div ref={componentRef} className="relative overflow-clip mx-auto">
-        <div
-          id="contact-and-high-level "
-          className="max-w-screen-xl flex flex-wrap px-4 my-0 py-4 xl:my-4 xl:py-0  mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
-        >
-          <div className="flex flex-wrap flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
-            <div className="max-h-48 max-w-[10rem] mx-auto">
-              <Image
-                src={headshot}
-                className="rounded-full"
-                alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
-              />
+        <div ref={componentRef} className="relative overflow-clip mx-auto">
+          <div
+            id="contact-and-high-level "
+            className="max-w-screen-xl flex flex-wrap px-4 my-0 py-4 xl:my-4 xl:py-0  mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
+          >
+            <div className="flex flex-wrap flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
+              <div className="max-h-48 max-w-[10rem] mx-auto">
+                <Image
+                  src={headshot}
+                  className="rounded-full"
+                  alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
+                />
+              </div>
+              <button
+                className="absolute right-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
+                onClick={handlePrint}
+              >
+                <Printer size={12} className="mr-1" /> Print or PDF
+              </button>
             </div>
-            <button
-              className="absolute right-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
-              onClick={handlePrint}
-            >
-              <Printer size={12} className="mr-1" /> Print or PDF
-            </button>
-          </div>
-          {/* Need the wrapping div so the HR can be the same length as the top-level bio info */}
-          <div className="basis-full xl:basis-3/4 print:basis-3/4 xl:p-4 print:p-4 bg-primary text-neutral-main">
-            <div className="flex items-center justify-between">
-              <header className="basis-1/2 mb-1">
-                <h1 className="text-4xl ">{aboutMe.name}</h1>
-                <p>{aboutMe.title}</p>
-              </header>
-              <address id="links" className="text-xs basis-1/2">
-                <ul className="flex flex-row flex-wrap justify-between">
-                  {aboutMe.links.map((link, i) => (
-                    <li
-                      className="flex items-center px-2 py-1 basis-1/2"
-                      key={link.id}
-                    >
-                      <link.Icon size={16} className="inline mr-2" />
-                      <a
-                        target="_blank"
-                        href={link.link}
-                        rel="noopener noreferrer"
+            {/* Need the wrapping div so the HR can be the same length as the top-level bio info */}
+            <div className="basis-full xl:basis-3/4 print:basis-3/4 xl:p-4 print:p-4 bg-primary text-neutral-main">
+              <div className="flex items-center justify-between">
+                <header className="basis-1/2 mb-1">
+                  <h1 className="text-4xl ">{aboutMe.name}</h1>
+                  <p>{aboutMe.title}</p>
+                </header>
+                <address id="links" className="text-xs basis-1/2">
+                  <ul className="flex flex-row flex-wrap justify-between">
+                    {aboutMe.links.map((link, i) => (
+                      <li
+                        className="flex items-center px-2 py-1 basis-1/2"
+                        key={link.id}
                       >
-                        {link.display}
-                      </a>
+                        <link.Icon size={16} className="inline mr-2" />
+                        <a
+                          target="_blank"
+                          href={link.link}
+                          rel="noopener noreferrer"
+                        >
+                          {link.display}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </address>
+              </div>
+              <hr className="mb-4 h-1" />
+              <p id="mission-statement">{aboutMe.elevatorPitch}</p>
+            </div>
+          </div>
+          <div
+            id="content"
+            className=" max-w-screen-xl flex flex-wrap-reverse px-4 my-4 mx-auto text-primary bg-neutral-main"
+          >
+            <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-col sm:flex-row xl:flex-col print:!flex-col">
+              <div className="pr-0 sm:pr-4 xl:pr-0 print:!pr-0 basis-auto sm:basis-1/2 xl:basis-auto print:!basis-auto">
+                <h2 className="text-xl font-bold ">Education</h2>
+                <hr className="w-full border-primary pb-4" />
+                {education.map((edu) => (
+                  <article
+                    key={[edu.degree, edu.school].join("-")}
+                    className="mb-4"
+                  >
+                    <h3 className="text-base font-bold">
+                      {edu.degree}, {edu.school}
+                    </h3>
+                    <p className="text-sm">{edu.focus}</p>
+                    <p className="text-sm">
+                      {edu.period}, {edu.gpa}
+                    </p>
+                    {edu.notes && <p className="text-sm italic">{edu.notes}</p>}
+                  </article>
+                ))}
+              </div>
+              <div className="sm:basis-1/2 xl:basis-auto print:!basis-auto">
+                <h2 className="text-xl font-bold ">Skills</h2>
+                <hr className="w-full border-primary pb-4" />
+                <SkillLevelLegend />
+                <ul>
+                  {skills.map((skill) => (
+                    <li
+                      key={skill.name}
+                      className="mb flex justify-between items-center mb-1 "
+                    >
+                      <p className="basis-1/2 text-sm">{skill.name}</p>
+                      <SkillLevel
+                        skill={skill.name}
+                        className="basis-1/2 text-right"
+                        level={skill.level}
+                      />
                     </li>
                   ))}
                 </ul>
-              </address>
-            </div>
-            <hr className="mb-4 h-1" />
-            <p id="mission-statement">{aboutMe.elevatorPitch}</p>
-          </div>
-        </div>
-        <div
-          id="content"
-          className=" max-w-screen-xl flex flex-wrap-reverse px-4 my-4 mx-auto text-primary bg-neutral-main"
-        >
-          <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-col sm:flex-row xl:flex-col print:!flex-col">
-            <div className="pr-0 sm:pr-4 xl:pr-0 print:!pr-0 basis-auto sm:basis-1/2 xl:basis-auto print:!basis-auto">
-              <h2 className="text-xl font-bold ">Education</h2>
-              <hr className="w-full border-primary pb-4" />
-              {education.map((edu) => (
-                <article
-                  key={[edu.degree, edu.school].join("-")}
-                  className="mb-4"
-                >
-                  <h3 className="text-base font-bold">
-                    {edu.degree}, {edu.school}
-                  </h3>
-                  <p className="text-sm">{edu.focus}</p>
-                  <p className="text-sm">
-                    {edu.period}, {edu.gpa}
-                  </p>
-                  {edu.notes && <p className="text-sm italic">{edu.notes}</p>}
-                </article>
-              ))}
-            </div>
-            <div className="sm:basis-1/2 xl:basis-auto print:!basis-auto">
-              <h2 className="text-xl font-bold ">Skills</h2>
-              <hr className="w-full border-primary pb-4" />
-              <SkillLevelLegend />
-              <ul>
-                {skills.map((skill) => (
-                  <li
-                    key={skill.name}
-                    className="mb flex justify-between items-center mb-1 "
-                  >
-                    <p className="basis-1/2 text-sm">{skill.name}</p>
-                    <SkillLevel
-                      skill={skill.name}
-                      className="basis-1/2 text-right"
-                      level={skill.level}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-          <section className="basis-full xl:basis-3/4 print:basis-3/4">
-            <div id="experience">
-              <h2 className="text-xl font-bold ">Experience</h2>
-              <hr className="w-full border-primary pb-4" />
-              {jobs.map((job) => {
-                return (
-                  <article
-                    id={job.title}
-                    className="mb-4 last-of-type:mb-4"
-                    key={job.title}
-                  >
-                    <header>
-                      <div className="w-full flex flex-row items-start justify-between">
-                        <div className="flex flex-col flex-1">
-                          <h3 className="text-base font-bold mr-2">
-                            {job.title}
-                          </h3>
-                          <p className="text-base italic">
-                            {job.elevatorPitch}
+              </div>
+            </section>
+            <section className="basis-full xl:basis-3/4 print:basis-3/4">
+              <div id="experience">
+                <h2 className="text-xl font-bold ">Experience</h2>
+                <hr className="w-full border-primary pb-4" />
+                {jobs.map((job) => {
+                  return (
+                    <article
+                      id={job.title}
+                      className="mb-4 last-of-type:mb-4"
+                      key={job.title}
+                    >
+                      <header>
+                        <div className="w-full flex flex-row items-start justify-between">
+                          <div className="flex flex-col flex-1">
+                            <h3 className="text-base font-bold mr-2">
+                              {job.title}
+                            </h3>
+                            <p className="text-base italic">
+                              {job.elevatorPitch}
+                            </p>
+                          </div>
+                          <p className="text-base text-right flex-1 ">
+                            {jobMetadata(job)}
                           </p>
                         </div>
-                        <p className="text-base text-right flex-1 ">
-                          {jobMetadata(job)}
-                        </p>
-                      </div>
-                    </header>
-                    {/* Bullets */}
-                    <ul className="list-inside list-disc text-sm">
-                      {job.bullets?.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </article>
-                );
-              })}
-            </div>
-            <div id="projects">
-              <h2 className="text-xl font-bold ">Projects</h2>
-              <hr className="w-full border-primary pb-4" />
-              {projects.map((project) => {
-                return (
-                  <article
-                    id={project.title}
-                    className="mb-4 last-of-type:mb-4"
-                    key={project.title}
-                  >
-                    <header>
-                      <div className="w-full flex flex-row justify-between">
-                        <div className="flex items-center">
-                          <h3 className="text-base font-bold mr-2">
-                            {project.title}
-                          </h3>
-                          {/* Links */}
-                          {project.links.map((link) => (
-                            <a
-                              target="__blank"
-                              href={link.url}
-                              key={link.url}
-                              title={link.title}
-                              className="text-base bg-primary text-neutral-main rounded-full  px-1 py-1 mx-1 font-bold animate__animated hover:animate__tada"
-                            >
-                              <link.Icon className="mx-2" size={16} />
-                            </a>
-                          ))}
-                        </div>
-                        <p className="text-base text-right">
-                          {projectMetadata(project)}
-                        </p>
-                      </div>
-                      {/* Tags */}
-                      <div className="w-full flex flex-row justify-between items-center">
-                        <p className="text-base italic flex-2">
-                          {project.elevatorPitch}
-                        </p>
-                        <div className="flex flex-1 flex-row justify-end">
-                          {project.tags.map((tag) => {
-                            return (
-                              <p
-                                id={tag}
-                                key={tag}
-                                className="inline px-2 py-1 mx-1 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                      </header>
+                      {/* Bullets */}
+                      <ul className="list-inside list-disc text-sm">
+                        {job.bullets?.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </article>
+                  );
+                })}
+              </div>
+              <div id="projects">
+                <h2 className="text-xl font-bold ">Projects</h2>
+                <hr className="w-full border-primary pb-4" />
+                {projects.map((project) => {
+                  return (
+                    <article
+                      id={project.title}
+                      className="mb-4 last-of-type:mb-4"
+                      key={project.title}
+                    >
+                      <header>
+                        <div className="w-full flex flex-row justify-between">
+                          <div className="flex items-center">
+                            <h3 className="text-base font-bold mr-2">
+                              {project.title}
+                            </h3>
+                            {/* Links */}
+                            {project.links.map((link) => (
+                              <a
+                                target="__blank"
+                                href={link.url}
+                                key={link.url}
+                                title={link.title}
+                                className="text-base bg-primary text-neutral-main rounded-full  px-1 py-1 mx-1 font-bold animate__animated hover:animate__tada"
                               >
-                                {tag}
-                              </p>
-                            );
-                          })}
+                                <link.Icon className="mx-2" size={16} />
+                              </a>
+                            ))}
+                          </div>
+                          <p className="text-base text-right">
+                            {projectMetadata(project)}
+                          </p>
                         </div>
-                      </div>
-                    </header>
-                    {/* Bullets */}
-                    <ul className="list-inside list-disc text-sm">
-                      {project.bullets?.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </article>
-                );
-              })}
-            </div>
-          </section>
+                        {/* Tags */}
+                        <div className="w-full flex flex-row justify-between items-center">
+                          <p className="text-base italic flex-2">
+                            {project.elevatorPitch}
+                          </p>
+                          <div className="flex flex-1 flex-row justify-end">
+                            {project.tags.map((tag) => {
+                              return (
+                                <p
+                                  id={tag}
+                                  key={tag}
+                                  className="inline px-2 py-1 mx-1 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                                >
+                                  {tag}
+                                </p>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </header>
+                      {/* Bullets */}
+                      <ul className="list-inside list-disc text-sm">
+                        {project.bullets?.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-      {/* <Image
+        {/* <Image
         src={WaveRight}
         className="h-full"
         fill
         width={"100px"}
         // height={"100%"}
       /> */}
-    </div>
+      </div>
+    </PageFadeWrapper>
   );
 }
