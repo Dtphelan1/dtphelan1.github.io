@@ -1,6 +1,8 @@
-export default function PageFadeWrapper({ children }) {
+export default function PageFadeWrapper({ children, className }) {
   return (
-    <div className="animate__animated animate__delay-1s animate__fadeIn ">
+    <div
+      className={`h-full w-full animate__animated animate__delay-1s animate__fadeIn ${className}`}
+    >
       {children}
     </div>
   );

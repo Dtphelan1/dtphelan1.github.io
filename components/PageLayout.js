@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import {
   GitHub,
   Linkedin,
@@ -10,14 +9,13 @@ import {
   Mail,
 } from "react-feather";
 import Canvas from "../components/Canvas";
-import styles from "../styles/PageLayout.module.css";
 
 export default function PageLayout({ children }) {
   return (
     <>
       <Head>
         {/* <!-- Primary Meta Tags --> */}
-        <title>Dylan Phelan&apos;s Portfolio </title>
+        <title>Dylan Phelan&apos;s Personal Website </title>
         <meta name="title" content="Dylan Phelan's Personal Website" />
         <meta
           name="description"
@@ -69,17 +67,25 @@ export default function PageLayout({ children }) {
       </Head>
       <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row bg-black p-2 text-primary">
         <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
-          <div id="top-nav" className="">
-            <h1 className="text-2xl animate__animated animate__fadeInDown">
-              Dylan Phelan //
-            </h1>
-            <nav className="flex flex-col animate__animated animate__fadeInDown">
-              <Link href="/">Home</Link>
+          <div id="top-nav" className="animate__animated animate__fadeInDown">
+            <div className="mb-2 flex flex-wrap text-center sm:text-left justify-center sm:justify-start">
+              <h1 className="text-2xl basis-full">Dylan Phelan</h1>
+              <p className="text-lg basis-full">
+                Web Developer & Technical Lead
+              </p>
+            </div>
+            <nav className="flex justify-center sm:justify-start mb-2">
+              <Link href="/home">
+                <a className="inline hover:font-bold after:content-['\00a0//\00a0'] after:inline hover:after:font-normal">
+                  {"Home"}
+                </a>
+              </Link>
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
-              <Link href="/resume">Resume</Link>
+              <Link href="/">
+                <a className="inline hover:font-bold">{"Resume"}</a>
+              </Link>
               {/* <Link>Random Fact</Link> */}
-              {/* What are you doing here? This wasn't meant for your eyes /bonus */}
             </nav>
           </div>
           <Canvas className="h-full hidden sm:block" />
@@ -119,7 +125,9 @@ export default function PageLayout({ children }) {
             </div>
           </div>
         </div>
-        <main className="basis-4/5 bg-neutral-main ">{children}</main>
+        <main className="basis-4/5 overflow-auto bg-neutral-main ">
+          {children}
+        </main>
       </div>
     </>
   );

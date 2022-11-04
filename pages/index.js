@@ -3,8 +3,6 @@ import Image from "next/image";
 import { Globe, GitHub, Mail, Linkedin, Printer } from "react-feather";
 import { useReactToPrint } from "react-to-print";
 import headshot from "../public/headshot.jpeg";
-import CircleLeft from "../public/circle-left.svg";
-import CircleRight from "../public/circle-right.svg";
 import WaveLeft from "../public/wave-left.svg";
 import WaveRight from "../public/wave-right.svg";
 import PageFadeWrapper from "../components/PageFadeWrapper";
@@ -90,7 +88,7 @@ export default function Resume() {
         "Current technical lead & developer on MITRE's oncology moonshot, creating tools that accelerate the adoption of data standards in cancer care",
         "Technical lead for 3+ software teams at MITRE, owning the development of data visualization applications, CLI tools for data extraction, rich-text based data capture applications, multiphase form applications, and other technologies",
         "Developed software for dozens of MITRE projects across domains in oncology, COVID-19, social justice, ai ethics, & benefits delivery",
-        "Coordinator for department brownbag series, attracting dozens of project presentations, feedback sessions, and team collaborations",
+        "Coordinator for department brown-bag series, planning and moderating dozens of presentations, feedback sessions, and team collaborations",
         "Co-leading department internship program, mentoring 12+ interns with considerable full time conversions",
       ],
       tags: [],
@@ -275,13 +273,6 @@ export default function Resume() {
   return (
     <PageFadeWrapper>
       <div className="h-screen md:h-auto md:max-h-[97vh] w-full overflow-auto text-sm">
-        {/* <Image
-        src={WaveLeft}
-        className="h-full"
-        fill
-        width={"100px"}
-        // height={"100%"}
-      /> */}
         <div ref={componentRef} className="relative overflow-clip mx-auto">
           <div
             id="contact-and-high-level "

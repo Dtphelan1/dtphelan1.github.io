@@ -75,7 +75,6 @@ export default function Canvas({ className }) {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      document.addEventListener;
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -269,7 +268,7 @@ export default function Canvas({ className }) {
         height={1000}
         ref={canvasRef}
       />
-      <div className={`w-full h-0 relative ${className}`}>
+      {/* <div className={`w-full h-0 relative ${className}`}>
         <button
           className="absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-6 h-6 flex justify-center items-center"
           onClick={() => setShowSettings(!showSettings)}
@@ -304,7 +303,7 @@ export default function Canvas({ className }) {
             />
           </div>
         </article>
-      </div>
+      </div> */}
     </>
   );
 }
