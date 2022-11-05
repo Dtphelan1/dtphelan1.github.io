@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import {
   GitHub,
   Linkedin,
@@ -64,25 +65,32 @@ export default function PageLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        {/* Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row bg-black p-2 text-primary">
         <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
           <div id="top-nav" className="animate__animated animate__fadeInDown">
             <div className="mb-2 flex flex-wrap text-center sm:text-left justify-center sm:justify-start">
-              <h1 className="text-2xl basis-full">Dylan Phelan</h1>
-              <p className="text-lg basis-full">
+              <h1 className="text-2xl font-serif basis-full">Dylan Phelan</h1>
+              <p className="text-lg basis-full font-sans">
                 Web Developer & Technical Lead
               </p>
             </div>
             <nav className="flex justify-center sm:justify-start mb-2">
-              <Link href="/home">
+              <Link href="/">
                 <a className="inline hover:font-bold after:content-['\00a0//\00a0'] after:inline hover:after:font-normal">
                   {"Home"}
                 </a>
               </Link>
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
-              <Link href="/">
+              <Link href="/resume">
                 <a className="inline hover:font-bold">{"Resume"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}

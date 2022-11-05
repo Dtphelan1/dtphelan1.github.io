@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -5,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ['"Playfair Display"', ...defaultTheme.fontFamily.serif],
+        // sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         "neutral-main": "#F3EDE1",
         primary: "#333d29",
