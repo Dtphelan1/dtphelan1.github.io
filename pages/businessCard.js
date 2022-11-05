@@ -6,7 +6,7 @@ export default function BusinessCard() {
     <PageFadeWrapper>
       <div className="relative m-8 p-8 w-[600px] h-[314px] flex flex-col justify-between bg-neutral-main text-primary border-8 border-black text-xl">
         <header className="mb-4">
-          <h1 className="text-4xl font-serif">Dylan Phelan</h1>
+          <h1 className="text-4xl">Dylan Phelan</h1>
           <h2 className="text-2xl">Web Developer & Technical Lead</h2>
         </header>
         <address className="mb-">

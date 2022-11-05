@@ -77,7 +77,7 @@ export default function PageLayout({ children }) {
         <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
           <div id="top-nav" className="animate__animated animate__fadeInDown">
             <div className="mb-2 flex flex-wrap text-center sm:text-left justify-center sm:justify-start">
-              <h1 className="text-2xl font-serif basis-full">Dylan Phelan</h1>
+              <h1 className="text-2xl basis-full">Dylan Phelan</h1>
               <p className="text-lg basis-full font-sans">
                 Web Developer & Technical Lead
               </p>
