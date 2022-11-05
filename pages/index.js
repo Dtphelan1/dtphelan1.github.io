@@ -10,7 +10,7 @@ export default function Index() {
     <PageFadeWrapper>
       <div
         id={styles["homepage"]}
-        className="h-full w-full p-36 relative bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light"
+        className="p-36 relative bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light"
       >
         <div id={styles["homepage-intro"]} className="text-xl ">
           <h1 className="mb-10">
@@ -46,16 +46,11 @@ export default function Index() {
           </p>
           <div className="flex flex-wrap flex-col mt-8">
             <div className="basis-1/2">
-              <button className="text-xl my-4 border-2 border-primary rounded p-4">
-                <Link href="/resume">Check out my Resume</Link>
-              </button>
-            </div>
-            <div className="basis-1/2">
-              <button className="text-xl my-4 border-2 border-primary rounded p-4 ">
-                <a href="/githubWheel" target="__blank">
-                  Random GitHub Project
-                </a>
-              </button>
+              <Link href="/resume">
+                <button className="text-xl my-4 border-2 border-primary rounded p-4">
+                  Check out my Resume
+                </button>
+              </Link>
             </div>
           </div>
         </div>
