@@ -15,14 +15,14 @@ export default function Index() {
         <div id={styles["homepage-intro"]} className="text-xl ">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
-              How's it goin'! My name is{" "}
+              How&apos;s it goin&apos;! My name is{" "}
             </span>
             <span className="text-6xl block font-serif ">Dylan Phelan</span>
           </h1>
         </div>
         <div id={styles["homepage-about"]} className="text-xl ">
           <p className="mb-2">
-            I'm a <span className="font-bold">web developer</span> and{" "}
+            I&apos;m a <span className="font-bold">web developer</span> and{" "}
             <span className="font-bold">technical lead</span> with 6+ years
             experience working on healthcare, social justice, and benefits
             delivery projects.
@@ -41,7 +41,7 @@ export default function Index() {
             , and much more!
           </p>
           <p>
-            My teams and I have developed UI's using{" "}
+            My teams and I have developed UI&apos;s using{" "}
             <span className="font-bold">React and Vue</span>, implemented CLIs
             and APIs using <span className="font-bold">Node.js</span>, trained
             machine learning models and run voting science simulations using{" "}
@@ -79,7 +79,7 @@ export default function Index() {
           className="text-xl max-w-full lg:max-w-md"
         >
           <h2 className="text-xl font-bold">
-            In my free time I'm usually...
+            In my free time I&apos;m usually...
             {/* <hr className="w-full border-primary pb-4  pr-" /> */}
           </h2>
 
