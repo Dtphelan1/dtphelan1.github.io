@@ -6,12 +6,18 @@ import {
   Linkedin,
   Instagram,
   Twitter,
+  Menu,
   Disc,
   Mail,
 } from "react-feather";
 import Canvas from "../components/Canvas";
+import { useState } from "react";
 
 export default function PageLayout({ children }) {
+  const [expanded, setExpanded] = useState(false);
+  function toggleExpanded() {
+    setExpanded(!expanded);
+  }
   return (
     <>
       <Head>
@@ -74,7 +80,22 @@ export default function PageLayout({ children }) {
         />
       </Head>
       <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row bg-black p-2 text-primary">
-        <div className="basis-1/5 border-black border-b-8 sm:border-b-0 sm:border-r-8 bg-neutral-main px-4 pt-4 flex flex-col justify-between">
+        <div
+          className={`
+            absolute sm:relative
+            self-end sm:self-auto
+            basis-full sm:basis-1/5
+            h-[99vh] sm:h-auto
+            box-border w-1/2 sm:w-auto
+            border-black border-b-8 border-x-8 sm:border-r-8 sm:border-l-0 sm:border-b-0
+            sm:px-4 sm:pt-4
+            bg-neutral-main flex flex-col justify-between
+            transition-transform duration-300 z-20 ${
+              expanded
+                ? "translate-x-0 sm:transform-none  "
+                : "translate-x-full sm:transform-none"
+            }`}
+        >
           <div id="top-nav" className="animate__animated animate__fadeInDown">
             <div className="mb-2 flex flex-wrap text-center sm:text-left justify-center sm:justify-start">
               <h1 className="text-2xl basis-full">Dylan Phelan</h1>
@@ -96,46 +117,54 @@ export default function PageLayout({ children }) {
               {/* <Link>Random Fact</Link> */}
             </nav>
           </div>
-          <Canvas className="h-full hidden sm:block" />
+          <div className="w-full h-4/5 ">
+            <Canvas className="h-full hidden sm:block" />
+          </div>
           <div
             id="contact-info"
             className="flex flex-row flex-wrap justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
           >
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="mailto:dtphelan1@gmail.com">
                 <Mail />
               </a>
             </div>
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="https://www.linkedin.com/in/dtphelan1">
                 <Linkedin />
               </a>
             </div>
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="https://www.github.com/Dtphelan1">
                 <GitHub />
               </a>
             </div>
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="https://www.instagram.com/dtphelan1/">
                 <Instagram />
               </a>
             </div>
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="https://twitter.com/Dtphelan1">
                 <Twitter />
               </a>
             </div>
-            <div className="flex justify-center basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
+            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
               <a target="__blank" href="https://www.discogs.com/user/dtphelan1">
                 <Disc />
               </a>
             </div>
           </div>
         </div>
-        <main className="basis-4/5 overflow-auto bg-neutral-main ">
+        <main className="basis-full sm:basis-4/5 overflow-auto bg-neutral-main z-10 ">
           {children}
         </main>
+        <button
+          className="rounded-full p-2 m-2 absolute top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30"
+          onClick={toggleExpanded}
+        >
+          <Menu size={16} />
+        </button>
       </div>
     </>
   );

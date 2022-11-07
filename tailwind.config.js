@@ -11,6 +11,9 @@ module.exports = {
         serif: ['"Playfair Display"', ...defaultTheme.fontFamily.serif],
         // sans: ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
       },
+      items: {
+        normal: "normal",
+      },
       colors: {
         "neutral-main": "#F3EDE1",
         primary: "#333d29",

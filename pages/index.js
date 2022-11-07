@@ -7,12 +7,12 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 overflow-auto ">
       <div
         id={styles["homepage"]}
-        className="p-8 lg:p-36 min-h-full max-w-screen-xl mx-auto relative"
+        className="min-h-full max-w-screen-xl mx-auto relative self-center"
       >
-        <div id={styles["homepage-intro"]} className="text-xl  self-center">
+        <div id={styles["homepage-intro"]} className="text-xl ">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
               How's it goin'! My name is{" "}
@@ -74,7 +74,10 @@ export default function Index() {
             alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
           />
         </div>
-        <p id={styles["homepage-personal-about"]} className="text-xl max-w-md">
+        <p
+          id={styles["homepage-personal-about"]}
+          className="text-xl max-w-full lg:max-w-md"
+        >
           <h2 className="text-xl font-bold">
             In my free time I'm usually...
             {/* <hr className="w-full border-primary pb-4  pr-" /> */}
