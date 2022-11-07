@@ -2,30 +2,39 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 100%;
+  grid-template-columns: 50% 50%;
   /* grid-template-rows: 30% 70%; */
   grid-template-areas:
-    "📸"
-    "🚨"
-    "🎶";
+    "👋 📸"
+    "📖 📖"
+    "🎶 🎶"
+    "🔘 🔘";
 }
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   #homepage {
     display: grid;
     gap: 1rem;
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 70%;
     grid-template-areas:
-      "🚨 📸"
-      "🚨 🎶";
+      "👋 📸"
+      "📖 🎶"
+      "🔘 🎶";
   }
 }
 
 #homepage-intro {
-  grid-area: 🚨;
+  grid-area: 👋;
+}
+#homepage-about {
+  grid-area: 📖;
 }
 #homepage-headshot {
   grid-area: 📸;
 }
-#homepage-profession-about {
+#homepage-personal-about {
   grid-area: 🎶;
+}
+#homepage-button {
+  grid-area: 🔘;
 }

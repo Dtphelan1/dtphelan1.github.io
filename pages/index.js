@@ -7,18 +7,20 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper>
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light">
       <div
         id={styles["homepage"]}
-        className="p-36 relative bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light"
+        className="p-8 lg:p-36 min-h-full max-w-screen-xl mx-auto relative"
       >
-        <div id={styles["homepage-intro"]} className="text-xl ">
+        <div id={styles["homepage-intro"]} className="text-xl  self-center">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
               How's it goin'! My name is{" "}
             </span>
             <span className="text-6xl block font-serif ">Dylan Phelan</span>
           </h1>
+        </div>
+        <div id={styles["homepage-about"]} className="text-xl ">
           <p className="mb-2">
             I'm a <span className="font-bold">web developer</span> and{" "}
             <span className="font-bold">technical lead</span> with 6+ years
@@ -31,7 +33,12 @@ export default function Index() {
             scientists exchanging resources surrounding{" "}
             <span className="font-bold">COVID-19 back in 2020</span>, clinical
             trials <span className="font-bold">collecting real world data</span>{" "}
-            for comparison against traditional data elements, TODOTODO
+            for comparison against traditional data elements, research teams
+            exploring how to make{" "}
+            <span className="font-bold">
+              filing for unemployment benefits easier
+            </span>
+            , and much more!
           </p>
           <p>
             My teams and I have developed UI's using{" "}
@@ -44,19 +51,22 @@ export default function Index() {
             </span>{" "}
             to support projects technical success.
           </p>
-          <div className="flex flex-wrap flex-col mt-8">
-            <div className="basis-1/2">
-              <Link href="/resume">
-                <button className="text-xl my-4 border-2 border-primary rounded p-4">
-                  Check out my Resume
-                </button>
-              </Link>
-            </div>
+        </div>
+        <div
+          id={styles["homepage-button"]}
+          className="flex flex-wrap flex-col mt-8"
+        >
+          <div className="basis-1/2">
+            <Link href="/resume">
+              <button className="text-xl my-4 border-2 border-primary rounded p-4">
+                Check out my Resume
+              </button>
+            </Link>
           </div>
         </div>
         <div
           id={styles["homepage-headshot"]}
-          className="w-48 h-48  shadow-xl rounded-full"
+          className="w-32 h-32 md:w-48 md:h-48 self-center shadow-xl rounded-full"
         >
           <Image
             src={headshot}
@@ -64,8 +74,7 @@ export default function Index() {
             alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
           />
         </div>
-
-        <p id={styles["homepage-personal-about"]} className="text-xl mr-16">
+        <p id={styles["homepage-personal-about"]} className="text-xl max-w-md">
           <h2 className="text-xl font-bold">
             In my free time I'm usually...
             {/* <hr className="w-full border-primary pb-4  pr-" /> */}
