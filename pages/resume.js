@@ -271,7 +271,7 @@ export default function Resume() {
 
   return (
     <PageFadeWrapper>
-      <div className="h-screen md:h-auto md:max-h-[97vh] w-full overflow-auto text-sm">
+      <div className="h-screen md:h-auto md:max-h-[97vh] w-full text-sm">
         <div ref={componentRef} className="relative overflow-clip mx-auto">
           <div
             id="contact-and-high-level "

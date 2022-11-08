@@ -79,7 +79,7 @@ export default function PageLayout({ children }) {
           rel="stylesheet"
         />
       </Head>
-      <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row bg-black p-2 text-primary">
+      <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row border-8 border-black text-primary overflow-x-hidden overflow-y-auto">
         <div
           className={`
             absolute sm:relative
@@ -156,7 +156,7 @@ export default function PageLayout({ children }) {
             </div>
           </div>
         </div>
-        <main className="basis-full sm:basis-4/5 overflow-auto bg-neutral-main z-10 ">
+        <main className="basis-full sm:basis-4/5 bg-neutral-main z-10 ">
           {children}
         </main>
         <button

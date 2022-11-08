@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 overflow-auto ">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 overflow-x-hidden overflow-y-auto ">
       <div
         id={styles["homepage"]}
         className="min-h-full max-w-screen-xl mx-auto relative self-center"
