@@ -286,7 +286,7 @@ export default function Resume() {
                 />
               </div>
               <button
-                className="absolute right-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
+                className="absolute left-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
                 onClick={handlePrint}
               >
                 <Printer size={12} className="mr-1" /> Print or PDF

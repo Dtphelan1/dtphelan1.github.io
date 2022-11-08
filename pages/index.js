@@ -84,20 +84,21 @@ export default function Index() {
           </h2>
 
           <ul className="text-lg list-inside list-disc">
+            <li className="my-2">
+              Reading everything from poetry and non-fiction, to romance and
+              murder mysteries
+            </li>
             <li className="my-2">Learning Japanese on Duolingo and WaniKani</li>
             <li className="my-2">
               Hosting dinner parties with my friends, feeding them cocktails,
               natural wine, and home-cooked vegan meals
             </li>
             <li className="my-2">
-              Reading everything from poetry and non-fiction, to romance and
-              murder mysteries
+              Hiking/birdwatching in Horn Pond and other parks across
+              Massachusetts
             </li>
             <li className="my-2">
-              Playing video games on retro hardware or new emulator handhelds
-            </li>
-            <li className="my-2">
-              Listening to some of my vinyls and cassettes – or buying more for
+              Listening to my favorite vinyls and cassettes – or buying more for
               the collection
             </li>
           </ul>

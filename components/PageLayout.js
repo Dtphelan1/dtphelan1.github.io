@@ -14,9 +14,9 @@ import Canvas from "../components/Canvas";
 import { useState } from "react";
 
 export default function PageLayout({ children }) {
-  const [expanded, setExpanded] = useState(false);
-  function toggleExpanded() {
-    setExpanded(!expanded);
+  const [menuExpanded, setMenuExpanded] = useState(false);
+  function toggleMenuExpanded() {
+    setMenuExpanded(!menuExpanded);
   }
   return (
     <>
@@ -79,89 +79,120 @@ export default function PageLayout({ children }) {
           rel="stylesheet"
         />
       </Head>
-      <div className="h-screen w-screen max-h-screen box-border flex flex-col sm:flex-row border-8 border-black text-primary overflow-x-hidden overflow-y-auto">
+      <div
+        className="
+      h-screen w-screen max-h-screen
+      box-border
+      relative
+      flex flex-col sm:flex-row
+      border-8 border-black text-primary
+      overflow-x-hidden overflow-y-auto
+      "
+      >
         <div
           className={`
             absolute sm:relative
+            top-0 right-0
+            text-right sm:text-left
             self-end sm:self-auto
             basis-full sm:basis-1/5
             h-[99vh] sm:h-auto
             box-border w-1/2 sm:w-auto
-            border-black border-b-8 border-x-8 sm:border-r-8 sm:border-l-0 sm:border-b-0
-            sm:px-4 sm:pt-4
-            bg-neutral-main flex flex-col justify-between
+            border-black border-l-8 sm:border-r-8 sm:border-l-0
+            p-4 sm:pb-0
+            bg-neutral-main flex flex-col justify-start sm:justify-between
             transition-transform duration-300 z-20 ${
-              expanded
+              menuExpanded
                 ? "translate-x-0 sm:transform-none  "
                 : "translate-x-full sm:transform-none"
             }`}
         >
-          <div id="top-nav" className="animate__animated animate__fadeInDown">
-            <div className="mb-2 flex flex-wrap text-center sm:text-left justify-center sm:justify-start">
+          <div
+            id="top-nav"
+            className="mt-16 sm:mt-0 animate__animated animate__fadeInDown"
+          >
+            <div className="mb-2 flex flex-wrap sm:text-left justify-center sm:justify-start">
               <h1 className="text-2xl basis-full">Dylan Phelan</h1>
               <p className="text-lg basis-full font-sans">
                 Web Developer & Technical Lead
               </p>
             </div>
-            <nav className="flex justify-center sm:justify-start mb-2">
+            <nav className="flex flex-col sm:flex-row justify-center sm:justify-start mb-2">
               <Link href="/">
-                <a className="inline hover:font-bold after:content-['\00a0//\00a0'] after:inline hover:after:font-normal">
+                <a className="block sm:inline hover:font-bold sm:after:content-['\00a0//\00a0'] sm:after:inline hover:after:font-normal">
                   {"Home"}
                 </a>
               </Link>
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
               <Link href="/resume">
-                <a className="inline hover:font-bold">{"Resume"}</a>
+                <a className="block sm:inline hover:font-bold">{"Resume"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}
             </nav>
           </div>
-          <div className="w-full h-4/5 ">
-            <Canvas className="h-full hidden sm:block" />
+          <div className="w-full h-4/5 hidden sm:block ">
+            <Canvas className="h-full" />
           </div>
           <div
             id="contact-info"
-            className="flex flex-row flex-wrap justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
+            className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
           >
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="mailto:dtphelan1@gmail.com">
-                <Mail />
-              </a>
-            </div>
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="https://www.linkedin.com/in/dtphelan1">
-                <Linkedin />
-              </a>
-            </div>
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="https://www.github.com/Dtphelan1">
-                <GitHub />
-              </a>
-            </div>
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="https://www.instagram.com/dtphelan1/">
-                <Instagram />
-              </a>
-            </div>
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="https://twitter.com/Dtphelan1">
-                <Twitter />
-              </a>
-            </div>
-            <div className="flex justify-center basis-full sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada">
-              <a target="__blank" href="https://www.discogs.com/user/dtphelan1">
-                <Disc />
-              </a>
-            </div>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="mailto:dtphelan1@gmail.com"
+            >
+              <Mail />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="https://www.linkedin.com/in/dtphelan1"
+            >
+              <Linkedin />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="https://www.github.com/Dtphelan1"
+            >
+              <GitHub />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="https://www.instagram.com/dtphelan1/"
+            >
+              <Instagram />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="https://twitter.com/Dtphelan1"
+            >
+              <Twitter />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              target="__blank"
+              href="https://www.discogs.com/user/dtphelan1"
+            >
+              <Disc />
+            </a>
           </div>
         </div>
-        <main className="basis-full sm:basis-4/5 bg-neutral-main z-10 ">
+        <main
+          className={`basis-full sm:basis-4/5 bg-neutral-main z-10 transition-opacity ease-in-out duration-300 ${
+            menuExpanded && "opacity-30 overflow-hidden"
+          }`}
+          onClick={() => menuExpanded && toggleMenuExpanded()}
+        >
           {children}
         </main>
         <button
-          className="rounded-full p-2 m-2 absolute top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30"
-          onClick={toggleExpanded}
+          className="rounded-full p-2 m-2 fixed top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30"
+          onClick={toggleMenuExpanded}
         >
           <Menu size={16} />
         </button>
