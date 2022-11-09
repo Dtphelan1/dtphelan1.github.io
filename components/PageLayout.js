@@ -114,7 +114,9 @@ export default function PageLayout({ children }) {
             <div className="mb-2 flex flex-wrap sm:text-left justify-center sm:justify-start">
               <h1 className="text-2xl basis-full">Dylan Phelan</h1>
               <p className="text-lg basis-full font-sans">
-                Web Developer & Technical Lead
+                Web Developer &
+                <br />
+                Technical Lead
               </p>
             </div>
             <nav className="flex flex-col sm:flex-row justify-center sm:justify-start mb-2">
@@ -131,7 +133,7 @@ export default function PageLayout({ children }) {
               {/* <Link>Random Fact</Link> */}
             </nav>
           </div>
-          <div className="w-full h-4/5 hidden sm:block ">
+          <div className="w-full h-3/4 hidden sm:block ">
             <Canvas className="h-full" />
           </div>
           <div
@@ -139,42 +141,42 @@ export default function PageLayout({ children }) {
             className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
           >
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="mailto:dtphelan1@gmail.com"
             >
               <Mail />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.linkedin.com/in/dtphelan1"
             >
               <Linkedin />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.github.com/Dtphelan1"
             >
               <GitHub />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.instagram.com/dtphelan1/"
             >
               <Instagram />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://twitter.com/Dtphelan1"
             >
               <Twitter />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__tada"
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.discogs.com/user/dtphelan1"
             >
@@ -191,7 +193,7 @@ export default function PageLayout({ children }) {
           {children}
         </main>
         <button
-          className="rounded-full p-2 m-2 fixed top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30"
+          className="inline-block rounded-full p-2 m-2 fixed top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30 hover:bg-neutral-main hover:text-primary hover:border hover:border-primary transition-all"
           onClick={toggleMenuExpanded}
         >
           <Menu size={16} />

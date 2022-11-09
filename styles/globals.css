@@ -6,6 +6,9 @@
   .animate__tada {
     animation-name: tada;
   }
+  .animate__pulse {
+    animation-name: pulse;
+  }
 }
 
 @layer base {
@@ -31,5 +34,11 @@
   /* All delay classes will take half the time to start */
   :root {
     --animate-delay: 0.5s;
+  }
+  @media print {
+    html,
+    body {
+      font-size: 14px;
+    }
   }
 }

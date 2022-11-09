@@ -45,14 +45,14 @@ export default function Resume() {
         Icon: Globe,
       },
       {
-        id: "email",
-        link: "mailto:dtphelan1@gmail.com",
+        id: "github",
+        link: "https://www.github.com/Dtphelan1",
         display: "@dtphelan1",
         Icon: GitHub,
       },
       {
-        id: "github",
-        link: "https://www.github.com/Dtphelan1",
+        id: "email",
+        link: "mailto:dtphelan1@gmail.com",
         display: "Dtphelan1@gmail.com",
         Icon: Mail,
       },
@@ -229,20 +229,20 @@ export default function Resume() {
   const skills = [
     { name: "HTML", level: 5 },
     { name: "React", level: 5 },
-    // { name: "Vue", level: 4 },
+    { name: "Vue", level: 4 },
     { name: "Next.js", level: 4 },
-    // { name: "Nuxt.js", level: 3 },
+    { name: "Nuxt.js", level: 3 },
     // { name: "Create React App (CRA)", level: 5 },
     // { name: "React Router", level: 4 },
     { name: "Bootstrap", level: 4 },
-    { name: "Material UI", level: 3 },
+    // { name: "Material UI", level: 3 },
     { name: "CSS", level: 5 },
     { name: "Tailwind", level: 4 },
     { name: "SASS", level: 3 },
     { name: "JavaScript", level: 5 },
     { name: "Node.js", level: 4 },
     { name: "Python", level: 4 },
-    { name: "Flask", level: 2 },
+    // { name: "Flask", level: 2 },
     { name: "HL7's FHIR", level: 4 },
     { name: "GitHub Pages", level: 4 },
     // { name: "Heroku", level: 3 },
@@ -306,12 +306,12 @@ export default function Resume() {
                         className="flex items-center px-2 py-1 basis-1/2"
                         key={link.id}
                       >
-                        <link.Icon size={16} className="inline mr-2" />
                         <a
                           target="_blank"
                           href={link.link}
                           rel="noopener noreferrer"
                         >
+                          <link.Icon size={16} className="inline mr-2" />
                           {link.display}
                         </a>
                       </li>

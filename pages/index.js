@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 overflow-x-hidden overflow-y-auto ">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 ">
       <div
         id={styles["homepage"]}
         className="min-h-full max-w-screen-xl mx-auto relative self-center"
@@ -23,12 +23,14 @@ export default function Index() {
         <div id={styles["homepage-about"]} className="text-xl ">
           <p className="mb-2">
             I&apos;m a <span className="font-bold">web developer</span> and{" "}
-            <span className="font-bold">technical lead</span> with 6+ years
-            experience working on healthcare, social justice, and benefits
-            delivery projects.
+            <span className="font-bold">technical lead</span> with an{" "}
+            <span className="font-bold">eye for design</span> whose worked for
+            6+ years on healthcare, social justice, and benefits delivery
+            projects.
           </p>
           <p className="mb-2">
-            My projects have supported clinicians visualizing the future of{" "}
+            My <span className="font-bold">projects</span> have supported
+            clinicians visualizing the future of{" "}
             <span className="font-bold">oncology note taking</span>, data
             scientists exchanging resources surrounding{" "}
             <span className="font-bold">COVID-19 back in 2020</span>, clinical
@@ -41,7 +43,8 @@ export default function Index() {
             , and much more!
           </p>
           <p>
-            My teams and I have developed UI&apos;s using{" "}
+            When it comes to <span className="font-bold">technology</span>, my
+            teams and I have developed UI&apos;s using{" "}
             <span className="font-bold">React and Vue</span>, implemented CLIs
             and APIs using <span className="font-bold">Node.js</span>, trained
             machine learning models and run voting science simulations using{" "}
@@ -58,7 +61,7 @@ export default function Index() {
         >
           <div className="basis-1/2">
             <Link href="/resume">
-              <button className="text-xl my-4 border-2 border-primary rounded p-4">
+              <button className="text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main">
                 Check out my Resume
               </button>
             </Link>
