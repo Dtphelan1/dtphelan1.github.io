@@ -133,7 +133,7 @@ export default function PageLayout({ children }) {
               {/* <Link>Random Fact</Link> */}
             </nav>
           </div>
-          <div className="w-full h-3/4 hidden sm:block ">
+          <div className="w-full h-3/4 hidden sm:block animate__animated animate__fadeIn">
             <Canvas className="h-full" />
           </div>
           <div
