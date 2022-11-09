@@ -128,7 +128,9 @@ export default function PageLayout({ children }) {
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
               <Link href="/resume">
-                <a className="block sm:inline hover:font-bold">{"Resume"}</a>
+                <a className="block sm:inline hover:font-bold mr-2">
+                  {"Resume"}
+                </a>
               </Link>
               {/* <Link>Random Fact</Link> */}
             </nav>

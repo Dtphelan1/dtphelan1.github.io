@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-36 ">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-32 ">
       <div
         id={styles["homepage"]}
         className="min-h-full max-w-screen-xl mx-auto relative self-center"
@@ -59,12 +59,8 @@ export default function Index() {
           id={styles["homepage-button"]}
           className="flex flex-wrap flex-col mt-8"
         >
-          <div className="basis-1/2">
-            <Link href="/resume">
-              <button className="text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main">
-                Check out my Resume
-              </button>
-            </Link>
+          <div className="w-fit text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main cursor-pointer">
+            <Link href="/resume">Check out my Resume</Link>
           </div>
         </div>
         <div

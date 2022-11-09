@@ -427,7 +427,7 @@ export default function Resume() {
                                 href={link.url}
                                 key={link.url}
                                 title={link.title}
-                                className="text-base bg-primary text-neutral-main rounded-full  px-1 py-1 mx-1 font-bold animate__animated hover:animate__tada"
+                                className="text-base  font-bold animate__animated hover:animate__pulse"
                               >
                                 <link.Icon className="mx-2" size={16} />
                               </a>
