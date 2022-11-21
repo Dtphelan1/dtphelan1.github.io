@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import Script from "next/script";
 import {
   GitHub,
   Linkedin,
@@ -9,6 +9,7 @@ import {
   Menu,
   Disc,
   Mail,
+  Book,
 } from "react-feather";
 import Canvas from "../components/Canvas";
 import { useState } from "react";
@@ -20,6 +21,8 @@ export default function PageLayout({ children }) {
   }
   return (
     <>
+      {/* Iconify icon */}
+      <Script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js" />
       <Head>
         {/* <!-- Primary Meta Tags --> */}
         <title>Dylan Phelan&apos;s Personal Website </title>
@@ -73,7 +76,11 @@ export default function PageLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro&display=swap"
           rel="stylesheet"
@@ -163,26 +170,45 @@ export default function PageLayout({ children }) {
             >
               <GitHub />
             </a>
-            <a
+            {/* <a
               className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.instagram.com/dtphelan1/"
             >
               <Instagram />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://twitter.com/Dtphelan1"
             >
               <Twitter />
-            </a>
+            </a> */}
             <a
               className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.discogs.com/user/dtphelan1"
             >
               <Disc />
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              target="__blank"
+              href="https://www.duolingo.com/profile/Dylan991330"
+              title="Duolingo Logo icon by Icons8 - Icons8.com"
+            >
+              <iconify-icon
+                icon="heroicons:language-20-solid"
+                width="25"
+                height="25"
+              ></iconify-icon>
+            </a>
+            <a
+              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              target="__blank"
+              href="https://app.thestorygraph.com/profile/dphelan1994"
+            >
+              <Book />
             </a>
           </div>
         </div>

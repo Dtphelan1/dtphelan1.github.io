@@ -165,7 +165,8 @@ export default function Resume() {
           Icon: GitHub,
         },
       ],
-      elevatorPitch: "Converting hospital cancer data to FHIR's mCODE standard",
+      elevatorPitch:
+        "Converting hospitals' cancer data to FHIR's mCODE standard",
       bullets: [
         "Built Node CLI for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
         // "Prototyped electron UI app",
