@@ -233,25 +233,10 @@ export default function Canvas({ className }) {
           <Settings size={16} />
         </button>
         <article
-          className={`absolute bottom-9 left-1 border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 overflow-auto p-4 animate__animated ${
+          className={`absolute bottom-9 right-[-12.5rem] border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 overflow-auto p-4 animate__animated ${
             showSettings ? " animate__fadeIn" : " animate__fadeOut hidden"
           }`}
         >
-          <div>
-            <label htmlFor="fadeSpeed">
-              Fade <span className="text-xs">(⍺ per sec)</span>
-            </label>
-            <input
-              type="number"
-              id="fadeSpeed"
-              className="w-full px-4 py-3 rounded-full"
-              value={fadeSpeed}
-              onChange={(e) => setFadeSpeed(e.target.value)}
-              min="1"
-              max="8"
-              step="1"
-            />
-          </div>
           <div>
             <label htmlFor="maxAcceleration">
               Acceleration <span className="text-xs">(px/sec/sec)</span>
@@ -282,9 +267,21 @@ export default function Canvas({ className }) {
               step="1000"
             />
           </div>
-          <p>{fadeSpeed}</p>
-          <p>{maxAcceleration}</p>
-          <p>{redrawFrequency}</p>
+          <div>
+            <label htmlFor="fadeSpeed">
+              Fade <span className="text-xs">(⍺ per sec)</span>
+            </label>
+            <input
+              type="number"
+              id="fadeSpeed"
+              className="w-full px-4 py-3 rounded-full"
+              value={fadeSpeed}
+              onChange={(e) => setFadeSpeed(e.target.value)}
+              min="1"
+              max="8"
+              step="1"
+            />
+          </div>
         </article>
       </div>
     </>

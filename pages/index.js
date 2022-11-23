@@ -58,9 +58,11 @@ export default function Index() {
           id={styles["homepage-button"]}
           className="flex flex-wrap flex-col mt-8"
         >
-          <div className="w-fit text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main cursor-pointer">
-            <Link href="/resume">Check out my Resume</Link>
-          </div>
+          <Link href="/resume">
+            <a className="w-fit text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main cursor-pointer">
+              Check out my Resume
+            </a>
+          </Link>
         </div>
         <div
           id={styles["homepage-headshot"]}
@@ -72,7 +74,7 @@ export default function Index() {
             alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
           />
         </div>
-        <p
+        <div
           id={styles["homepage-personal-about"]}
           className="text-xl max-w-full lg:max-w-md"
         >
@@ -83,24 +85,55 @@ export default function Index() {
 
           <ul className="text-lg list-inside list-disc">
             <li className="my-2">
-              Reading everything from poetry and non-fiction, to romance and
-              murder mysteries
-            </li>
-            <li className="my-2">Learning Japanese on Duolingo and WaniKani</li>
-            <li className="my-2">
-              Hosting dinner parties with my friends, feeding them cocktails,
-              natural wine, and home-cooked vegan meals
-            </li>
-            <li className="my-2">
-              Hiking/birdwatching in Horn Pond and other parks across
-              Massachusetts
+              Reading everything from poetry and non-fiction to romance and
+              murder mysteries, then logging it on{" "}
+              <a
+                href="https://app.thestorygraph.com/profile/dphelan1994"
+                target="__blank"
+                className="underline"
+              >
+                Storygraph
+              </a>
             </li>
             <li className="my-2">
-              Listening to my favorite vinyls and cassettes – or buying more for
-              the collection
+              Learning Japanese on{" "}
+              <a
+                href="https://www.duolingo.com/profile/Dylan991330"
+                target="__blank"
+                className="underline"
+              >
+                Duolingo
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.wanikani.com/users/Dtphelan1"
+                target="__blank"
+                className="underline"
+              >
+                WaniKani
+              </a>
+            </li>
+            <li className="my-2">
+              Hosting dinner parties for my friends with rich cocktails, natural
+              wine, and home-cooked vegan meals
+            </li>
+            <li className="my-2">
+              Hiking & birdwatching in Horn Pond, the Middlesex Fells, and other
+              parks across Massachusetts
+            </li>
+            <li className="my-2">
+              Listening to my favorite hip hop vinyls and future funk cassettes
+              – or buying more for my{" "}
+              <a
+                target="__blank"
+                className="underline"
+                href="https://www.discogs.com/user/dtphelan1"
+              >
+                collection
+              </a>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
     </PageFadeWrapper>
   );
