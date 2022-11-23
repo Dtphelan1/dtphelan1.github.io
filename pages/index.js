@@ -10,9 +10,9 @@ export default function Index() {
     <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-32 ">
       <div
         id={styles["homepage"]}
-        className="min-h-full max-w-screen-xl mx-auto relative self-center"
+        className="min-h-full max-w-screen-xl mx-auto relative"
       >
-        <div id={styles["homepage-intro"]} className="text-xl ">
+        <div id={styles["homepage-intro"]} className="text-xl self-center">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
               How&apos;s it goin&apos;! My name is{" "}
@@ -20,7 +20,7 @@ export default function Index() {
             <span className="text-6xl block font-serif ">Dylan Phelan</span>
           </h1>
         </div>
-        <div id={styles["homepage-about"]} className="text-xl ">
+        <div id={styles["homepage-about"]} className="text-xl">
           <p className="mb-2">
             I&apos;m a <span className="font-bold">web developer</span> and{" "}
             <span className="font-bold">technical lead</span> with an{" "}

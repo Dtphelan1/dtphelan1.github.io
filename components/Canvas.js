@@ -17,7 +17,6 @@ const MINACCELERATION = 0.05;
 // per second
 const MAXACCELERATION = 0.1;
 const FADEOUTSPEED = 1;
-const FADEINSPEED = 2;
 const MINALPHA = 0;
 const MAXALPHA = 255;
 // Based on colors generated using coolors.com
@@ -38,9 +37,129 @@ export default function Canvas({ className }) {
   const canvasRef = useRef(null);
   const [showSettings, setShowSettings] = useState(false);
   const [fadeSpeed, setFadeSpeed] = useState(FADEOUTSPEED);
+  const [redrawFrequency, setRedrawFrequency] = useState(SPAWNFREQUENCY);
   const [maxAcceleration, setMaxAcceleration] = useState(MAXACCELERATION);
-  // useEffect for all canvas updates
+
   useEffect(() => {
+    // Update all the elements on the canvas
+    function updateElements(canvas, context) {
+      // always update the canvas based on size
+      context.canvas.height = canvas.parentElement.offsetHeight;
+      context.canvas.width = canvas.parentElement.offsetWidth;
+      const w = canvas.width;
+      const h = canvas.height;
+      if (ELEMENTS.length > MAXELEMENTS) {
+        // Remove elements if we're over max
+        FADINGELEMENTS = [
+          ...FADINGELEMENTS,
+          ...ELEMENTS.splice(0, ELEMENTSEACHFRAME),
+        ];
+      }
+      // Draw updated versions of all main elements
+      ELEMENTS.forEach((element) => {
+        drawAndUpdateElement(context, element, w, h);
+      });
+      // Draw fading elements, incrementally bumping their alphas
+      FADINGELEMENTS.forEach((element) => {
+        const fading = true;
+        drawAndUpdateElement(context, element, w, h, fading);
+      });
+      // Totally remove any fading elements below our minimum alpha value
+      FADINGELEMENTS = FADINGELEMENTS.filter(
+        (element) => element.alpha > MINALPHA
+      );
+    }
+    // Create `numElements` many new orbs
+    function createNewElements(
+      canvas,
+      numElements = ELEMENTSEACHFRAME,
+      sudden = false
+    ) {
+      for (let element = 0; element < numElements; element++) {
+        const w = canvas.width;
+        const h = canvas.height;
+        const rad = randomPoint(MINRAD, MAXRAD);
+        const x = randomPoint(MAXRAD, w - MAXRAD);
+        const y = randomPoint(MAXRAD, h - MAXRAD);
+        const colorInd = Math.round(randomPoint(0, PALETTE.length));
+        const color = PALETTE[colorInd];
+        const xSpeed = randomPoint(MINSPEED, MAXSPEED);
+        const xDirection = Math.random() > 0.5 / 2 ? -1 : 1;
+        const xAcceleration = randomPoint(
+          MINACCELERATION / 1000,
+          maxAcceleration / 1000
+        );
+        const ySpeed = randomPoint(MINSPEED, MAXSPEED);
+        const yDirection = Math.random() > 0.5 / 2 ? -1 : 1;
+        const yAcceleration = randomPoint(
+          MINACCELERATION / 1000,
+          maxAcceleration / 1000
+        );
+        const element = {
+          rad,
+          x,
+          y,
+          color,
+          xSpeed,
+          xDirection,
+          xAcceleration,
+          ySpeed,
+          yDirection,
+          yAcceleration,
+          alpha: sudden ? MAXALPHA : MINALPHA,
+        };
+        ELEMENTS.push(element);
+      }
+    }
+
+    // Draw a given orb, updating any dynamic values (position, velocity, alpha value)
+    function drawAndUpdateElement(context, element, w, h, disappear = false) {
+      const {
+        rad,
+        x,
+        y,
+        color,
+        xSpeed,
+        xDirection,
+        xAcceleration,
+        ySpeed,
+        yDirection,
+        yAcceleration,
+        alpha,
+      } = element;
+      // update position based on speed
+      element.x = x + xSpeed * xDirection;
+      element.y = y + ySpeed * yDirection;
+      // update speed based on acceleration
+      element.xSpeed = xSpeed + xSpeed * xAcceleration;
+      element.ySpeed = ySpeed + ySpeed * yAcceleration;
+      // update alpha if disappear
+      if (disappear) {
+        element.alpha = element.alpha - fadeSpeed;
+      } else if (element.alpha < MAXALPHA) {
+        // Fade in at double the typical speed
+        element.alpha = Math.min(element.alpha + fadeSpeed * 2, MAXALPHA);
+      }
+      // bounce off walls if needed
+      if (element.x + rad > w) {
+        element.xDirection *= -1;
+      }
+      if (element.x - rad < 0) {
+        element.xDirection *= -1;
+      }
+      if (element.y + rad > h) {
+        element.yDirection *= -1;
+      }
+      if (element.y - rad < 0) {
+        element.yDirection *= -1;
+      }
+      // draw the element based on original values
+      context.beginPath();
+      context.fillStyle = `${color}${alphaToHex(alpha)}`;
+      context.arc(x, y, rad, 0, 2 * Math.PI);
+      context.fill();
+    }
+
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     // Need to align canvas size with window
@@ -57,11 +176,11 @@ export default function Canvas({ className }) {
         // Start the visual off with many elements
         const sudden = true;
         createNewElements(canvas, MAXELEMENTS, sudden);
-        LASTDRAW = 0.0001;
-      } else if (Math.round(timestamp / SPAWNFREQUENCY) > LASTDRAW) {
+        LASTDRAW = timestamp;
+      } else if (Math.round(timestamp - LASTDRAW) > redrawFrequency) {
         // Add new elements every second after the last draw
         createNewElements(canvas);
-        LASTDRAW = Math.round(timestamp / SPAWNFREQUENCY);
+        LASTDRAW = timestamp;
       }
       // Clear the canvas
       clear(canvas, context);
@@ -77,169 +196,7 @@ export default function Canvas({ className }) {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
-  //
-  useEffect(() => {
-    // Generate an orb
-    function generateElement(canvas, sudden = false) {
-      const w = canvas.width;
-      const h = canvas.height;
-      const rad = randomPoint(MINRAD, MAXRAD);
-      const x = randomPoint(MAXRAD, w - MAXRAD);
-      const y = randomPoint(MAXRAD, h - MAXRAD);
-      const colorInd = Math.round(randomPoint(0, PALETTE.length));
-      const color = PALETTE[colorInd];
-      const xSpeed = randomPoint(MINSPEED, MAXSPEED);
-      const xDirection = Math.random() > 0.5 / 2 ? -1 : 1;
-      const xAcceleration = randomPoint(
-        MINACCELERATION / 1000,
-        maxAcceleration / 1000
-      );
-      const ySpeed = randomPoint(MINSPEED, MAXSPEED);
-      const yDirection = Math.random() > 0.5 / 2 ? -1 : 1;
-      const yAcceleration = randomPoint(
-        MINACCELERATION / 1000,
-        maxAcceleration / 1000
-      );
-      return {
-        rad,
-        x,
-        y,
-        color,
-        xSpeed,
-        xDirection,
-        xAcceleration,
-        ySpeed,
-        yDirection,
-        yAcceleration,
-        alpha: sudden ? MAXALPHA : MINALPHA,
-      };
-    }
-  }, [fadeSpeed, maxAcceleration]);
-
-  // Update all the elements on the canvas
-  function updateElements(canvas, context) {
-    // always update the canvas based on size
-    context.canvas.height = canvas.parentElement.offsetHeight;
-    context.canvas.width = canvas.parentElement.offsetWidth;
-    const w = canvas.width;
-    const h = canvas.height;
-    if (ELEMENTS.length > MAXELEMENTS) {
-      // Remove elements if we're over max
-      FADINGELEMENTS = [
-        ...FADINGELEMENTS,
-        ...ELEMENTS.splice(0, ELEMENTSEACHFRAME),
-      ];
-    }
-    // Draw updated versions of all main elements
-    ELEMENTS.forEach((element) => {
-      drawAndUpdateElement(context, element, w, h);
-    });
-    // Draw fading elements, incrementally bumping their alphas
-    FADINGELEMENTS.forEach((element) => {
-      const fading = true;
-      drawAndUpdateElement(context, element, w, h, fading);
-    });
-    // Totally remove any fading elements below our minimum alpha value
-    FADINGELEMENTS = FADINGELEMENTS.filter(
-      (element) => element.alpha > MINALPHA
-    );
-  }
-
-  // Create `numElements` many new orbs
-  function createNewElements(
-    canvas,
-    numElements = ELEMENTSEACHFRAME,
-    sudden = false
-  ) {
-    for (let element = 0; element < numElements; element++) {
-      const element = generateElement(canvas, sudden);
-      ELEMENTS.push(element);
-    }
-  }
-
-  // Generate an orb
-  function generateElement(canvas, sudden = false) {
-    const w = canvas.width;
-    const h = canvas.height;
-    const rad = randomPoint(MINRAD, MAXRAD);
-    const x = randomPoint(MAXRAD, w - MAXRAD);
-    const y = randomPoint(MAXRAD, h - MAXRAD);
-    const colorInd = Math.round(randomPoint(0, PALETTE.length));
-    const color = PALETTE[colorInd];
-    const xSpeed = randomPoint(MINSPEED, MAXSPEED);
-    const xDirection = Math.random() > 0.5 / 2 ? -1 : 1;
-    const xAcceleration = randomPoint(
-      MINACCELERATION / 1000,
-      maxAcceleration / 1000
-    );
-    const ySpeed = randomPoint(MINSPEED, MAXSPEED);
-    const yDirection = Math.random() > 0.5 / 2 ? -1 : 1;
-    const yAcceleration = randomPoint(
-      MINACCELERATION / 1000,
-      maxAcceleration / 1000
-    );
-    return {
-      rad,
-      x,
-      y,
-      color,
-      xSpeed,
-      xDirection,
-      xAcceleration,
-      ySpeed,
-      yDirection,
-      yAcceleration,
-      alpha: sudden ? MAXALPHA : MINALPHA,
-    };
-  }
-
-  // Draw a given orb, updating any dynamic values (position, velocity, alpha value)
-  function drawAndUpdateElement(context, element, w, h, disappear = false) {
-    const {
-      rad,
-      x,
-      y,
-      color,
-      xSpeed,
-      xDirection,
-      xAcceleration,
-      ySpeed,
-      yDirection,
-      yAcceleration,
-      alpha,
-    } = element;
-    // update position based on speed
-    element.x = x + xSpeed * xDirection;
-    element.y = y + ySpeed * yDirection;
-    // update speed based on acceleration
-    element.xSpeed = xSpeed + xSpeed * xAcceleration;
-    element.ySpeed = ySpeed + ySpeed * yAcceleration;
-    // update alpha if disappear
-    if (disappear) {
-      element.alpha = element.alpha - fadeSpeed;
-    } else if (element.alpha < MAXALPHA) {
-      element.alpha = Math.min(element.alpha + FADEINSPEED, MAXALPHA);
-    }
-    // bounce off walls if needed
-    if (element.x + rad > w) {
-      element.xDirection *= -1;
-    }
-    if (element.x - rad < 0) {
-      element.xDirection *= -1;
-    }
-    if (element.y + rad > h) {
-      element.yDirection *= -1;
-    }
-    if (element.y - rad < 0) {
-      element.yDirection *= -1;
-    }
-    // draw the element based on original values
-    context.beginPath();
-    context.fillStyle = `${color}${alphaToHex(alpha)}`;
-    context.arc(x, y, rad, 0, 2 * Math.PI);
-    context.fill();
-  }
+  }, [redrawFrequency, fadeSpeed, maxAcceleration]);
 
   // Clear the canvas with the bg color
   function clear(canvas, context) {
@@ -268,7 +225,7 @@ export default function Canvas({ className }) {
         height={1000}
         ref={canvasRef}
       />
-      {/* <div className={`w-full h-0 relative ${className}`}>
+      <div className={`w-full h-0 relative ${className}`}>
         <button
           className="absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-6 h-6 flex justify-center items-center"
           onClick={() => setShowSettings(!showSettings)}
@@ -276,34 +233,60 @@ export default function Canvas({ className }) {
           <Settings size={16} />
         </button>
         <article
-          className={`bottom-9 right-1 border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 p-4 animate__animated absolute ${
+          className={`absolute bottom-9 left-1 border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 overflow-auto p-4 animate__animated ${
             showSettings ? " animate__fadeIn" : " animate__fadeOut hidden"
           }`}
         >
           <div>
-            <label>Fadeout Speed</label>
+            <label htmlFor="fadeSpeed">
+              Fade <span className="text-xs">(⍺ per sec)</span>
+            </label>
             <input
               type="number"
+              id="fadeSpeed"
               className="w-full px-4 py-3 rounded-full"
               value={fadeSpeed}
               onChange={(e) => setFadeSpeed(e.target.value)}
               min="1"
-              max="7"
+              max="8"
+              step="1"
             />
           </div>
           <div>
-            <label>Bubble Acceleration</label>
+            <label htmlFor="maxAcceleration">
+              Acceleration <span className="text-xs">(px/sec/sec)</span>
+            </label>
             <input
               type="number"
+              id="maxAcceleration"
               className="w-full px-4 py-3 rounded-full"
               value={maxAcceleration}
               onChange={(e) => setMaxAcceleration(e.target.value)}
-              min="1"
+              min="0.1"
               max="10"
+              step="0.1"
             />
           </div>
+          <div>
+            <label htmlFor="redrawFrequency">
+              Redraw <span className="text-xs">(in ms)</span>
+            </label>
+            <input
+              type="number"
+              id="redrawFrequency"
+              className="w-full px-4 py-3 rounded-full"
+              value={redrawFrequency}
+              onChange={(e) => setRedrawFrequency(e.target.value)}
+              min="1000"
+              max="10000"
+              step="1000"
+            />
+          </div>
+          <p>{fadeSpeed}</p>
+          <p>{maxAcceleration}</p>
+          <p>{redrawFrequency}</p>
         </article>
-      </div> */}
+      </div>
     </>
   );
 }
