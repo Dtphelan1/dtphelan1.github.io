@@ -227,10 +227,10 @@ export default function Canvas({ className }) {
       />
       <div className={`w-full h-0 relative ${className}`}>
         <button
-          className="absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-6 h-6 flex justify-center items-center"
+          className={`absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-8 h-8 flex justify-center items-center ${className}`}
           onClick={() => setShowSettings(!showSettings)}
         >
-          <Settings size={16} />
+          <Settings size={20} />
         </button>
         <article
           className={`absolute bottom-9 right-[-12.5rem] border-black border mr-2 rounded-lg bg-neutral-main h-96 w-56 overflow-auto p-4 animate__animated ${

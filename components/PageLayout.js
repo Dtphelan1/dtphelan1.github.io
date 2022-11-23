@@ -116,7 +116,7 @@ export default function PageLayout({ children }) {
         >
           <div
             id="top-nav"
-            className="mt-16 sm:mt-0 animate__animated animate__fadeInDown"
+            className="mt-16 sm:mt-0 animate__animated animate__fadeIn"
           >
             <div className="mb-2 flex flex-wrap sm:text-left justify-center sm:justify-start">
               <h1 className="text-2xl basis-full">Dylan Phelan</h1>
@@ -135,9 +135,7 @@ export default function PageLayout({ children }) {
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
               <Link href="/resume">
-                <a className="block sm:inline hover:font-bold mr-2">
-                  {"Resume"}
-                </a>
+                <a className="block sm:inline hover:font-bold">{"Resume"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}
             </nav>
@@ -147,7 +145,7 @@ export default function PageLayout({ children }) {
           </div>
           <div
             id="contact-info"
-            className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeInDown"
+            className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeIn"
           >
             <a
               className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"

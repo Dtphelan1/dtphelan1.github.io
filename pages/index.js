@@ -59,7 +59,7 @@ export default function Index() {
           className="flex flex-wrap flex-col mt-8"
         >
           <Link href="/resume">
-            <a className="w-fit text-xl my-4 border-2 border-primary rounded p-4 transition-all hover:bg-primary hover:text-neutral-main cursor-pointer">
+            <a className="w-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
               Check out my Resume
             </a>
           </Link>

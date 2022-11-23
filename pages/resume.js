@@ -143,6 +143,46 @@ export default function Resume() {
       tags: ["Sketch", "React", "Bootstrap", "Node"],
     },
     {
+      title: "Unemployment Benefits UI Prototype",
+      role: "Technical Lead & Developer",
+      date: "Mar 2022 - Sept 2022",
+      links: [],
+      elevatorPitch: "Streamline applying for unemployment insurance benefits",
+      bullets: [
+        "Balanced competing needs for a rapid prototype and potential use-case pivots",
+        "Distilled MVP requirements based on EOY objectives and project leadership input",
+        "Collaborated with research team to align UI features with experiment scenarios",
+        "Built and delivered final prototype based on designer-made mockups and MVP requirements",
+      ],
+      tags: ["Vue", "EJS", "NGINX", "Express"],
+    },
+    {
+      title: "MITRE's Social Justice Platform",
+      role: "Frontend Developer",
+      date: "Jan 2022 - Sept 2022",
+      links: [
+        {
+          url: "https://www.sjp.mitre.org/",
+          title: "MITRE's Social Justice Platform",
+          Icon: Globe,
+        },
+        {
+          url: "https://sjp.mitre.org/household-wealth-gap",
+          title: 'Insight on "The Racial Wealth Gap and Household Finances"',
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Exhibit MITRE's social justice work in one place",
+      bullets: [
+        'Coordinated with MITRE researchers to construct a bespoke interactive report, "The Racial Wealth Gap and Your Household Finances"',
+        "Ported Python NumPy and Streamlit code to HTML/JS, aligning visualizations and input controls to the overall website's design language",
+        "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
+        "Supported markdown preview in resource authoring and rendering on resource detail views",
+        "Implemented custom URLs for resources at the admin-authoring and routing level",
+      ],
+      tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
+    },
+    {
       title: "mCODE Extraction Framework (MEF)",
       role: "Technical Lead & Developer",
       date: "2018-Now",
@@ -167,9 +207,9 @@ export default function Resume() {
         "Converting hospitals' cancer data to FHIR's mCODE standard",
       bullets: [
         "Built Node CLI for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
-        // "Prototyped electron UI app",
+        // "Led the development of an electron UI app for extracting and viewing data via desktop",
         "Implemented an architecture enabling modularity across data sources and usecase extensibility ",
-        "Led creation and maintenance of 6+ github repositories in support of several usecases",
+        "Led team charged with creating and maintaining 6+ github repositories in support of 5+ usecases",
         "Enabled MITRE's ICAREdata clinical trial data analysis with data extracted by MEF",
       ],
       tags: ["FHIR", "Node", "Electron", "React", "Bootstrap"],
@@ -196,12 +236,9 @@ export default function Resume() {
         },
       ],
       elevatorPitch:
-        "Creating a UI to empower discussion about radiation data standards with clinical, non-technical experts",
+        "Empower discussions on radiation data standards among clinical experts",
       bullets: [
-        "Coordinated with Radiation Therapy Treatment Data (RTTD) ",
-        "Built Node command line tool for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
-        "Architected framework for modularity across data sources and usecase extensibility ",
-        "Led the development of 6+ github repositories leveraging the MEF in 2+ applications",
+        "Solicited requirements from mCODE's Radiation Therapy Treatment Data (RTTD) team",
         "Delivered initial prototype within 3 weeks, enabling stakeholder interviews",
       ],
       tags: ["React", "CRA", "Tailwind", "Prettier", "GitHub Workflows"],
@@ -441,13 +478,13 @@ export default function Resume() {
                           <p className="text-base italic flex-2">
                             {project.elevatorPitch}
                           </p>
-                          <div className="flex flex-1 flex-row justify-end">
+                          <div className="flex flex-1 flex-row items-center justify-end">
                             {project.tags.map((tag) => {
                               return (
                                 <p
                                   id={tag}
                                   key={tag}
-                                  className="inline px-2 py-1 mx-1 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                                  className="inline px-2 py-1 mx-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
                                 >
                                   {tag}
                                 </p>
