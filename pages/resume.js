@@ -3,8 +3,6 @@ import Image from "next/image";
 import { Globe, GitHub, Mail, Linkedin, Printer } from "react-feather";
 import { useReactToPrint } from "react-to-print";
 import headshot from "../public/headshot.jpeg";
-import WaveLeft from "../public/wave-left.svg";
-import WaveRight from "../public/wave-right.svg";
 import PageFadeWrapper from "../components/PageFadeWrapper";
 import SkillLevel from "../components/SkillLevel";
 import SkillLevelLegend from "../components/SkillLevelLegend";

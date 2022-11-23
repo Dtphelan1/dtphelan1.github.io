@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import headshot from "../public/headshot.jpeg";
-import CircleRight from "../public/circle-right.svg";
 import PageFadeWrapper from "../components/PageFadeWrapper";
 import styles from "../styles/Home.module.css";
 
