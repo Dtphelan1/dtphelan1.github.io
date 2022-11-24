@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Globe, GitHub, Mail, Linkedin, Printer } from "react-feather";
 import { useReactToPrint } from "react-to-print";
@@ -93,9 +93,131 @@ export default function Resume() {
   ];
   const projects = [
     {
+      title: "mCODE Extraction Framework (MEF)",
+      role: "Technical Lead & Developer",
+      date: "2018-Now",
+      links: [
+        {
+          url: "https://github.com/mcode/mcode-extraction-framework",
+          title: "Code for core mCODE Extraction Framework",
+          Icon: GitHub,
+        },
+        {
+          url: "https://github.com/mcode/base-icare-extraction-client",
+          title: "Code for ICAREdata Client",
+          Icon: GitHub,
+        },
+        {
+          url: "https://github.com/mcode/mcode-extraction-ui",
+          title: "Code for Extraction UI",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Convert hospitals' cancer data to FHIR's mCODE standard",
+      bullets: [
+        "Designed a technical architecture enabling modularity across data sources and usecases",
+        "Extracted data from proprietary web APIs, and from CSV files either on disk or served over HTTP",
+        "Built Node CLI for translating healthcare data from proprietary formats to the mCODE standard",
+        // "Created and maintained 6+ other github repositories in support of 3 separate usecases",
+        "Enabled MITRE's ICAREdata project to analyze health system clinical trial data extracted by MEF",
+      ],
+      tags: ["React", "Bootstrap", "Node", "FHIR"],
+    },
+    {
+      title: "Radiation Therapy Treatment Data (RTTD) App",
+      role: "Technical Lead & Web Dev",
+      date: "May 2022 - Now",
+      links: [
+        {
+          url: "https://github.com/mcode/rttd-summary-webapp",
+          title: "Code for RTTD web application",
+          Icon: GitHub,
+        },
+        {
+          url: "https://mcode.github.io/rttd-summary-webapp/",
+          title: "Demo of RTTD web application",
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Empower discussions on radiation data standards",
+      bullets: [
+        "Solicited requirements from MITRE's RTTD team",
+        "Developed React web application using Axios to fetch & render RTTD data from FHIR servers",
+        "Delivered initial prototype within 3 weeks, enabling the team's external stakeholder interviews",
+        "Iterated application based on stakeholder feedback, supporting new request headers, reformatted visualizations, and metadata displays",
+      ],
+      tags: ["React", "Tailwind", "FHIR"],
+    },
+    {
+      title: "Unemployment Benefits UI Prototype",
+      role: "Technical Lead & Web Dev",
+      date: "Mar - Sept 2022",
+      links: [],
+      elevatorPitch: "Streamline unemployment insurance benefits",
+      bullets: [
+        "Created Vue frontend for submitting multi-page unemployment insurance benefits form",
+        "Implemented Express backend API for creating, updating, and reviewing unemployment applications",
+        "Distilled MVP requirements based on EOY objectives and research team's experimental scenarios",
+        "Balanced competing needs for a rapid prototype and potential use-case pivots",
+      ],
+      tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
+    },
+    {
+      title: "MITRE's Social Justice Platform",
+      role: "Web Dev",
+      date: "Jan - Sept 2022",
+      links: [
+        {
+          url: "https://www.sjp.mitre.org/",
+          title: "MITRE's Social Justice Platform",
+          Icon: Globe,
+        },
+        {
+          url: "https://sjp.mitre.org/household-wealth-gap",
+          title: 'Insight on "The Racial Wealth Gap and Household Finances"',
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Exhibit MITRE's social justice work in one place",
+      bullets: [
+        'Coordinated with MITRE researchers to build web-based interactive report, "The Racial Wealth Gap and Your Household Finances"',
+        "Ported Python NumPy and Streamlit code to HTML/JS, aligning mockups, visualizations, and input controls to our design language",
+        "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
+        "Supported markdown preview in resource authoring and rendering on resource detail views",
+        "Implemented custom URLs for resources at the admin-authoring and routing level",
+      ],
+      tags: ["Vue", "EJS", "NGINX", "Express"],
+    },
+    {
+      title: "FluxNotes",
+      role: "Technical Lead & Developer",
+      date: "2017-2019",
+      links: [
+        {
+          url: "https://github.com/fluxnotes/flux",
+          title: "Code for core mCODE Extraction Framework",
+          Icon: GitHub,
+        },
+        {
+          url: "https://fluxnotes.github.io/flux/",
+          title: "FluxNotes Application",
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Re-imagine the clinical note taking experience",
+      bullets: [
+        "Built a SMARTonFHIR React web application for visualizing and capturing mCODE data",
+        "Leveraged SlateJs rich-text editor for inline suggestions and data tagging in clinical notes",
+        "Visualized patient data with ReCharts and custom HTML visualizations",
+        "Enabled data provenance tracking via data-linkage to source notes and ElasticSearch querying",
+        "Received praise from oncologists and MITRE executives, motivating future research on novel data capture techniques",
+      ],
+      tags: ["React", "Material UI", "SCSS", "FHIR"],
+    },
+    {
       title: "Vote Smart Arlington",
       role: "Lead Designer & Web Dev",
-      date: "Apr 2020 ",
+      date: "Apr 2021 ",
       links: [
         {
           url: "https://www.votesmartarlington.com/#/ ",
@@ -148,130 +270,8 @@ export default function Resume() {
       tags: ["Balsamiq", "React", "Bootstrap", "Python"],
     },
     {
-      title: "mCODE Extraction Framework (MEF)",
-      role: "Technical Lead & Developer",
-      date: "2018-Now",
-      links: [
-        {
-          url: "https://github.com/mcode/mcode-extraction-framework",
-          title: "Code for core mCODE Extraction Framework",
-          Icon: GitHub,
-        },
-        {
-          url: "https://github.com/mcode/base-icare-extraction-client",
-          title: "Code for ICAREdata Client",
-          Icon: GitHub,
-        },
-        {
-          url: "https://github.com/mcode/mcode-extraction-ui",
-          title: "Code for Extraction UI",
-          Icon: GitHub,
-        },
-      ],
-      elevatorPitch: "Convert hospitals' cancer data to FHIR's mCODE standard",
-      bullets: [
-        "Designed a technical architecture enabling modularity across data sources and usecases",
-        "Extracted data from proprietary web APIs, and from CSV files either on disk or served over HTTP",
-        "Built Node CLI for translating healthcare data from proprietary formats to the mCODE standard",
-        // "Created and maintained 6+ other github repositories in support of 3 separate usecases",
-        "Enabled MITRE's ICAREdata project to analyze health system clinical trial data extracted by MEF",
-      ],
-      tags: ["React", "Bootstrap", "Node", "FHIR"],
-    },
-    {
-      title: "Radiation Therapy Treatment Data (RTTD) App",
-      role: "Technical Lead & Developer",
-      date: "May 2022 - Now",
-      links: [
-        {
-          url: "https://github.com/mcode/rttd-summary-webapp",
-          title: "Code for RTTD web application",
-          Icon: GitHub,
-        },
-        {
-          url: "https://mcode.github.io/rttd-summary-webapp/",
-          title: "Demo of RTTD web application",
-          Icon: Globe,
-        },
-      ],
-      elevatorPitch: "Empower discussions on radiation data standards",
-      bullets: [
-        "Solicited requirements from MITRE's RTTD team",
-        "Developed React web application using Axios to fetch & render RTTD data from FHIR servers",
-        "Delivered initial prototype within 3 weeks, enabling the team's external stakeholder interviews",
-        "Iterated application based on stakeholder feedback, supporting new request headers, reformatted visualizations, and metadata displays",
-      ],
-      tags: ["React", "Tailwind", "FHIR"],
-    },
-    {
-      title: "Unemployment Benefits UI Prototype",
-      role: "Technical Lead & Developer",
-      date: "Mar - Sept 2022",
-      links: [],
-      elevatorPitch: "Streamline unemployment insurance benefits",
-      bullets: [
-        "Created Vue frontend for submitting multi-page unemployment insurance benefits form",
-        "Implemented Express backend API for creating, updating, and reviewing unemployment applications",
-        "Distilled MVP requirements based on EOY objectives and research team's experimental scenarios",
-        "Balanced competing needs for a rapid prototype and potential use-case pivots",
-      ],
-      tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
-    },
-    {
-      title: "MITRE's Social Justice Platform",
-      role: "Web Developer",
-      date: "Jan - Sept 2022",
-      links: [
-        {
-          url: "https://www.sjp.mitre.org/",
-          title: "MITRE's Social Justice Platform",
-          Icon: Globe,
-        },
-        {
-          url: "https://sjp.mitre.org/household-wealth-gap",
-          title: 'Insight on "The Racial Wealth Gap and Household Finances"',
-          Icon: Globe,
-        },
-      ],
-      elevatorPitch: "Exhibit MITRE's social justice work in one place",
-      bullets: [
-        'Coordinated with MITRE researchers to build web-based interactive report, "The Racial Wealth Gap and Your Household Finances"',
-        "Ported Python NumPy and Streamlit code to HTML/JS, aligning mockups, visualizations, and input controls to our design language",
-        "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
-        "Supported markdown preview in resource authoring and rendering on resource detail views",
-        "Implemented custom URLs for resources at the admin-authoring and routing level",
-      ],
-      tags: ["Vue", "EJS", "NGINX", "Express"],
-    },
-    {
-      title: "FluxNotes",
-      role: "Web Developer & Technical Lead",
-      date: "2017-2019",
-      links: [
-        {
-          url: "https://github.com/fluxnotes/flux",
-          title: "Code for core mCODE Extraction Framework",
-          Icon: GitHub,
-        },
-        {
-          url: "https://fluxnotes.github.io/flux/",
-          title: "FluxNotes Application",
-          Icon: Globe,
-        },
-      ],
-      elevatorPitch: "Re-imagine the clinical note taking experience",
-      bullets: [
-        "Built a SMARTonFHIR React web application for visualizing and capturing mCODE data",
-        "Leveraged SlateJs rich-text editor for inline suggestions and data tagging in clinical notes",
-        "Visualized patient data with ReCharts and custom HTML visualizations",
-        "Enabled data provenance tracking via data-linkage to source notes and ElasticSearch querying",
-        "Received praise from oncologists and MITRE executives, motivating future research on novel data capture techniques",
-      ],
-      tags: ["React", "Material UI", "SCSS", "FHIR"],
-    },
-    {
       title: "Sorting out Bandcamp Merch",
-      role: "Solo Developer",
+      role: "Lead Web Dev",
       date: "Aug 2022",
       links: [
         {
@@ -295,7 +295,7 @@ export default function Resume() {
     },
     {
       title: "NYJMusic.com",
-      role: "Solo Developer & Designer",
+      role: "Lead Designer & Web Dev",
       date: "Aug 2022",
       links: [
         {
@@ -364,6 +364,8 @@ export default function Resume() {
     { name: "Balsamiq", level: 3 },
     // { name: "Sketch", level: 2 },
   ];
+  const skillAreas = ["Featured", "React", "Vue", "Healthcare", "Voting"];
+  const [skillArea, setSkillArea] = useState(skillAreas[0]);
   // Printing logic
   // Ref of the component to print
   const componentRef = useRef();
@@ -413,7 +415,7 @@ export default function Resume() {
                   <ul className="flex flex-row flex-wrap justify-between">
                     {aboutMe.links.map((link, i) => (
                       <li
-                        className="flex items-center px-2 py-1 basis-1/2 animate__animated hover:animate__pulse"
+                        className="flex items-center px-2 py-1 basis-full sm:basis-1/2 animate__animated hover:animate__pulse"
                         key={link.id}
                       >
                         <a
@@ -517,7 +519,23 @@ export default function Resume() {
                 })}
               </div>
               <div id="projects">
-                <h2 className="text-xl font-bold ">Projects</h2>
+                <h2 className="text-xl font-bold inline mr-2">Projects</h2>
+                <div className="relative inline-block max-w-[16.25rem] md:max-w-max overflow-auto mb-[4px] bottom-[-11px] border-x border-t border-primary">
+                  {skillAreas.map((curSkill) => {
+                    return (
+                      <p
+                        key={curSkill}
+                        className={
+                          "cursor-pointer text-base inline border-primary border-r last-of-type:border-r-0 px-1 " +
+                          (skillArea === curSkill && "font-bold")
+                        }
+                        onClick={() => setSkillArea(curSkill)}
+                      >
+                        {curSkill}
+                      </p>
+                    );
+                  })}
+                </div>
                 <hr className="w-full border-primary pb-4" />
                 {projects.map((project) => {
                   return (
@@ -527,40 +545,40 @@ export default function Resume() {
                       key={project.title}
                     >
                       <header>
-                        <div className="w-full flex flex-row justify-between">
-                          <div className="flex items-center">
-                            <h3 className="text-base font-bold mr-2">
-                              {project.title}
-                            </h3>
+                        <div className="w-full flex flex-row flex-wrap justify-start">
+                          <div className="flex justify-between md:justify-start basis-full md:basis-1/2 text-base font-bold">
+                            <h3 className="pr-2">{project.title}</h3>
                             {/* Links */}
-                            {project.links.map((link) => (
-                              <a
-                                target="__blank"
-                                href={link.url}
-                                key={link.url}
-                                title={link.title}
-                                className="text-base  font-bold animate__animated hover:animate__pulse"
-                              >
-                                <link.Icon className="mx-2" size={16} />
-                              </a>
-                            ))}
+                            <div className="flex flex-row ">
+                              {project.links.map((link) => (
+                                <a
+                                  target="__blank"
+                                  href={link.url}
+                                  key={link.url}
+                                  title={link.title}
+                                  className="m-1 text-base font-bold animate__animated hover:animate__pulse"
+                                >
+                                  <link.Icon size={16} />
+                                </a>
+                              ))}
+                            </div>
                           </div>
-                          <p className="text-base text-right">
+                          <p className="basis-full md:basis-1/2 text-base text-left md:text-right">
                             {projectMetadata(project)}
                           </p>
                         </div>
                         {/* Tags */}
-                        <div className="w-full flex flex-row justify-between items-center">
-                          <p className="text-base italic flex-2 pr-2">
+                        <div className="w-full flex flex-col-reverse items-start md:flex-row md:flex-wrap md:justify-between md:items-center">
+                          <p className="basis-full md:basis-1/2 text-base italic flex-1 pr-2">
                             {project.elevatorPitch}
                           </p>
-                          <div className="flex flex-1 flex-row items-center justify-end">
+                          <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
                             {project.tags.map((tag) => {
                               return (
                                 <p
                                   id={tag}
                                   key={tag}
-                                  className="inline px-2 py-1 mx-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                                  className="inline px-2 py-1 mx-1 my-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
                                 >
                                   {tag}
                                 </p>
