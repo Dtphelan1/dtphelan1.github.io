@@ -34,7 +34,7 @@ export default function Resume() {
   const aboutMe = {
     name: "Dylan Phelan",
     title: "Lead Web Developer @ MITRE",
-    elevatorPitch: `Hi, I'm Dylan! I'm a web developer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLI's and API's using Node.js, ML models using python, and architecture diagrams/roadmaps to support projects as a technical lead. Seeking Boston/remote web developer positions.`,
+    elevatorPitch: `Hi, I'm Dylan! I'm a web developer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLIs and APIs using Node.js and Python, ML models using Python, and architecture diagrams/roadmaps to support projects as a technical lead. `,
     links: [
       {
         id: "website",
@@ -83,40 +83,15 @@ export default function Resume() {
       elevatorPitch:
         "Technical lead, developer, intern lead, dept. brown-bag coordinator",
       bullets: [
-        "Current technical lead & dev on MITRE's oncology moonshot, architecting software  adoption of oncology data standards",
-        "Previous technical lead & developer for 3+ software teams at MITRE, owning the development of data visualization applications, novel data-capture applications, multiphase complex forms, and other technologies",
-        "Developed software for dozens of MITRE projects across domains in oncology, COVID-19, social justice, ai ethics, & benefits delivery",
-        "Runs department brown-bag series, executing dozens of presentations, feedback sessions, and project collaborations",
-        "Co-leads department internship program, mentoring 12+ interns with considerable full time conversions",
+        "Current technical lead & developer on MITRE's oncology moonshot, improving cancer data standards with technology",
+        "Prior technical lead & developer for 3+ software teams in charge of web applications, CLIs, APIs, visualizations, rich-text editors, multiphase complex forms, and more",
+        "Developer for 12+ MITRE projects in oncology, social justice, benefits delivery, and COVID-19",
+        "Runs department brown-bag series, executed 20+ presentations and project feedback sessions",
+        "Co-leads department internship program, mentoring 12+ undergraduate and graduate interns",
       ],
     },
   ];
   const projects = [
-    {
-      title: "NYJMusic.com",
-      role: "Solo Developer & Designer",
-      date: "Aug 2022",
-      links: [
-        {
-          url: "https://www.nyjmusic.com/",
-          title: "Website",
-          Icon: Globe,
-        },
-        {
-          url: "https://github.com/Dtphelan1/NYJ",
-          title: "Code",
-          Icon: GitHub,
-        },
-      ],
-      elevatorPitch:
-        "Minimalist responsive webpage for NYJ Da Prafet's merch/music/socials",
-      bullets: [
-        "Conducted stakeholder interview and landscape assessment of similar artists websites",
-        "Solicited feedback on designs and mockups before executing final product",
-        "Implemented and deployed website rapidly (48hrs) in-time for upcoming launches",
-      ],
-      tags: ["HTML", "jQuery", "Tailwind", "Vercel"],
-    },
     {
       title: "Vote Smart Arlington",
       role: "Lead Designer & Web Dev",
@@ -133,54 +108,44 @@ export default function Resume() {
           Icon: GitHub,
         },
       ],
-      elevatorPitch:
-        "Making representatives' voting patterns easy to understand",
+      elevatorPitch: "Learn how representatives vote on Arlington measures",
       bullets: [
-        "Built and led team of three devs to volunteer their time to build this application",
-        "Visualized voting history of 100+ town representatives on ballot measures",
-        "Garnered appreciation from multiple local representatives, >1000 visits during election week",
+        "Organized a team of three devs to build a React web application with an Express backend",
+        "Visualized voting history of 100+ town representatives on ballot measures with React Table",
+        "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
       ],
       tags: ["Sketch", "React", "Bootstrap", "Node"],
     },
     {
-      title: "Unemployment Benefits UI Prototype",
-      role: "Technical Lead & Developer",
-      date: "Mar 2022 - Sept 2022",
-      links: [],
-      elevatorPitch: "Streamline applying for unemployment insurance benefits",
-      bullets: [
-        "Balanced competing needs for a rapid prototype and potential use-case pivots",
-        "Distilled MVP requirements based on EOY objectives and project leadership input",
-        "Collaborated with research team to align UI features with experiment scenarios",
-        "Built and delivered final prototype based on designer-made mockups and MVP requirements",
-      ],
-      tags: ["Vue", "EJS", "NGINX", "Express"],
-    },
-    {
-      title: "MITRE's Social Justice Platform",
-      role: "Frontend Developer",
-      date: "Jan 2022 - Sept 2022",
+      title: "Ranked Choice Voting (RCV) Simulation Research",
+      role: "Lead Designer & Web Dev",
+      date: "Sept 2020 - May 2021",
       links: [
         {
-          url: "https://www.sjp.mitre.org/",
-          title: "MITRE's Social Justice Platform",
+          url: "https://mggg.github.io/rcv-webapp/#/",
+          title: "RCV Simulation Demo",
           Icon: Globe,
         },
         {
-          url: "https://sjp.mitre.org/household-wealth-gap",
-          title: 'Insight on "The Racial Wealth Gap and Household Finances"',
-          Icon: Globe,
+          url: "https://github.com/mggg/rcv-webapp",
+          title: "Frontend Code",
+          Icon: GitHub,
+        },
+        {
+          url: "https://github.com/mggg/RCV_Basics",
+          title: "Frontend Code",
+          Icon: GitHub,
         },
       ],
-      elevatorPitch: "Exhibit MITRE's social justice work in one place",
+      elevatorPitch: "Explore RCV's impact on election outcomes",
       bullets: [
-        'Coordinated with MITRE researchers to construct a bespoke interactive report, "The Racial Wealth Gap and Your Household Finances"',
-        "Ported Python NumPy and Streamlit code to HTML/JS, aligning visualizations and input controls to the overall website's design language",
-        "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
-        "Supported markdown preview in resource authoring and rendering on resource detail views",
-        "Implemented custom URLs for resources at the admin-authoring and routing level",
+        "Implemented a React web application and Python Flask API for running RCV election simulations",
+        "Conducted contextual inquiries to understand target users' interaction and visualization needs",
+        "Designed mockups for defining input parameters and visualizing election outcomes",
+        "Created Flask API for running and aggregating 4 types of RCV simulation",
+        "Visualize simulation outcomes across various model types with Victory charts",
       ],
-      tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
+      tags: ["Balsamiq", "React", "Bootstrap", "Python"],
     },
     {
       title: "mCODE Extraction Framework (MEF)",
@@ -203,45 +168,154 @@ export default function Resume() {
           Icon: GitHub,
         },
       ],
-      elevatorPitch:
-        "Converting hospitals' cancer data to FHIR's mCODE standard",
+      elevatorPitch: "Convert hospitals' cancer data to FHIR's mCODE standard",
       bullets: [
-        "Built Node CLI for extracting & translating healthcare data from proprietary formats to the FHIR's mCODE standard",
-        // "Led the development of an electron UI app for extracting and viewing data via desktop",
-        "Implemented an architecture enabling modularity across data sources and usecase extensibility ",
-        "Led team charged with creating and maintaining 6+ github repositories in support of 5+ usecases",
-        "Enabled MITRE's ICAREdata clinical trial data analysis with data extracted by MEF",
+        "Designed a technical architecture enabling modularity across data sources and usecases",
+        "Extracted data from proprietary web APIs, and from CSV files either on disk or served over HTTP",
+        "Built Node CLI for translating healthcare data from proprietary formats to the mCODE standard",
+        // "Created and maintained 6+ other github repositories in support of 3 separate usecases",
+        "Enabled MITRE's ICAREdata project to analyze health system clinical trial data extracted by MEF",
       ],
-      tags: ["FHIR", "Node", "Electron", "React", "Bootstrap"],
+      tags: ["React", "Bootstrap", "Node", "FHIR"],
     },
     {
-      title: "RTTD Web Application",
+      title: "Radiation Therapy Treatment Data (RTTD) App",
       role: "Technical Lead & Developer",
-      date: "2018-Now",
+      date: "May 2022 - Now",
       links: [
         {
-          url: "https://github.com/mcode/mcode-extraction-framework",
+          url: "https://github.com/mcode/rttd-summary-webapp",
+          title: "Code for RTTD web application",
+          Icon: GitHub,
+        },
+        {
+          url: "https://mcode.github.io/rttd-summary-webapp/",
+          title: "Demo of RTTD web application",
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Empower discussions on radiation data standards",
+      bullets: [
+        "Solicited requirements from MITRE's RTTD team",
+        "Developed React web application using Axios to fetch & render RTTD data from FHIR servers",
+        "Delivered initial prototype within 3 weeks, enabling the team's external stakeholder interviews",
+        "Iterated application based on stakeholder feedback, supporting new request headers, reformatted visualizations, and metadata displays",
+      ],
+      tags: ["React", "Tailwind", "FHIR"],
+    },
+    {
+      title: "Unemployment Benefits UI Prototype",
+      role: "Technical Lead & Developer",
+      date: "Mar - Sept 2022",
+      links: [],
+      elevatorPitch: "Streamline unemployment insurance benefits",
+      bullets: [
+        "Created Vue frontend for submitting multi-page unemployment insurance benefits form",
+        "Implemented Express backend API for creating, updating, and reviewing unemployment applications",
+        "Distilled MVP requirements based on EOY objectives and research team's experimental scenarios",
+        "Balanced competing needs for a rapid prototype and potential use-case pivots",
+      ],
+      tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
+    },
+    {
+      title: "MITRE's Social Justice Platform",
+      role: "Web Developer",
+      date: "Jan - Sept 2022",
+      links: [
+        {
+          url: "https://www.sjp.mitre.org/",
+          title: "MITRE's Social Justice Platform",
+          Icon: Globe,
+        },
+        {
+          url: "https://sjp.mitre.org/household-wealth-gap",
+          title: 'Insight on "The Racial Wealth Gap and Household Finances"',
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Exhibit MITRE's social justice work in one place",
+      bullets: [
+        'Coordinated with MITRE researchers to build web-based interactive report, "The Racial Wealth Gap and Your Household Finances"',
+        "Ported Python NumPy and Streamlit code to HTML/JS, aligning mockups, visualizations, and input controls to our design language",
+        "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
+        "Supported markdown preview in resource authoring and rendering on resource detail views",
+        "Implemented custom URLs for resources at the admin-authoring and routing level",
+      ],
+      tags: ["Vue", "EJS", "NGINX", "Express"],
+    },
+    {
+      title: "FluxNotes",
+      role: "Web Developer & Technical Lead",
+      date: "2017-2019",
+      links: [
+        {
+          url: "https://github.com/fluxnotes/flux",
           title: "Code for core mCODE Extraction Framework",
           Icon: GitHub,
         },
         {
-          url: "https://github.com/mcode/base-icare-extraction-client",
-          title: "Code for ICAREdata Client",
-          Icon: GitHub,
+          url: "https://fluxnotes.github.io/flux/",
+          title: "FluxNotes Application",
+          Icon: Globe,
+        },
+      ],
+      elevatorPitch: "Re-imagine the clinical note taking experience",
+      bullets: [
+        "Built a SMARTonFHIR React web application for visualizing and capturing mCODE data",
+        "Leveraged SlateJs rich-text editor for inline suggestions and data tagging in clinical notes",
+        "Visualized patient data with ReCharts and custom HTML visualizations",
+        "Enabled data provenance tracking via data-linkage to source notes and ElasticSearch querying",
+        "Received praise from oncologists and MITRE executives, motivating future research on novel data capture techniques",
+      ],
+      tags: ["React", "Material UI", "SCSS", "FHIR"],
+    },
+    {
+      title: "Sorting out Bandcamp Merch",
+      role: "Solo Developer",
+      date: "Aug 2022",
+      links: [
+        {
+          url: "https://addons.mozilla.org/en-US/firefox/addon/bandcamp-merch-sorter/",
+          title: "Firefox Extension",
+          Icon: Globe,
         },
         {
-          url: "https://github.com/mcode/mcode-extraction-ui",
-          title: "Code for Extraction UI",
+          url: "https://github.com/Dtphelan1/bc-merch-sort-firefox-extension",
+          title: "Code",
           Icon: GitHub,
         },
       ],
-      elevatorPitch:
-        "Empower discussions on radiation data standards among clinical experts",
+      elevatorPitch: "Move sold-out items out of the way",
       bullets: [
-        "Solicited requirements from mCODE's Radiation Therapy Treatment Data (RTTD) team",
-        "Delivered initial prototype within 3 weeks, enabling stakeholder interviews",
+        "Relegates sold-out items to the bottom of the merch store's inventory",
+        "Adds subtle transparency to sold-out items to indicate their absence",
+        "Published extension on the Firefox add-on store",
       ],
-      tags: ["React", "CRA", "Tailwind", "Prettier", "GitHub Workflows"],
+      tags: ["JavaScript", "web-ext"],
+    },
+    {
+      title: "NYJMusic.com",
+      role: "Solo Developer & Designer",
+      date: "Aug 2022",
+      links: [
+        {
+          url: "https://www.nyjmusic.com/",
+          title: "Website",
+          Icon: Globe,
+        },
+        {
+          url: "https://github.com/Dtphelan1/NYJ",
+          title: "Code",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Promote NYJ Da Prafet's merch, music, & socials",
+      bullets: [
+        "Conducted stakeholder interview and landscape assessment of similar artists websites",
+        "Solicited feedback on designs and mockups before executing final product",
+        "Implemented and deployed website rapidly (48hrs) in-time for upcoming launches",
+      ],
+      tags: ["HTML", "Tailwind", "jQuery", "Vercel"],
     },
   ];
   const education = [
@@ -266,9 +340,9 @@ export default function Resume() {
     { name: "HTML", level: 5 },
     { name: "React", level: 5 },
     { name: "Vue", level: 4 },
+    { name: "Create React App", level: 5 },
     { name: "Next.js", level: 4 },
     { name: "Nuxt.js", level: 3 },
-    // { name: "Create React App (CRA)", level: 5 },
     // { name: "React Router", level: 4 },
     { name: "Bootstrap", level: 4 },
     // { name: "Material UI", level: 3 },
@@ -322,7 +396,7 @@ export default function Resume() {
                 />
               </div>
               <button
-                className="absolute left-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary xl:border-0 border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden"
+                className="absolute left-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
                 onClick={handlePrint}
               >
                 <Printer size={12} className="mr-1" /> Print or PDF
@@ -339,7 +413,7 @@ export default function Resume() {
                   <ul className="flex flex-row flex-wrap justify-between">
                     {aboutMe.links.map((link, i) => (
                       <li
-                        className="flex items-center px-2 py-1 basis-1/2"
+                        className="flex items-center px-2 py-1 basis-1/2 animate__animated hover:animate__pulse"
                         key={link.id}
                       >
                         <a
@@ -356,7 +430,9 @@ export default function Resume() {
                 </address>
               </div>
               <hr className="mb-4 h-1" />
-              <p id="mission-statement">{aboutMe.elevatorPitch}</p>
+              <p id="mission-statement" className="text-base print:text-sm">
+                {aboutMe.elevatorPitch}
+              </p>
             </div>
           </div>
           <div
@@ -475,7 +551,7 @@ export default function Resume() {
                         </div>
                         {/* Tags */}
                         <div className="w-full flex flex-row justify-between items-center">
-                          <p className="text-base italic flex-2">
+                          <p className="text-base italic flex-2 pr-2">
                             {project.elevatorPitch}
                           </p>
                           <div className="flex flex-1 flex-row items-center justify-end">
