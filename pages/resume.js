@@ -91,9 +91,10 @@ export default function Resume() {
       ],
     },
   ];
-  const projects = [
+  const workProjects = [
     {
       title: "mCODE Extraction Framework (MEF)",
+      featured: true,
       role: "Technical Lead & Developer",
       date: "2018-Now",
       links: [
@@ -113,12 +114,12 @@ export default function Resume() {
           Icon: GitHub,
         },
       ],
-      elevatorPitch: "Convert hospitals' cancer data to FHIR's mCODE standard",
+      elevatorPitch: "Bridge current cancer data to emerging data standard",
       bullets: [
+        "Built Node CLI for translating healthcare data from proprietary formats to FHIR's minimal Common Oncology Data Elements (mCODE) standard",
         "Designed a technical architecture enabling modularity across data sources and usecases",
         "Extracted data from proprietary web APIs, and from CSV files either on disk or served over HTTP",
-        "Built Node CLI for translating healthcare data from proprietary formats to the mCODE standard",
-        // "Created and maintained 6+ other github repositories in support of 3 separate usecases",
+        "Created and maintained 6+ other github repositories in support of 3 separate usecases",
         "Enabled MITRE's ICAREdata project to analyze health system clinical trial data extracted by MEF",
       ],
       tags: ["React", "Bootstrap", "Node", "FHIR"],
@@ -141,8 +142,8 @@ export default function Resume() {
       ],
       elevatorPitch: "Empower discussions on radiation data standards",
       bullets: [
-        "Solicited requirements from MITRE's RTTD team",
         "Developed React web application using Axios to fetch & render RTTD data from FHIR servers",
+        "Conducted requirements solicitations from MITRE's RTTD team",
         "Delivered initial prototype within 3 weeks, enabling the team's external stakeholder interviews",
         "Iterated application based on stakeholder feedback, supporting new request headers, reformatted visualizations, and metadata displays",
       ],
@@ -165,6 +166,7 @@ export default function Resume() {
     {
       title: "MITRE's Social Justice Platform",
       role: "Web Dev",
+      // featured: true,
       date: "Jan - Sept 2022",
       links: [
         {
@@ -187,6 +189,22 @@ export default function Resume() {
         "Implemented custom URLs for resources at the admin-authoring and routing level",
       ],
       tags: ["Vue", "EJS", "NGINX", "Express"],
+    },
+    {
+      title: "COVID-19 Free Testing Finder",
+      role: "Lead Web Developer",
+      date: "Oct 2021 - Jan 2022",
+      links: [],
+      elevatorPitch: "Find free COVID tests at ICATT-participating pharmacies ",
+      bullets: [
+        "Constructed a Vue application capable of finding free, nearby COVID-19 tests at pharmacies participating in CDC's Increasing Community Access To Testing (ICATT) program.",
+        "Collaborated with designer to tailor Vue components and tailwind styling to high fidelity wireframes",
+        "Utilized Open Street Maps and Leaflet for testing site visualization",
+        "Integrated backend web service request generating and response parsing into frontend",
+        "Transitioned complete web application to sponsor for integration into their deployment environemnt",
+        // TODO
+      ],
+      tags: ["Vue", "Tailwind", "Node", "Express", "Leaflet"],
     },
     {
       title: "FluxNotes",
@@ -215,60 +233,52 @@ export default function Resume() {
       tags: ["React", "Material UI", "SCSS", "FHIR"],
     },
     {
-      title: "Vote Smart Arlington",
-      role: "Lead Designer & Web Dev",
-      date: "Apr 2021 ",
+      title: "Synthea Homepage",
+      role: "Lead Designer and Web Dev",
+      date: "2017",
       links: [
         {
-          url: "https://www.votesmartarlington.com/#/ ",
-          title: "Website",
+          url: "https://synthetichealth.github.io/synthea/",
+          title: "Synthea Website",
           Icon: Globe,
         },
-        {
-          url: "https://github.com/dtphelan1/arlington-ma-town-member-voting",
-          title: "Code",
-          Icon: GitHub,
-        },
       ],
-      elevatorPitch: "Learn how representatives vote on Arlington measures",
+      elevatorPitch:
+        "Generate free, synthetic, & realistic patient data easily",
       bullets: [
-        "Organized a team of three devs to build a React web application with an Express backend",
-        "Visualized voting history of 100+ town representatives on ballot measures with React Table",
-        "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
+        "Constructed a simple HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
+        "Conducted landscape assessment for similar single-page information pages in academic contexts",
+        "Utilized Material Design and Bootstrap in the design of components",
+        "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
+        // TODO
       ],
-      tags: ["Sketch", "React", "Bootstrap", "Node"],
+      tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     },
     {
-      title: "Ranked Choice Voting (RCV) Simulation Research",
-      role: "Lead Designer & Web Dev",
-      date: "Sept 2020 - May 2021",
+      title: "MITRE's Standard Health Record Homepage",
+      role: "Lead Designer and Web Dev",
+      date: "2016",
       links: [
         {
-          url: "https://mggg.github.io/rcv-webapp/#/",
-          title: "RCV Simulation Demo",
+          url: "http://standardhealthrecord.org/",
+          title: "Standard Health Record Website",
           Icon: Globe,
         },
-        {
-          url: "https://github.com/mggg/rcv-webapp",
-          title: "Frontend Code",
-          Icon: GitHub,
-        },
-        {
-          url: "https://github.com/mggg/RCV_Basics",
-          title: "Frontend Code",
-          Icon: GitHub,
-        },
       ],
-      elevatorPitch: "Explore RCV's impact on election outcomes",
+      elevatorPitch:
+        "Sparking community engagement in healthcare standards development",
       bullets: [
-        "Implemented a React web application and Python Flask API for running RCV election simulations",
-        "Conducted contextual inquiries to understand target users' interaction and visualization needs",
-        "Designed mockups for defining input parameters and visualizing election outcomes",
-        "Created Flask API for running and aggregating 4 types of RCV simulation",
-        "Visualize simulation outcomes across various model types with Victory charts",
+        "Constructed a simple HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
+        "Constructed a simple HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
+        "Conducted landscape assessment for similar single-page information pages in academic contexts",
+        "Utilized Material Design and Bootstrap in the design of components",
+        "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
+        // TODO
       ],
-      tags: ["Balsamiq", "React", "Bootstrap", "Python"],
+      tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     },
+  ];
+  const personalProjects = [
     {
       title: "Sorting out Bandcamp Merch",
       role: "Lead Web Dev",
@@ -317,6 +327,110 @@ export default function Resume() {
       ],
       tags: ["HTML", "Tailwind", "jQuery", "Vercel"],
     },
+    {
+      title: "Vote Smart Arlington",
+      role: "Lead Designer & Web Dev",
+      featured: true,
+      date: "Apr 2021 ",
+      links: [
+        {
+          url: "https://www.votesmartarlington.com/#/",
+          title: "Vote Smart Arlington Website",
+          Icon: Globe,
+        },
+        {
+          url: "https://github.com/dtphelan1/arlington-ma-town-member-voting",
+          title: "Vote Smart Arlington Code",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Learn how representatives vote on Arlington measures",
+      bullets: [
+        "Organized a team of three devs to build a React web application with an Express backend",
+        "Visualized voting history of 100+ town representatives on ballot measures with React Table",
+        "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
+      ],
+      tags: ["Sketch", "React", "Bootstrap", "Node"],
+    },
+    {
+      title: "Ranked Choice Voting (RCV) Simulation Research",
+      role: "Lead Designer & Web Dev",
+      date: "Sept 2020 - May 2021",
+      links: [
+        {
+          url: "https://mggg.github.io/rcv-webapp/#/",
+          title: "RCV Simulation Demo",
+          Icon: Globe,
+        },
+        {
+          url: "https://github.com/mggg/rcv-webapp",
+          title: "Frontend Code",
+          Icon: GitHub,
+        },
+        {
+          url: "https://github.com/mggg/RCV_Basics",
+          title: "Frontend Code",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Explore RCV's impact on election outcomes",
+      bullets: [
+        "Implemented a React web application and Python Flask API for running RCV election simulations",
+        "Conducted contextual inquiries to understand target users' interaction and visualization needs",
+        "Designed mockups for defining input parameters and visualizing election outcomes",
+        "Created Flask API for running and aggregating 4 types of RCV simulation",
+        "Visualize simulation outcomes across various model types with Victory charts",
+      ],
+      tags: ["Balsamiq", "React", "Bootstrap", "Python"],
+    },
+    {
+      title: "Elections and Tournaments",
+      role: "Solo Project",
+      date: "Summer 2020",
+      links: [
+        {
+          url: "https://dtphelan1.github.io/elections/ ",
+          title: "Website",
+          Icon: Globe,
+        },
+        {
+          url: "https://github.com/Dtphelan1/elections",
+          title: "Code",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Explain frustrating voting patterns with graph theory",
+      bullets: [
+        "Built a React-powered one-pager using Graph Theory to explore frustrations with First Past the Post voting",
+        "Leveraged 'tournaments' as a mechanism of Explored ",
+        "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
+      ],
+      tags: ["React", "Bootstrap", "SASS"],
+    },
+    {
+      title: "Gerrymandering & Markov Chain Monte Carlo Simulation",
+      role: "Solo Project",
+      date: "Spring 2020",
+      links: [
+        {
+          url: "https://dtphelan1.github.io/elections/ ",
+          title: "Website",
+          Icon: Globe,
+        },
+        {
+          url: "https://github.com/Dtphelan1/elections",
+          title: "Code",
+          Icon: GitHub,
+        },
+      ],
+      elevatorPitch: "Use graphs and simulation to identify gerrymandering",
+      bullets: [
+        "Used markov chain monte carlo simulation to quantifying the likelihood a voting district map is gerrymandered",
+        "Replicated Tufts' MGGG lab's ReCombination algorithm using Python to generate new district maps",
+        "Visualize frequency plot of simulated graph 'eccentricity' using matplotlib to show outliership",
+      ],
+      tags: ["Python", "matplotlib", "argparse"],
+    },
   ];
   const education = [
     {
@@ -364,8 +478,6 @@ export default function Resume() {
     { name: "Balsamiq", level: 3 },
     // { name: "Sketch", level: 2 },
   ];
-  const skillAreas = ["Featured", "React", "Vue", "Healthcare", "Voting"];
-  const [skillArea, setSkillArea] = useState(skillAreas[0]);
   // Printing logic
   // Ref of the component to print
   const componentRef = useRef();
@@ -423,7 +535,7 @@ export default function Resume() {
                           href={link.link}
                           rel="noopener noreferrer"
                         >
-                          <link.Icon size={16} className="inline mr-2" />
+                          <link.Icon size={15} className="inline mr-2" />
                           {link.display}
                         </a>
                       </li>
@@ -519,94 +631,138 @@ export default function Resume() {
                 })}
               </div>
               <div id="projects">
-                <h2 className="text-xl font-bold inline mr-2">Projects</h2>
-                <div className="relative inline-block max-w-[16.25rem] md:max-w-max overflow-auto mb-[4px] bottom-[-11px] border-x border-t border-primary">
-                  {skillAreas.map((curSkill) => {
-                    return (
-                      <p
-                        key={curSkill}
-                        className={
-                          "cursor-pointer text-base inline border-primary border-r last-of-type:border-r-0 px-1 " +
-                          (skillArea === curSkill && "font-bold")
-                        }
-                        onClick={() => setSkillArea(curSkill)}
-                      >
-                        {curSkill}
-                      </p>
-                    );
-                  })}
-                </div>
+                <h2 className="text-xl font-bold inline mr-2">Work Projects</h2>
                 <hr className="w-full border-primary pb-4" />
-                {projects.map((project) => {
-                  return (
-                    <article
-                      id={project.title}
-                      className="mb-4 last-of-type:mb-4"
-                      key={project.title}
-                    >
-                      <header>
-                        <div className="w-full flex flex-row flex-wrap justify-start">
-                          <div className="flex justify-between md:justify-start basis-full md:basis-1/2 text-base font-bold">
-                            <h3 className="pr-2">{project.title}</h3>
-                            {/* Links */}
-                            <div className="flex flex-row ">
-                              {project.links.map((link) => (
-                                <a
-                                  target="__blank"
-                                  href={link.url}
-                                  key={link.url}
-                                  title={link.title}
-                                  className="m-1 text-base font-bold animate__animated hover:animate__pulse"
-                                >
-                                  <link.Icon size={16} />
-                                </a>
-                              ))}
+                {workProjects
+                  .filter((proj) => proj.featured)
+                  .map((project) => {
+                    return (
+                      <article
+                        id={project.title}
+                        className="mb-4 last-of-type:mb-4"
+                        key={project.title}
+                      >
+                        <header>
+                          <div className="w-full flex flex-row flex-wrap justify-start">
+                            <div className="flex justify-between md:justify-start basis-full md:basis-1/2 text-base font-bold">
+                              <h3 className="pr-2">{project.title}</h3>
+                              {/* Links */}
+                              <div className="flex flex-row ">
+                                {project.links.map((link) => (
+                                  <a
+                                    target="__blank"
+                                    href={link.url}
+                                    key={link.url}
+                                    title={link.title}
+                                    className="m-1 text-base font-bold animate__animated hover:animate__pulse"
+                                  >
+                                    <link.Icon size={15} />
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                            <p className="basis-full md:basis-1/2 text-base text-left md:text-right">
+                              {projectMetadata(project)}
+                            </p>
+                          </div>
+                          {/* Tags */}
+                          <div className="w-full flex flex-col-reverse items-start md:flex-row md:flex-wrap md:justify-between md:items-center">
+                            <p className="basis-full md:basis-1/2 text-base italic flex-1 pr-2">
+                              {project.elevatorPitch}
+                            </p>
+                            <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
+                              {project.tags.map((tag) => {
+                                return (
+                                  <p
+                                    id={tag}
+                                    key={tag}
+                                    className="inline px-2 py-1 mx-1 my-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                                  >
+                                    {tag}
+                                  </p>
+                                );
+                              })}
                             </div>
                           </div>
-                          <p className="basis-full md:basis-1/2 text-base text-left md:text-right">
-                            {projectMetadata(project)}
-                          </p>
-                        </div>
-                        {/* Tags */}
-                        <div className="w-full flex flex-col-reverse items-start md:flex-row md:flex-wrap md:justify-between md:items-center">
-                          <p className="basis-full md:basis-1/2 text-base italic flex-1 pr-2">
-                            {project.elevatorPitch}
-                          </p>
-                          <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
-                            {project.tags.map((tag) => {
-                              return (
-                                <p
-                                  id={tag}
-                                  key={tag}
-                                  className="inline px-2 py-1 mx-1 my-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
-                                >
-                                  {tag}
-                                </p>
-                              );
-                            })}
+                        </header>
+                        {/* Bullets */}
+                        <ul className="list-inside list-disc text-sm">
+                          {project.bullets?.map((bullet) => (
+                            <li key={bullet}>{bullet}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    );
+                  })}
+                <h2 className="text-xl font-bold inline mr-2">
+                  Personal Projects
+                </h2>
+                <hr className="w-full border-primary pb-4" />
+                {personalProjects
+                  .filter((proj) => proj.featured)
+                  .map((project) => {
+                    return (
+                      <article
+                        id={project.title}
+                        className="mb-4 last-of-type:mb-4"
+                        key={project.title}
+                      >
+                        <header>
+                          <div className="w-full flex flex-row flex-wrap justify-start">
+                            <div className="flex justify-between md:justify-start basis-full md:basis-1/2 text-base font-bold">
+                              <h3 className="pr-2">{project.title}</h3>
+                              {/* Links */}
+                              <div className="flex flex-row ">
+                                {project.links.map((link) => (
+                                  <a
+                                    target="__blank"
+                                    href={link.url}
+                                    key={link.url}
+                                    title={link.title}
+                                    className="m-1 text-base font-bold animate__animated hover:animate__pulse"
+                                  >
+                                    <link.Icon size={15} />
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                            <p className="basis-full md:basis-1/2 text-base text-left md:text-right">
+                              {projectMetadata(project)}
+                            </p>
                           </div>
-                        </div>
-                      </header>
-                      {/* Bullets */}
-                      <ul className="list-inside list-disc text-sm">
-                        {project.bullets?.map((bullet) => (
-                          <li key={bullet}>{bullet}</li>
-                        ))}
-                      </ul>
-                    </article>
-                  );
-                })}
+                          {/* Tags */}
+                          <div className="w-full flex flex-col-reverse items-start md:flex-row md:flex-wrap md:justify-between md:items-center">
+                            <p className="basis-full md:basis-1/2 text-base italic flex-1 pr-2">
+                              {project.elevatorPitch}
+                            </p>
+                            <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
+                              {project.tags.map((tag) => {
+                                return (
+                                  <p
+                                    id={tag}
+                                    key={tag}
+                                    className="inline px-2 py-1 mx-1 my-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
+                                  >
+                                    {tag}
+                                  </p>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </header>
+                        {/* Bullets */}
+                        <ul className="list-inside list-disc text-sm">
+                          {project.bullets?.map((bullet) => (
+                            <li key={bullet}>{bullet}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    );
+                  })}
               </div>
             </section>
           </div>
         </div>
-        {/* <Image
-        src={WaveRight}
-        className="h-full"
-        fill
-        width={"100px"}
-        // height={"100%"}
-      /> */}
       </div>
     </PageFadeWrapper>
   );
