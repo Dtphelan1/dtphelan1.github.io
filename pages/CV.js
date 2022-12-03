@@ -1,13 +1,12 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import { Printer } from "react-feather";
+import { Globe, GitHub, Mail, Linkedin, Printer } from "react-feather";
 import { useReactToPrint } from "react-to-print";
 import headshot from "../public/headshot.jpeg";
 import PageFadeWrapper from "../components/PageFadeWrapper";
-import EducationSection from "../components/EducationSection";
-import ExperienceSection from "../components/ExperienceSection";
-import SkillsSection from "../components/SkillsSection";
 import ConferenceSection from "../components/ConferenceSection";
+import SkillsSection from "../components/SkillsSection";
+import EducationSection from "../components/EducationSection";
 import ProjectSection from "../components/ProjectSection";
 // Data
 import education from "../data/education";
@@ -16,8 +15,9 @@ import jobs from "../data/jobs";
 import skills from "../data/skills";
 import aboutMe from "../data/aboutMe";
 import { workProjects, personalProjects } from "../data/projects";
+import ExperienceSection from "../components/ExperienceSection";
 
-export default function Resume() {
+export default function CV() {
   // Printing logic
   // Ref of the component to print
   const componentRef = useRef();
@@ -38,7 +38,7 @@ export default function Resume() {
       <div className="h-screen md:h-auto md:max-h-[97vh] w-full text-sm">
         <div ref={componentRef} className="relative overflow-clip mx-auto">
           <div
-            id="contact-and-high-level "
+            id="contact-and-high-level"
             className="max-w-screen-xl flex flex-wrap px-4 my-0 py-4 xl:my-4 xl:py-0  mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
           >
             <div className="flex flex-wrap flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
@@ -110,10 +110,8 @@ export default function Resume() {
               </div>
               <div id="projects">
                 <ProjectSection
-                  workProjects={workProjects.filter((proj) => proj.featured)}
-                  personalProjects={personalProjects.filter(
-                    (proj) => proj.featured
-                  )}
+                  workProjects={workProjects}
+                  personalProjects={personalProjects}
                 />
               </div>
             </section>
