@@ -35,6 +35,7 @@ const PALETTE = [
 
 export default function Canvas({ className }) {
   const canvasRef = useRef(null);
+  const [hideGraphic, setHideGraphic] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [fadeSpeed, setFadeSpeed] = useState(FADEOUTSPEED);
   const [redrawFrequency, setRedrawFrequency] = useState(SPAWNFREQUENCY);
@@ -196,7 +197,7 @@ export default function Canvas({ className }) {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [redrawFrequency, fadeSpeed, maxAcceleration]);
+  }, [redrawFrequency, fadeSpeed, maxAcceleration, hideGraphic]);
 
   // Clear the canvas with the bg color
   function clear(canvas, context) {
@@ -219,13 +220,17 @@ export default function Canvas({ className }) {
   return (
     <>
       <canvas
-        className={`w-full h-full ${className}`}
+        className={`w-full h-full ${className} ${hideGraphic && "hidden"}`}
         id="html-canvas"
         width={1000}
         height={1000}
         ref={canvasRef}
       />
-      <div className={`w-full h-0 relative ${className}`}>
+      <div
+        className={`w-full h-0 relative ${className} ${
+          hideGraphic && "!h-full"
+        }`}
+      >
         <button
           className={`absolute bottom-0 right-0 border m-2 border-black rounded-full shadow-2xl bg-neutral-main w-8 h-8 flex justify-center items-center ${className}`}
           onClick={() => setShowSettings(!showSettings)}
@@ -237,7 +242,7 @@ export default function Canvas({ className }) {
             showSettings ? " animate__fadeIn" : " animate__fadeOut hidden"
           }`}
         >
-          <div>
+          <div className="pt-0">
             <label htmlFor="maxAcceleration">
               Acceleration <span className="text-xs">(px/sec/sec)</span>
             </label>
@@ -252,7 +257,7 @@ export default function Canvas({ className }) {
               step="0.1"
             />
           </div>
-          <div>
+          <div className="pt-2">
             <label htmlFor="redrawFrequency">
               Redraw <span className="text-xs">(in ms)</span>
             </label>
@@ -267,7 +272,7 @@ export default function Canvas({ className }) {
               step="1000"
             />
           </div>
-          <div>
+          <div className="pt-2">
             <label htmlFor="fadeSpeed">
               Fade <span className="text-xs">(⍺ per sec)</span>
             </label>
@@ -276,10 +281,24 @@ export default function Canvas({ className }) {
               id="fadeSpeed"
               className="w-full px-4 py-3 rounded-full"
               value={fadeSpeed}
-              onChange={(e) => setFadeSpeed(e.target.value)}
+              onChange={(e) => setFadeSpeed(Number(e.target.value))}
               min="1"
               max="8"
               step="1"
+            />
+          </div>
+          <div className="pt-2">
+            <label htmlFor="hideGraphic" className="mr-2">
+              Hide graphic
+            </label>
+            <input
+              type="checkbox"
+              id="hideGraphic"
+              // className="w-full px-4 py-3 rounded-full"
+              checked={hideGraphic}
+              onChange={(e) => {
+                setHideGraphic(!hideGraphic);
+              }}
             />
           </div>
         </article>
