@@ -26,15 +26,15 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
       {/* Need the wrapping div so the HR can be the same length as the top-level bio info */}
       <div className="basis-full xl:basis-3/4 print:basis-3/4 xl:p-4 print:p-4 bg-primary text-neutral-main relative">
         <div className="flex items-center justify-between">
-          <header className="basis-1/2 mb-1">
+          <header className="basis-1/2 print:basis-2/5 mb-1">
             <h1 className="text-4xl ">{aboutMe.name}</h1>
             <p>{aboutMe.title}</p>
           </header>
-          <address id="links" className="text-xs basis-1/2">
+          <address id="links" className="text-xs basis-1/2 print:basis-3/5">
             <ul className="flex flex-row flex-wrap justify-between">
               {aboutMe.links.map((link, i) => (
                 <li
-                  className="flex items-center px-2 py-1 basis-full sm:basis-1/2 animate__animated hover:animate__pulse"
+                  className="flex items-center px-2 py-1 basis-full print:!basis-1/2 sm:basis-1/2 animate__animated hover:animate__pulse"
                   key={link.id}
                 >
                   <a target="_blank" href={link.link} rel="noopener noreferrer">
