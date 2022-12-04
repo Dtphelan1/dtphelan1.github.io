@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-light p-8 lg:p-32 ">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 lg:p-32 ">
       <div
         id={styles["homepage"]}
         className="min-h-full max-w-screen-xl mx-auto relative"
@@ -56,11 +56,16 @@ export default function Index() {
         </div>
         <div
           id={styles["homepage-button"]}
-          className="flex flex-wrap flex-col mt-8"
+          className="flex flex-wrap gap-4 mt-8"
         >
+          <Link href="/cv">
+            <a className="w-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
+              Check out my CV
+            </a>
+          </Link>
           <Link href="/resume">
             <a className="w-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
-              Check out my Resume
+              See more specific resumes
             </a>
           </Link>
         </div>

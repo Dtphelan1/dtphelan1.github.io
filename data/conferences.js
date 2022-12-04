@@ -38,7 +38,7 @@ const conferences = [
     period: "Sept 2018",
     role: "Presenter",
     notes: [
-      "Presented on 'The Flipped Internship', a novel model for project based learning spearheaded in collaboration with Burlington High School's Shereen Tyrell and Roy Wong",
+      "Presented on 'The Flipped Internship', a novel model for project-based learning created in collaboration with Burlington High School's Shereen Tyrell and Roy Wong",
     ],
   },
   {

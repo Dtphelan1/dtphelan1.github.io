@@ -1,5 +1,5 @@
-import SkillLevel from "../components/SkillLevel";
-import SkillLevelLegend from "../components/SkillLevelLegend";
+import SkillLevel from "../SkillLevel";
+import SkillLevelLegend from "../SkillLevelLegend";
 
 export default function SkillsSection({ skills }) {
   return (
@@ -7,7 +7,7 @@ export default function SkillsSection({ skills }) {
       <h2 className="text-xl font-bold ">Skills</h2>
       <hr className="w-full border-primary pb-4" />
       <SkillLevelLegend />
-      <ul>
+      <ul className="mb-4">
         {skills.map((skill) => (
           <li
             key={skill.name}

@@ -5,8 +5,9 @@ const PROJECTTYPES = {
   personal: "personal",
 };
 
-const workProjects = [
+const projects = [
   {
+    id: "mef",
     title: "mCODE Extraction Framework (MEF)",
     featured: true,
     role: "Technical Lead & Developer",
@@ -37,9 +38,11 @@ const workProjects = [
       "Created and maintained 6+ other github repositories in support of 3 separate usecases",
       "Enabled MITRE's ICAREdata project to analyze health system clinical trial data extracted by MEF",
     ],
+    featuredTags: ["React", "Bootstrap", "Node", "FHIR"],
     tags: ["React", "Bootstrap", "Node", "FHIR"],
   },
   {
+    id: "rttd",
     title: "Radiation Therapy Treatment Data (RTTD) App",
     featured: false,
     role: "Technical Lead & Web Dev",
@@ -59,14 +62,16 @@ const workProjects = [
     ],
     elevatorPitch: "Empower discussions on radiation data standards",
     bullets: [
-      "Developed React web application using Axios to fetch & render RTTD data from FHIR servers",
-      "Conducted requirements solicitations from MITRE's RTTD team",
+      "Designed & developed React app using Axios to fetch & render RTTD data from FHIR servers",
+      "Conducted requirements solicitations from MITRE's RTTD team for pen/paper",
       "Delivered initial prototype within 3 weeks, enabling the team's external stakeholder interviews",
       "Iterated application based on stakeholder feedback, supporting new request headers, reformatted visualizations, and metadata displays",
     ],
+    featuredTags: ["React", "Tailwind", "FHIR"],
     tags: ["React", "Tailwind", "FHIR"],
   },
   {
+    id: "ssnmip",
     title: "Unemployment Benefits UI Prototype",
     featured: false,
     role: "Technical Lead & Web Dev",
@@ -75,14 +80,16 @@ const workProjects = [
     links: [],
     elevatorPitch: "Streamline unemployment insurance benefits",
     bullets: [
-      "Created Vue frontend for submitting multi-page unemployment insurance benefits form",
-      "Implemented Express backend API for creating, updating, and reviewing unemployment applications",
-      "Distilled MVP requirements based on EOY objectives and research team's experimental scenarios",
+      "Created Vue application for submitting multi-page unemployment insurance benefits form",
+      "Implemented Express API for creating, updating, and reviewing unemployment applications",
+      "Distilled MVP requirements from EOY objectives and research team's experimental scenarios",
       "Balanced competing needs for a rapid prototype and potential use-case pivots",
     ],
-    tags: ["Vue", "Nuxt", "Tailwind", "HTML"],
+    featuredTags: ["Vue", "Nuxt", "Tailwind", "Express"],
+    tags: ["Vue", "Nuxt", "Tailwind", "Express"],
   },
   {
+    id: "sjp",
     title: "MITRE's Social Justice Platform",
     featured: true,
     role: "Web Dev",
@@ -108,9 +115,11 @@ const workProjects = [
       "Supported markdown preview in resource authoring and rendering on resource detail views",
       "Implemented custom URLs for resources at the admin-authoring and routing level",
     ],
+    featuredTags: ["Vue", "EJS", "NGINX", "Express"],
     tags: ["Vue", "EJS", "NGINX", "Express"],
   },
   {
+    id: "icatt",
     title: "COVID-19 Free Testing Finder",
     featured: false,
     role: "Lead Web Developer",
@@ -120,15 +129,15 @@ const workProjects = [
     elevatorPitch: "Find free COVID tests at ICATT-participating pharmacies ",
     bullets: [
       "Constructed a Vue application capable of finding free, nearby COVID-19 tests at pharmacies participating in CDC's Increasing Community Access To Testing (ICATT) program.",
-      "Collaborated with designer to tailor Vue components and tailwind styling to high fidelity wireframes",
-      "Utilized Open Street Maps and Leaflet for testing site visualization",
-      "Integrated backend web service request generating and response parsing into frontend",
-      "Transitioned complete web application to sponsor for integration into their deployment environemnt",
-      // TODO
+      "Collaborated with designer, tailoring Vue components/tailwind styles to high fidelity wireframes",
+      "Utilized Open Street Maps and Leaflet for testing-site visualizations",
+      "Integrated backend web service request-generating and response-parsing into frontend",
     ],
+    featuredTags: ["Vue", "Tailwind", "Node", "Express", "Leaflet"],
     tags: ["Vue", "Tailwind", "Node", "Express", "Leaflet"],
   },
   {
+    id: "flux-notes",
     title: "FluxNotes",
     featured: false,
     role: "Technical Lead & Developer",
@@ -154,9 +163,11 @@ const workProjects = [
       "Enabled data provenance tracking via data-linkage to source notes and ElasticSearch querying",
       "Received praise from oncologists and MITRE executives, motivating future research on novel data capture techniques",
     ],
+    featuredTags: ["React", "Material UI", "SCSS", "FHIR"],
     tags: ["React", "Material UI", "SCSS", "FHIR"],
   },
   {
+    id: "synthea",
     title: "Synthea Homepage",
     featured: false,
     role: "Lead Designer and Web Dev",
@@ -177,9 +188,11 @@ const workProjects = [
       "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
       // TODO
     ],
+    featuredTags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
   },
   {
+    id: "shr",
     title: "MITRE's Standard Health Record Homepage",
     featured: false,
     role: "Lead Designer and Web Dev",
@@ -201,12 +214,13 @@ const workProjects = [
       "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
       // TODO
     ],
+    featuredTags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
   },
-];
-
-const personalProjects = [
+  //////////////////////
+  // PERSONAL PROJECTS
   {
+    id: "bc-sort",
     title: "Sorting out Bandcamp Merch",
     featured: false,
     type: PROJECTTYPES["personal"],
@@ -230,9 +244,11 @@ const personalProjects = [
       "Adds subtle transparency to sold-out items to indicate their absence",
       "Published extension on the Firefox add-on store",
     ],
+    featuredTags: ["JavaScript", "web-ext"],
     tags: ["JavaScript", "web-ext"],
   },
   {
+    id: "nyj-music",
     title: "NYJMusic.com",
     featured: false,
     type: PROJECTTYPES["personal"],
@@ -256,9 +272,11 @@ const personalProjects = [
       "Solicited feedback on designs and mockups before executing final product",
       "Implemented and deployed website rapidly (48hrs) in-time for upcoming launches",
     ],
+    featuredTags: ["HTML", "Tailwind", "jQuery", "Vercel"],
     tags: ["HTML", "Tailwind", "jQuery", "Vercel"],
   },
   {
+    id: "vsa",
     title: "Vote Smart Arlington",
     featured: true,
     type: PROJECTTYPES["personal"],
@@ -282,9 +300,11 @@ const personalProjects = [
       "Visualized voting history of 100+ town representatives on ballot measures with React Table",
       "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
     ],
+    featuredTags: ["Sketch", "React", "Bootstrap", "Node"],
     tags: ["Sketch", "React", "Bootstrap", "Node"],
   },
   {
+    id: "rcv",
     title: "Ranked Choice Voting (RCV) Simulation Research",
     featured: false,
     type: PROJECTTYPES["personal"],
@@ -315,9 +335,11 @@ const personalProjects = [
       "Created Flask API for running and aggregating 4 types of RCV simulation",
       "Visualize simulation outcomes across various model types with Victory charts",
     ],
+    featuredTags: ["Balsamiq", "React", "Bootstrap", "Python"],
     tags: ["Balsamiq", "React", "Bootstrap", "Python"],
   },
   {
+    id: "elections-graph-theory",
     title: "Elections and Tournaments",
     featured: false,
     type: PROJECTTYPES["personal"],
@@ -341,9 +363,11 @@ const personalProjects = [
       "Leveraged 'tournaments' as a mechanism of Explored ",
       "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
     ],
+    featuredTags: ["React", "Bootstrap", "SASS"],
     tags: ["React", "Bootstrap", "SASS"],
   },
   {
+    id: "gerrymandering-mcmc",
     title: "Gerrymandering & Markov Chain Monte Carlo Simulation",
     featured: false,
     type: PROJECTTYPES["personal"],
@@ -367,8 +391,9 @@ const personalProjects = [
       "Replicated Tufts' MGGG lab's ReCombination algorithm using Python to generate new district maps",
       "Visualize frequency plot of simulated graph 'eccentricity' using matplotlib to show outliership",
     ],
+    featuredTags: ["Python", "matplotlib", "argparse"],
     tags: ["Python", "matplotlib", "argparse"],
   },
 ];
 
-export { PROJECTTYPES, workProjects, personalProjects };
+export { PROJECTTYPES, projects };

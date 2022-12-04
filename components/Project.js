@@ -38,7 +38,7 @@ export default function Project({ project }) {
             {project.elevatorPitch}
           </p>
           <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
-            {project.tags.map((tag) => {
+            {project.featuredTags.map((tag) => {
               return (
                 <p
                   id={tag}

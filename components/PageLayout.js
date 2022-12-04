@@ -134,8 +134,13 @@ export default function PageLayout({ children }) {
               </Link>
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
+              <Link href="/cv">
+                <a className="block sm:inline hover:font-bold sm:after:content-['\00a0//\00a0'] sm:after:inline hover:after:font-normal">
+                  {"CV"}
+                </a>
+              </Link>
               <Link href="/resume">
-                <a className="block sm:inline hover:font-bold">{"Resume"}</a>
+                <a className="block sm:inline hover:font-bold">{"Resumes"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}
             </nav>
@@ -143,8 +148,8 @@ export default function PageLayout({ children }) {
           <div className="w-full h-3/4 hidden sm:block animate__animated animate__fadeIn">
             <Canvas className="h-full" />
           </div>
-          <div
-            id="contact-info"
+          <section
+            id="social-links"
             className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeIn"
           >
             <a
@@ -193,7 +198,6 @@ export default function PageLayout({ children }) {
               className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.duolingo.com/profile/Dylan991330"
-              title="Duolingo Logo icon by Icons8 - Icons8.com"
             >
               <iconify-icon
                 icon="heroicons:language-20-solid"
@@ -208,7 +212,7 @@ export default function PageLayout({ children }) {
             >
               <Book />
             </a>
-          </div>
+          </section>
         </div>
         <main
           className={`basis-full sm:basis-4/5 bg-neutral-main z-10 transition-opacity ease-in-out duration-300 ${
