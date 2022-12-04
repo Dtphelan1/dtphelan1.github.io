@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import PageFadeWrapper from "./PageFadeWrapper";
 import EducationSection from "./resumeSections/EducationSection";
