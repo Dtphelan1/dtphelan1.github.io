@@ -91,34 +91,34 @@ export default function PageLayout({ children }) {
       h-screen w-screen max-h-screen
       box-border
       relative
-      flex flex-col sm:flex-row
+      flex flex-col md:flex-row
       border-8 border-black text-primary
       overflow-x-hidden overflow-y-auto
       "
       >
         <div
           className={`
-            absolute sm:relative
+            absolute md:relative
             top-0 right-0
-            text-right sm:text-left
-            self-end sm:self-auto
-            basis-full sm:basis-1/5
-            h-[99vh] sm:h-auto
-            box-border w-1/2 sm:w-auto
-            border-black border-l-8 sm:border-r-8 sm:border-l-0
-            p-4 sm:pb-0
-            bg-neutral-main flex flex-col justify-start sm:justify-between
+            text-right md:text-left
+            self-end md:self-auto
+            basis-full md:basis-1/5
+            h-[99vh] md:h-auto
+            box-border w-1/2 md:w-auto
+            border-black border-l-8 md:border-r-8 md:border-l-0
+            p-4 md:pb-0
+            bg-neutral-main flex flex-col justify-start md:justify-between
             transition-transform duration-300 z-20 ${
               menuExpanded
-                ? "translate-x-0 sm:transform-none  "
-                : "translate-x-full sm:transform-none"
+                ? "translate-x-0 md:transform-none  "
+                : "translate-x-full md:transform-none"
             }`}
         >
           <div
             id="top-nav"
-            className="mt-16 sm:mt-0 animate__animated animate__fadeIn"
+            className="mt-16 md:mt-0 animate__animated animate__fadeIn"
           >
-            <div className="mb-2 flex flex-wrap sm:text-left justify-center sm:justify-start">
+            <div className="mb-2 flex flex-wrap md:text-left justify-center md:justify-start">
               <h1 className="text-2xl basis-full">Dylan Phelan</h1>
               <p className="text-lg basis-full font-sans">
                 Web Developer &
@@ -126,76 +126,76 @@ export default function PageLayout({ children }) {
                 Technical Lead
               </p>
             </div>
-            <nav className="flex flex-col sm:flex-row justify-center sm:justify-start mb-2">
+            <nav className="flex flex-col md:flex-row justify-center md:justify-start mb-2">
               <Link href="/">
-                <a className="block sm:inline hover:font-bold sm:after:content-['\00a0//\00a0'] sm:after:inline hover:after:font-normal">
+                <a className="block md:inline hover:font-bold md:after:content-['\00a0//\00a0'] md:after:inline hover:after:font-normal">
                   {"Home"}
                 </a>
               </Link>
               {/* <Link>About</Link> */}
               {/* <Link>Photos</Link> */}
               <Link href="/cv">
-                <a className="block sm:inline hover:font-bold sm:after:content-['\00a0//\00a0'] sm:after:inline hover:after:font-normal">
+                <a className="block md:inline hover:font-bold md:after:content-['\00a0//\00a0'] md:after:inline hover:after:font-normal">
                   {"CV"}
                 </a>
               </Link>
               <Link href="/resume">
-                <a className="block sm:inline hover:font-bold">{"Resumes"}</a>
+                <a className="block md:inline hover:font-bold">{"Resumes"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}
             </nav>
           </div>
-          <div className="w-full h-3/4 hidden sm:block animate__animated animate__fadeIn">
+          <div className="w-full h-3/4 hidden md:block animate__animated animate__fadeIn">
             <Canvas className="h-full" />
           </div>
           <section
             id="social-links"
-            className="flex flex-wrap justify-end sm:justify-center first:align-baseline py-2 animate__animated animate__fadeIn"
+            className="flex flex-wrap justify-end md:justify-center first:align-baseline py-2 animate__animated animate__fadeIn"
           >
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="mailto:dtphelan1@gmail.com"
             >
               <Mail />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.linkedin.com/in/dtphelan1"
             >
               <Linkedin />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.github.com/Dtphelan1"
             >
               <GitHub />
             </a>
             {/* <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.instagram.com/dtphelan1/"
             >
               <Instagram />
             </a> */}
             {/* <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://twitter.com/Dtphelan1"
             >
               <Twitter />
             </a> */}
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.discogs.com/user/dtphelan1"
             >
               <Disc />
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://www.duolingo.com/profile/Dylan991330"
             >
@@ -206,7 +206,7 @@ export default function PageLayout({ children }) {
               ></iconify-icon>
             </a>
             <a
-              className="flex justify-end sm:justify-center basis-1/2 sm:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
+              className="flex justify-end md:justify-center basis-1/2 md:basis-1/3 p-2 cursor-pointer animate__animated hover:animate__pulse"
               target="__blank"
               href="https://app.thestorygraph.com/profile/dphelan1994"
             >
@@ -215,7 +215,7 @@ export default function PageLayout({ children }) {
           </section>
         </div>
         <main
-          className={`basis-full sm:basis-4/5 bg-neutral-main z-10 transition-opacity ease-in-out duration-300 ${
+          className={`basis-full md:basis-4/5 bg-neutral-main z-10 transition-opacity ease-in-out duration-300 ${
             menuExpanded && "opacity-30 overflow-hidden"
           }`}
           onClick={() => menuExpanded && toggleMenuExpanded()}
@@ -223,7 +223,7 @@ export default function PageLayout({ children }) {
           {children}
         </main>
         <button
-          className="inline-block rounded-full p-2 m-2 fixed top-2 right-2 border sm:hidden text-neutral-main bg-primary z-30 hover:bg-neutral-main hover:text-primary hover:border hover:border-primary transition-all"
+          className="inline-block rounded-full p-2 m-2 fixed top-2 right-2 border md:hidden text-neutral-main bg-primary z-30 hover:bg-neutral-main hover:text-primary hover:border hover:border-primary transition-all"
           onClick={toggleMenuExpanded}
         >
           <Menu size={16} />

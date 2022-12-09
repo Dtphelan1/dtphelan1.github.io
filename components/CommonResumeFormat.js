@@ -34,8 +34,11 @@ export default function CommonResumeFormat({
 
   return (
     <PageFadeWrapper>
-      <div className="h-screen md:h-auto md:max-h-[97vh] w-full text-sm">
-        <div ref={componentRef} className="relative overflow-clip mx-auto">
+      <div className="h-screen  md:h-auto md:max-h-[97vh] w-full text-sm">
+        <div
+          ref={componentRef}
+          className="relative overflow-clip mx-auto print:min-h-screen"
+        >
           <AboutMeSection
             aboutMe={aboutMe}
             highlight={highlight}
@@ -45,11 +48,11 @@ export default function CommonResumeFormat({
             id="content"
             className=" max-w-screen-xl flex flex-wrap-reverse px-4 my-4 print:!mt-0 mx-auto text-primary bg-neutral-main"
           >
-            <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-col sm:flex-row xl:flex-col print:!flex-col">
-              <div className="pr-0 sm:pr-4 xl:pr-0 print:!pr-0 basis-auto sm:basis-1/2 xl:basis-auto print:!basis-auto">
+            <section className="basis-full xl:basis-1/4 print:basis-1/4 xl:pr-4 print:pr-4 flex flex-col md:flex-row xl:flex-col print:!flex-col">
+              <div className="pr-0 md:pr-4 xl:pr-0 print:!pr-0 basis-auto md:basis-1/2 xl:basis-auto print:!basis-auto">
                 <EducationSection education={education} />
               </div>
-              <div className="sm:basis-1/2 xl:basis-auto print:!basis-auto">
+              <div className="md:basis-1/2 xl:basis-auto print:!basis-auto">
                 <SkillsSection skills={skills} />
               </div>
             </section>

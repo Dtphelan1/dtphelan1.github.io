@@ -34,7 +34,7 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
             <ul className="flex flex-row flex-wrap justify-between">
               {aboutMe.links.map((link, i) => (
                 <li
-                  className="flex items-center px-2 py-1 basis-full print:!basis-1/2 sm:basis-1/2 animate__animated hover:animate__pulse"
+                  className="flex items-center px-2 py-1 basis-full print:!basis-1/2 md:basis-1/2 animate__animated hover:animate__pulse"
                   key={link.id}
                 >
                   <a target="_blank" href={link.link} rel="noopener noreferrer">

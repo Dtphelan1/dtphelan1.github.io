@@ -1,7 +1,6 @@
 #homepage {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 100%;
   grid-template-columns: 60% 40%;
   /* grid-template-rows: 30% 70%; */
   grid-template-areas:
@@ -14,12 +13,12 @@
   #homepage {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 50% 20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     grid-template-areas:
       "👋 📸"
       "📖 🎶"
-      "🔘 🎶";
+      "🔘 🔘";
   }
 }
 

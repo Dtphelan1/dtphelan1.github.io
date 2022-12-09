@@ -5,7 +5,7 @@ export default function SkillsSection({ skills }) {
   return (
     <>
       <h2 className="text-xl font-bold ">Skills</h2>
-      <hr className="w-full border-primary pb-4" />
+      <hr className="w-full border-primary pb-4  " />
       <SkillLevelLegend />
       <ul className="mb-4">
         {skills.map((skill) => (

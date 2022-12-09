@@ -54,17 +54,14 @@ export default function Index() {
             to support projects technical success.
           </p>
         </div>
-        <div
-          id={styles["homepage-button"]}
-          className="flex flex-wrap gap-4 mt-8"
-        >
+        <div id={styles["homepage-button"]} className="flex flex-wrap gap-4">
           <Link href="/cv">
-            <a className="w-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
+            <a className="w-fit h-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
               Check out my CV
             </a>
           </Link>
           <Link href="/resume">
-            <a className="w-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
+            <a className="w-fit h-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
               See more specific resumes
             </a>
           </Link>
