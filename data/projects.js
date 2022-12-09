@@ -110,10 +110,10 @@ const projects = [
     elevatorPitch: "Exhibit MITRE's social justice work in one place",
     bullets: [
       'Coordinated with MITRE researchers to build web-based interactive report, "The Racial Wealth Gap and Your Household Finances"',
-      "Ported Python NumPy and Streamlit code to HTML/JS, aligning visualizations and input controls to our design language",
+      "Ported NumPy and Streamlit code to HTML/JS, creating new UI elements aligned with existing design language",
       "Integrated Chart JS into our admin-authoring tools, visualizing data with bar and line charts",
-      "Supported markdown preview in resource authoring and rendering on resource detail views",
-      "Implemented custom URLs for resources at the admin-authoring and routing level",
+      "Supported markdown preview in resource-authoring and rendering on resource-detail views",
+      "Implemented support for custom URLs on resources at the admin-authoring and page-routing level",
     ],
     featuredTags: ["Vue", "EJS", "NGINX", "Express"],
     tags: ["Vue", "EJS", "NGINX", "Express"],
