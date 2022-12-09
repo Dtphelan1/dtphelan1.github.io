@@ -24,12 +24,25 @@ export default function ExperienceSection({ jobs }) {
             key={job.title}
           >
             <header>
-              <div className="w-full flex flex-row items-start justify-between">
-                <div className="flex flex-col flex-1">
+              {/* Small-&-below screen options - company and roles on one line; title below */}
+              <div className="flex sm:hidden w-full flex-col justify-between">
+                <div className="flex flex-row justify-between">
+                  <h3 className="text-base font-bold mr-2 basis-1/12">
+                    {job.title}
+                  </h3>
+                  <p className="text-sm text-right basis-11/12 ">
+                    {jobMetadata(job)}
+                  </p>
+                </div>
+                <p className="text-base italic">{job.elevatorPitch}</p>
+              </div>
+              {/* All other screen options - company and title on one column; roles on next column */}
+              <div className="hidden sm:flex w-full flex-row justify-between">
+                <div className="flex flex-col basis-5/12">
                   <h3 className="text-base font-bold mr-2">{job.title}</h3>
                   <p className="text-base italic">{job.elevatorPitch}</p>
                 </div>
-                <p className="text-base text-right flex-1 ">
+                <p className="text-base text-right basis-7/12 ">
                   {jobMetadata(job)}
                 </p>
               </div>

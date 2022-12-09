@@ -5,11 +5,13 @@ import { projects, PROJECTTYPES } from "../../data/projects";
 
 export default function Resume() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 lg:p-32 ">
-      <h1 className="text-2xl font-bold mb-2 ">Pick a Resume, Any Resume</h1>
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 xl:p-32 ">
+      <h1 className="text-2xl font-bold mb-2 ">
+        Different Resumes, Different Stories
+      </h1>
       <p className="my-2 text-xl">
         {
-          "It's no secret that individuals tailor their resumes to highlight specific roles & skills. That's part of the fun of resume-crafting – finding the right few projects and deliverables that, together, tell an interesting story. Below are a few of my stories I like the most, collections of skills and projects that provide a glimpse into the kind of work I've done across domains & technology stacks. If you want the full picture, you can always poke through my CV, where I cover even more details from my career."
+          "It's no secret that we tailor our resumes for different roles. That's part of the fun of resume-crafting – finding that combination of projects and deliverables that, together, tell an interesting story. Below are a few of the stories I tell most-often, each resume a different glimpse into the work I've done across domains & technology stacks. If you want the full picture, you can always poke through my CV, where I cover even more details from my career."
         }
       </p>
       <div className="text-xl list-inside grid grid-cols-2 md:grid-cols-3 gap-4  ">

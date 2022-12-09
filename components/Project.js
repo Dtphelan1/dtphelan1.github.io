@@ -11,7 +11,7 @@ export default function Project({ project }) {
     <article id={project.title} className="mb-4 last-of-type:mb-4">
       <header>
         <div className="w-full flex flex-row flex-wrap justify-start">
-          <div className="flex justify-between md:justify-start basis-full md:basis-1/2 text-base font-bold">
+          <div className="flex justify-between sm:justify-start basis-full sm:basis-1/2 text-base font-bold">
             <h3 className="pr-2">{project.title}</h3>
             {/* Links */}
             <div className="flex flex-row ">
@@ -28,16 +28,16 @@ export default function Project({ project }) {
               ))}
             </div>
           </div>
-          <p className="basis-full md:basis-1/2 text-base text-left md:text-right">
+          <p className="basis-full sm:basis-1/2 text-base text-left sm:text-right">
             {projectMetadata(project)}
           </p>
         </div>
         {/* Tags */}
-        <div className="w-full flex flex-col-reverse items-start md:flex-row md:flex-wrap md:justify-between md:items-center">
-          <p className="basis-full md:basis-1/2 text-base italic flex-1 pr-2">
+        <div className="w-full flex flex-col-reverse items-start sm:flex-row sm:flex-wrap sm:justify-between sm:items-center">
+          <p className="basis-full sm:basis-1/2 text-base italic flex-1 pr-2">
             {project.elevatorPitch}
           </p>
-          <div className="basis-full md:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start md:justify-end">
+          <div className="basis-full sm:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start sm:justify-end">
             {project.featuredTags.map((tag) => {
               return (
                 <p

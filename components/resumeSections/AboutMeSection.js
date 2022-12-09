@@ -55,7 +55,7 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
             id="highlighted-area"
             className="text-base print:text-sm absolute -bottom-4 -right-4 xl:bottom-0 xl:right-0 print:bottom-0 print:right-0 border-t border-l p-1 px-2 border-neutral-50 text-neutral-main w-fit"
           >
-            {highlight} Focused
+            {highlight} Resume
           </div>
         )}
       </div>

@@ -6,12 +6,12 @@ import styles from "../styles/Home.module.css";
 
 export default function Index() {
   return (
-    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 lg:p-32 ">
+    <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 xl:p-32 ">
       <div
         id={styles["homepage"]}
         className="min-h-full max-w-screen-xl mx-auto relative"
       >
-        <div id={styles["homepage-intro"]} className="text-xl self-center">
+        <div id={styles["homepage-intro"]} className="text-xl">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
               How&apos;s it goin&apos;! My name is{" "}
@@ -78,7 +78,7 @@ export default function Index() {
         </div>
         <div
           id={styles["homepage-personal-about"]}
-          className="text-xl max-w-full lg:max-w-md"
+          className="text-xl max-w-full xl:max-w-md"
         >
           <h2 className="text-xl font-bold">
             In my free time I&apos;m usually...

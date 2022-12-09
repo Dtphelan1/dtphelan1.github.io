@@ -3,15 +3,15 @@ const jobs = [
     title: "MITRE Corporation",
     roleList: [
       {
-        title: "Lead Web Developer",
+        title: "Lead Web Dev",
         date: "2021 - Now",
       },
       {
-        title: "Senior Web Developer",
+        title: "Senior Web Dev",
         date: "2018 - 2021",
       },
       {
-        title: "Web Developer",
+        title: "Web Dev",
         date: "2016 - 2018",
       },
     ],
