@@ -182,7 +182,7 @@ const projects = [
     ],
     elevatorPitch: "Generate free, synthetic, & realistic patient data easily",
     bullets: [
-      "Constructed a simple HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
+      "Constructed a HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
       "Conducted landscape assessment for similar single-page information pages in academic contexts",
       "Utilized Material Design and Bootstrap in the design of components",
       "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
@@ -208,7 +208,7 @@ const projects = [
     elevatorPitch:
       "Sparking community engagement in healthcare standards development",
     bullets: [
-      "Constructed a simple HTML/JS site to spread awareness of MITRE's standard health record, SHR",
+      "Constructed a HTML/JS site to spread awareness of MITRE's standard health record, SHR",
       "Conducted landscape assessment for similar single-page information pages in academic contexts",
       "Utilized Material Design and Bootstrap in the design of components",
       "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
@@ -296,8 +296,9 @@ const projects = [
     ],
     elevatorPitch: "Learn how representatives vote on Arlington measures",
     bullets: [
-      "Organized a team of three devs to build a React web application with an Express backend",
+      "Created a React webapp and Express backend showing voters how their representatives voted on town measures",
       "Visualized voting history of 100+ town representatives on ballot measures with React Table",
+      "Organized a team of three devs to build the tool in 14 days, deploying before Arlington's election",
       "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
     ],
     featuredTags: ["Sketch", "React", "Bootstrap", "Node"],
@@ -327,13 +328,13 @@ const projects = [
         Icon: GitHub,
       },
     ],
-    elevatorPitch: "Explore RCV's impact on election outcomes",
+    elevatorPitch: "Explore RCV's impact on election representativeness",
     bullets: [
       "Implemented a React web application and Python Flask API for running RCV election simulations",
-      "Conducted contextual inquiries to understand target users' interaction and visualization needs",
       "Designed mockups for defining input parameters and visualizing election outcomes",
       "Created Flask API for running and aggregating 4 types of RCV simulation",
-      "Visualize simulation outcomes across various model types with Victory charts",
+      "Visualize outcomes across simulation types, showing RCV's impact on how voters are represented",
+      "Built in collaboration with Moon Duchin and Tufts' Metric Geometry & Gerrymandering Group (MGGG)",
     ],
     featuredTags: ["Balsamiq", "React", "Bootstrap", "Python"],
     tags: ["Balsamiq", "React", "Bootstrap", "Python"],
@@ -359,9 +360,9 @@ const projects = [
     ],
     elevatorPitch: "Explain frustrating voting patterns with graph theory",
     bullets: [
-      "Built a React-powered one-pager using Graph Theory to explore frustrations with First Past the Post voting",
-      "Leveraged 'tournaments' as a mechanism of Explored ",
-      "Garnered appreciation from multiple local representatives, >1000 visits during local election week",
+      "Designed and implemented a React one-pager using Graph Theory to explore common frustrations in election outcomes",
+      "Leveraged Tournaments and Ranked Voting to discuss Condorcet Winners, candidates who beat all others 1-on-1, and Condorcet Paradoxes, elections where every candidate loses to someone",
+      "Visualized graphs of candidates using react-digraph & election outcomes using HTML tables",
     ],
     featuredTags: ["React", "Bootstrap", "SASS"],
     tags: ["React", "Bootstrap", "SASS"],
@@ -375,21 +376,17 @@ const projects = [
     date: "Spring 2020",
     links: [
       {
-        url: "https://dtphelan1.github.io/elections/ ",
-        title: "Website",
-        Icon: Globe,
-      },
-      {
-        url: "https://github.com/Dtphelan1/elections",
+        url: "https://github.com/Dtphelan1/gerrymandering-mcmc",
         title: "Code",
         Icon: GitHub,
       },
     ],
-    elevatorPitch: "Use graphs and simulation to identify gerrymandering",
+    elevatorPitch:
+      "Use graph theory and simulations to identify gerrymandering",
     bullets: [
-      "Used markov chain monte carlo simulation to quantifying the likelihood a voting district map is gerrymandered",
-      "Replicated Tufts' MGGG lab's ReCombination algorithm using Python to generate new district maps",
-      "Visualize frequency plot of simulated graph 'eccentricity' using matplotlib to show outliership",
+      "Used markov chain monte carlo simulation to quantify how likely a voting district was gerrymandered",
+      "Implemented Tufts MGGG lab's ReCombination algorithm using Python to generate district maps",
+      "Visualize frequency plot of simulated graphs' 'eccentricity' using matplotlib, showing outliership",
     ],
     featuredTags: ["Python", "matplotlib", "argparse"],
     tags: ["Python", "matplotlib", "argparse"],
