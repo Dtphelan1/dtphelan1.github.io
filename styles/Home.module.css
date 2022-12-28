@@ -2,23 +2,19 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 60% 40%;
-  /* grid-template-rows: 30% 70%; */
   grid-template-areas:
     "👋 📸"
     "📖 📖"
-    "🎶 🎶"
-    "🔘 🔘";
+    "🎶 🎶";
 }
 @media (min-width: 1280px) {
   #homepage {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "👋 📸"
-      "📖 🎶"
-      "🔘 🔘";
+      "📖 🎶";
   }
 }
 

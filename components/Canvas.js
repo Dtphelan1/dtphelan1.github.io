@@ -42,6 +42,7 @@ export default function Canvas({ className }) {
   const [maxAcceleration, setMaxAcceleration] = useState(MAXACCELERATION);
 
   useEffect(() => {
+    if (hideGraphic) return;
     // Update all the elements on the canvas
     function updateElements(canvas, context) {
       // always update the canvas based on size
@@ -219,13 +220,15 @@ export default function Canvas({ className }) {
 
   return (
     <>
-      <canvas
-        className={`w-full h-full ${className} ${hideGraphic && "hidden"}`}
-        id="html-canvas"
-        width={1000}
-        height={1000}
-        ref={canvasRef}
-      />
+      {!hideGraphic && (
+        <canvas
+          className={`w-full h-full ${className}`}
+          id="html-canvas"
+          width={1000}
+          height={1000}
+          ref={canvasRef}
+        />
+      )}
       <div
         className={`w-full h-0 relative ${className} ${
           hideGraphic && "!h-full"

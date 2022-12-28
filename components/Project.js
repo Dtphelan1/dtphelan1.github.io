@@ -34,10 +34,10 @@ export default function Project({ project }) {
         </div>
         {/* Tags */}
         <div className="w-full flex flex-col-reverse items-start sm:flex-row sm:flex-wrap sm:justify-between sm:items-center">
-          <p className="basis-full sm:basis-1/2 text-base italic flex-1 pr-2">
+          <p className="basis-full sm:basis-auto text-base italic flex-1 pr-2">
             {project.elevatorPitch}
           </p>
-          <div className="basis-full sm:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start sm:justify-end">
+          <div className="basis-full sm:basis-auto flex flex-1 flex-row flex-wrap items-center justify-start sm:justify-end">
             {project.featuredTags.map((tag) => {
               return (
                 <p

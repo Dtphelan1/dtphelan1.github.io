@@ -15,48 +15,51 @@ export default function Resume() {
         }
       </p>
       <div className="text-xl list-inside grid grid-cols-2 md:grid-cols-3 gap-4  ">
-        <Link href="resume/react">
+        <Link href="resumes/react">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            ⚛ <span className="italic break-words">React Experience</span>
+            ⚛️ <span className="italic break-words ml-1">React Experience</span>
           </a>
         </Link>
-        <Link href="resume/vue">
+        <Link href="resumes/vue">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            🖖 <span className="italic break-words">Vue Experience</span>
+            🖖 <span className="italic break-words ml-1">Vue Experience</span>
           </a>
         </Link>
-        {/* <Link href="resume/python">
+        {/* <Link href="resumes/python">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            🐍 <span className="italic break-words">Python Experience</span>
+            🐍 <span className="italic break-words ml-1">Python Experience</span>
           </a>
         </Link> */}
-        <Link href="resume/ux">
+        <Link href="resumes/ux">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            ⚡️ <span className="italic break-words">UX-driven Projects</span>
+            ⚡️
+            <span className="italic break-words ml-1">UX-driven Projects</span>
           </a>
         </Link>
-        <Link href="resume/healthcare">
+        <Link href="resumes/healthcare">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            🏥 <span className="italic break-words">Healthcare Projects</span>
+            🏥
+            <span className="italic break-words ml-1">Healthcare Projects</span>
           </a>
         </Link>
-        <Link href="resume/voting">
+        <Link href="resumes/voting">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            🗳 <span className="italic break-words">Voting Projects</span>
+            🗳 <span className="italic break-words ml-1">Voting Projects</span>
           </a>
         </Link>
-        <Link href="resume/socialJustice">
+        <Link href="resumes/socialJustice">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            ⚖️{" "}
-            <span className="italic break-words"> Social-Justice Projects</span>
+            ⚖️
+            <span className="italic break-words ml-1">
+              Social-Justice Projects
+            </span>
           </a>
         </Link>
         <Link href="cv">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer col-span-2 md:col-span-3">
-            📚{" "}
-            <span className="italic break-words">
-              {" "}
-              My CV – Everything and More!{" "}
+            📚
+            <span className="italic break-words ml-1">
+              My CV – Everything and More!
             </span>
           </a>
         </Link>

@@ -139,7 +139,7 @@ export default function PageLayout({ children }) {
                   {"CV"}
                 </a>
               </Link>
-              <Link href="/resume">
+              <Link href="/resumes">
                 <a className="block md:inline hover:font-bold">{"Resumes"}</a>
               </Link>
               {/* <Link>Random Fact</Link> */}

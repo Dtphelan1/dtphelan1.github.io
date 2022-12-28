@@ -1,9 +1,6 @@
 export default function ConferenceSection({ conferences }) {
   return (
-    <section
-      className="basis-full xl:basis-3/4 print:basis-3/4"
-      id="Conferences"
-    >
+    <section id="Conferences">
       <h2 className="text-xl font-bold inline mr-2">Conferences</h2>
       <hr className="w-full border-primary pb-4" />
       {conferences.map((conference) => {

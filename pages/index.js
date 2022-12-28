@@ -7,14 +7,11 @@ import styles from "../styles/Home.module.css";
 export default function Index() {
   return (
     <PageFadeWrapper className="bg-gradient-to-br from-neutral-main via-neutral-main to-primary-ultra-light p-8 xl:p-32 ">
-      <div
-        id={styles["homepage"]}
-        className="min-h-full max-w-screen-xl mx-auto relative"
-      >
+      <div id={styles["homepage"]} className="max-w-screen-xl mx-auto relative">
         <div id={styles["homepage-intro"]} className="text-xl">
           <h1 className="mb-10">
             <span className="text-lg block mb-2">
-              How&apos;s it goin&apos;! My name is{" "}
+              How&apos;s it going! My name is{" "}
             </span>
             <span className="text-6xl block font-serif ">Dylan Phelan</span>
           </h1>
@@ -31,10 +28,11 @@ export default function Index() {
             My <span className="font-bold">projects</span> have supported
             clinicians visualizing the future of{" "}
             <span className="font-bold">oncology note taking</span>, data
-            scientists exchanging resources surrounding{" "}
-            <span className="font-bold">COVID-19 back in 2020</span>, clinical
-            trials <span className="font-bold">collecting real world data</span>{" "}
-            for comparison against traditional data elements, research teams
+            scientists{" "}
+            <span className="font-bold">exchanging research on COVID-19</span>{" "}
+            back in 2020, clinical trials{" "}
+            <span className="font-bold">collecting real world data</span> for
+            comparison against traditional data elements, research teams
             exploring how to make{" "}
             <span className="font-bold">
               filing for unemployment benefits easier
@@ -53,18 +51,6 @@ export default function Index() {
             </span>{" "}
             to support projects technical success.
           </p>
-        </div>
-        <div id={styles["homepage-button"]} className="flex flex-wrap gap-4">
-          <Link href="/cv">
-            <a className="w-fit h-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
-              Check out my CV
-            </a>
-          </Link>
-          <Link href="/resume">
-            <a className="w-fit h-fit text-xl my-4 border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
-              See more specific resumes
-            </a>
-          </Link>
         </div>
         <div
           id={styles["homepage-headshot"]}
@@ -135,6 +121,18 @@ export default function Index() {
               </a>
             </li>
           </ul>
+        </div>
+        <div className="flex flex-wrap gap-4 my-4">
+          <Link href="/cv">
+            <a className="w-fit h-fit text-xl border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
+              Check out my CV
+            </a>
+          </Link>
+          <Link href="/resumes/r">
+            <a className="w-fit h-fit text-xl border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
+              See more specific resumes
+            </a>
+          </Link>
         </div>
       </div>
     </PageFadeWrapper>
