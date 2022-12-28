@@ -8,8 +8,8 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
       id="contact-and-high-level "
       className="max-w-screen-xl flex flex-wrap px-4 my-0 py-4 xl:my-4 xl:py-0  mx-auto bg-primary xl:bg-neutral-main print:bg-neutral-main"
     >
-      <div className="flex flex-wrap flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
-        <div className="max-h-48 max-w-[10rem] mx-auto">
+      <div className="flex flex-col flex-full items-center basis-full xl:basis-1/4 print:basis-1/4 xl:pr-8 print:pr-8 ">
+        <div className="max-h-48 max-w-[10rem]">
           <Image
             src={headshot}
             className="rounded-full"
@@ -17,7 +17,7 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
           />
         </div>
         <button
-          className="absolute left-0 top-0 xl:mx-auto xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
+          className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
           onClick={handlePrint}
         >
           <Printer size={12} className="mr-1" /> Print or PDF
