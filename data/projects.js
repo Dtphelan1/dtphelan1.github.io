@@ -62,7 +62,7 @@ const projects = [
     ],
     elevatorPitch: "Empower discussions on radiation data standards",
     bullets: [
-      "Built a React app for reviewing data models for cancer radiation treatment summaries",
+      "Built a React app for reviewing data models for cancer radiation treatment summaries, enabling radiation data exchange for care coordination and multi-purpose reuse",
       "Used Axios to fetch data from FHIR servers and FHIRPath to isolate relevant data for visualizations ",
       "Conducted requirements solicitations from MITRE's RTTD team to enable pen/paper mockups",
       "Delivered initial prototype within 3 weeks, enabling rapid external stakeholder interviews",
@@ -158,7 +158,7 @@ const projects = [
     ],
     elevatorPitch: "Re-imagine the clinical note taking experience",
     bullets: [
-      "Built a SMARTonFHIR React web application for reducing clinician burden collecting patient data",
+      "Built a SMARTonFHIR React web application for reducing clinician burden collecting cancer data",
       "Leveraged SlateJs rich-text editor for inline suggestions and data tagging in clinical notes",
       "Visualized patient data with ReCharts and custom HTML visualizations",
       "Enabled data provenance tracking via linking to source notes and ElasticSearch document queries",
@@ -183,18 +183,17 @@ const projects = [
     ],
     elevatorPitch: "Generate free, synthetic, & realistic patient data easily",
     bullets: [
-      "Constructed a HTML/JS site to spread awareness of MITRE's healthcare data generation tool, Synthea",
+      "Constructed a HTML/JS site to spread awareness of Synthea, MITRE's healthcare data generation tool",
       "Conducted landscape assessment for similar single-page information pages in academic contexts",
-      "Utilized Material Design and Bootstrap in the design of components",
+      "Utilized Material Design and Bootstrap for component design and creation",
       "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
-      // TODO
     ],
     featuredTags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
   },
   {
     id: "shr",
-    title: "MITRE's Standard Health Record Homepage",
+    title: "Standard Health Record (SHR) Homepage",
     featured: false,
     role: "Lead Designer & Web Dev",
     type: PROJECTTYPES["work"],
@@ -209,11 +208,10 @@ const projects = [
     elevatorPitch:
       "Sparking community engagement in healthcare standards development",
     bullets: [
-      "Constructed a HTML/JS site to spread awareness of MITRE's standard health record, SHR",
-      "Conducted landscape assessment for similar single-page information pages in academic contexts",
+      "Constructed a HTML/JS site to spread awareness of the SHR, MITRE's standard health record initiative ",
       "Utilized Material Design and Bootstrap in the design of components",
-      "Facilitated the adoption of Synthea as the definitive tool for generating realistic but not real data in the FHIR community",
-      // TODO
+      "Built tree diagram visualizations for exploring the structure of the standards 50+ data elements.",
+      "Project springboarded the development of MITRE's oncology data standard, mCODE, and many of the tools used therein",
     ],
     featuredTags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
     tags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
@@ -241,7 +239,7 @@ const projects = [
     ],
     elevatorPitch: "Move sold-out items out of the way",
     bullets: [
-      "Relegates sold-out items to the bottom of the merch store's inventory",
+      "Relegates sold-out items to the bottom of the merch store's inventory, enhancing the bandcamp browsing experience",
       "Adds subtle transparency to sold-out items to indicate their absence",
       "Published extension on the Firefox add-on store",
     ],
@@ -269,9 +267,10 @@ const projects = [
     ],
     elevatorPitch: "Promote NYJ Da Prafet's merch, music, & socials",
     bullets: [
+      "Designed, constructed, and delivered a static-site for advertising local artist's several creative ventures",
       "Conducted stakeholder interview and landscape assessment of similar artists websites",
       "Solicited feedback on designs and mockups before executing final product",
-      "Implemented and deployed website rapidly (48hrs) in-time for upcoming launches",
+      "Implemented and deployed website rapidly (48hrs) in-time for upcoming product launch",
     ],
     featuredTags: ["HTML", "Tailwind", "jQuery", "Vercel"],
     tags: ["HTML", "Tailwind", "jQuery", "Vercel"],
