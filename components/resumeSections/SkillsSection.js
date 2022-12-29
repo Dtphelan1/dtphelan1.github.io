@@ -4,7 +4,12 @@ import SkillLevelLegend from "../SkillLevelLegend";
 export default function SkillsSection({ skills }) {
   return (
     <>
-      <h2 className="text-xl font-bold ">Skills</h2>
+      <h2 className="text-xl font-bold ">
+        Skills
+        <span className="ml-1 text-xs italic font-normal basis-full print:hidden">
+          Hover bubbles for more info
+        </span>
+      </h2>
       <hr className="w-full border-primary pb-4  " />
       <SkillLevelLegend />
       <ul className="mb-4">

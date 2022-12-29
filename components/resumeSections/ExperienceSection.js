@@ -25,7 +25,7 @@ export default function ExperienceSection({ jobs }) {
           >
             <header>
               {/* Small-&-below screen options - company and roles on one line; title below */}
-              <div className="flex sm:hidden w-full flex-col justify-between">
+              <div className="flex print:hidden sm:hidden w-full flex-col justify-between">
                 <div className="flex flex-row justify-between">
                   <h3 className="text-base font-bold mr-2 basis-1/12">
                     {job.title}
@@ -37,7 +37,7 @@ export default function ExperienceSection({ jobs }) {
                 <p className="text-base italic">{job.elevatorPitch}</p>
               </div>
               {/* All other screen options - company and title on one column; roles on next column */}
-              <div className="hidden sm:flex w-full flex-row justify-between">
+              <div className="hidden print:flex sm:flex w-full flex-row justify-between">
                 <div className="flex flex-col basis-5/12">
                   <h3 className="text-base font-bold mr-2">{job.title}</h3>
                   <p className="text-base italic">{job.elevatorPitch}</p>

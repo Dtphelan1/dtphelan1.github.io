@@ -32,10 +32,10 @@ const projects = [
     ],
     elevatorPitch: "Bridge current cancer data to emerging data standard",
     bullets: [
-      "Built Node command line tool for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, allowing for common usage and exchange of this healthcare data",
+      "Built Node command line tool for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, allowing for exchange and reuse of cancer patient data",
       "Designed a technical architecture enabling modularity across data sources and usecases",
       "Transformed data from proprietary healthsystem APIs and CSV files into mCODE standard",
-      "Created. managed, and maintained 6+ github repositories in support of 3 separate usecases",
+      "Created, managed, and maintained 6+ GitHub repositories in support of multiple usecases",
       "Enabled MITRE's ICAREdata project to compare routine health data with clinical trial data extracted by MEF",
     ],
     featuredTags: ["React", "Bootstrap", "Node", "FHIR"],
@@ -81,7 +81,7 @@ const projects = [
     links: [],
     elevatorPitch: "Streamline unemployment insurance benefits",
     bullets: [
-      "Created Vue UI to enable research on streamlining citizen usage of unemployment benefits",
+      "Created Vue UI to enable research on improving user experience for accessing unemployment benefits",
       "Implemented Express API for creating, updating, and reviewing unemployment applications",
       "Distilled MVP requirements from EOY objectives and research team's experimental scenarios",
       "Balanced competing needs for a rapid prototype and potential use-case pivots",
@@ -129,7 +129,7 @@ const projects = [
     links: [],
     elevatorPitch: "Find free COVID tests at ICATT-participating pharmacies ",
     bullets: [
-      "Constructed a Vue application capable of finding free, nearby COVID-19 tests at pharmacies participating in CDC's Increasing Community Access To Testing (ICATT) program.",
+      "Constructed a Vue application capable of finding free, nearby COVID-19 tests at pharmacies participating in CDC's Increasing Community Access To Testing (ICATT) program",
       "Collaborated with designer, tailoring Vue components/tailwind styles to high fidelity wireframes",
       "Utilized Open Street Maps and Leaflet for testing-site visualizations",
       "Integrated backend web service request-generating and response-parsing into frontend",
@@ -210,7 +210,7 @@ const projects = [
     bullets: [
       "Constructed a HTML/JS site to spread awareness of the SHR, MITRE's standard health record initiative ",
       "Utilized Material Design and Bootstrap in the design of components",
-      "Built tree diagram visualizations for exploring the structure of the standards 50+ data elements.",
+      "Built tree diagram visualizations for exploring the structure of the standards 50+ data elements",
       "Project springboarded the development of MITRE's oncology data standard, mCODE, and many of the tools used therein",
     ],
     featuredTags: ["HTML", "Material Design", "Bootstrap", "FHIR"],
@@ -267,7 +267,7 @@ const projects = [
     ],
     elevatorPitch: "Promote NYJ Da Prafet's merch, music, & socials",
     bullets: [
-      "Designed, constructed, and delivered a static-site for advertising local artist's several creative ventures",
+      "Designed, constructed, and deployed a static-site for advertising local artist's multiple creative ventures",
       "Conducted stakeholder interview and landscape assessment of similar artists websites",
       "Solicited feedback on designs and mockups before executing final product",
       "Implemented and deployed website rapidly (48hrs) in-time for upcoming product launch",

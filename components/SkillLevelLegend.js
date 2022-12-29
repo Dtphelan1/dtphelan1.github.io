@@ -4,7 +4,7 @@ import { skillLevels } from "../lib/skillLevel";
 export default function SkillLevelLegend() {
   let i = 0;
   return (
-    <div className="flex flex-row justify-between mb-2 mt-1">
+    <div className="flex flex-row flex-wrap justify-between mb-2 mt-1">
       {skillLevels.map((levelObj) => {
         return (
           <div
