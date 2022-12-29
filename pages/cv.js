@@ -22,26 +22,12 @@ export default function CV() {
   const personalProjects = projects.filter(
     (proj) => proj.type === PROJECTTYPES["personal"]
   );
-  // Printing logic
-  // Ref of the component to print
-  const componentRef = useRef();
-  // Date for file-name time stamping
-  const today = new Date();
-  // Set up printing hook
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-    documentTitle: `${[
-      today.getDate(),
-      today.getMonth() + 1,
-      today.getFullYear(),
-    ].join("-")}-Dylan-Phelan-Resume`,
-  });
 
   return (
     <PageFadeWrapper>
       <div className="h-screen md:h-auto md:max-h-[97vh] w-full text-sm">
-        <div ref={componentRef} className="relative overflow-clip mx-auto">
-          <AboutMeSection aboutMe={aboutMe} handlePrint={handlePrint} />
+        <div className="relative overflow-clip mx-auto">
+          <AboutMeSection aboutMe={aboutMe} />
           <div
             id="content"
             className=" max-w-screen-xl flex flex-wrap-reverse px-4 my-4 print:!mt-0 mx-auto text-primary bg-neutral-main"

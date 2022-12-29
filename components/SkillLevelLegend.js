@@ -1,4 +1,4 @@
-import { Star } from "react-feather";
+import { Circle } from "react-feather";
 import { skillLevels } from "../lib/skillLevel";
 
 export default function SkillLevelLegend() {
@@ -10,20 +10,20 @@ export default function SkillLevelLegend() {
           <div
             key={levelObj.level}
             title={levelObj.long}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center text-sm"
           >
             <div className="flex flex-row">
               {[...Array(levelObj.level)].map(() => {
                 return (
-                  <Star
-                    key={`star-${levelObj.level}-${i++}`}
-                    size="8"
-                    className="fill-primary text-primary"
+                  <Circle
+                    key={`circle-${levelObj.level}-${i++}`}
+                    size="10"
+                    className="fill-primary text-primary "
                   />
                 );
               })}
             </div>
-            <p className="text-center text-xs">{levelObj.short}</p>
+            <p className="text-center">{levelObj.short}</p>
           </div>
         );
       })}

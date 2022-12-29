@@ -32,11 +32,11 @@ const projects = [
     ],
     elevatorPitch: "Bridge current cancer data to emerging data standard",
     bullets: [
-      "Built Node CLI for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, allowing for common usage and exchange of this healthcare data",
+      "Built Node command line tool for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, allowing for common usage and exchange of this healthcare data",
       "Designed a technical architecture enabling modularity across data sources and usecases",
-      "Extracted data from proprietary web APIs, and from CSV files either on disk or served over HTTP",
-      "Created and maintained 6+ other github repositories in support of 3 separate usecases",
-      "Enabled MITRE's ICAREdata project to compare routine health data with e clinical trial data extracted by MEF",
+      "Transformed data from proprietary healthsystem APIs and CSV files into mCODE standard",
+      "Created. managed, and maintained 6+ github repositories in support of 3 separate usecases",
+      "Enabled MITRE's ICAREdata project to compare routine health data with clinical trial data extracted by MEF",
     ],
     featuredTags: ["React", "Bootstrap", "Node", "FHIR"],
     tags: ["React", "Bootstrap", "Node", "FHIR"],
@@ -98,7 +98,7 @@ const projects = [
     date: "Jan - Sept 2022",
     links: [
       {
-        url: "https://www.sjp.mitre.org/",
+        url: "https://sjp.mitre.org/",
         title: "MITRE's Social Justice Platform",
         Icon: Globe,
       },
@@ -161,7 +161,7 @@ const projects = [
       "Built a SMARTonFHIR React web application for reducing clinician burden collecting patient data",
       "Leveraged SlateJs rich-text editor for inline suggestions and data tagging in clinical notes",
       "Visualized patient data with ReCharts and custom HTML visualizations",
-      "Enabled data provenance tracking via data-linkage to source notes and ElasticSearch document queries",
+      "Enabled data provenance tracking via linking to source notes and ElasticSearch document queries",
       "Received praise from oncologists and MITRE executives, motivating future research on novel data capture techniques",
     ],
     featuredTags: ["React", "Material UI", "SCSS", "FHIR"],

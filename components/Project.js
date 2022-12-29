@@ -1,3 +1,5 @@
+import Tag from "./Tag";
+
 export default function Project({ project }) {
   function projectMetadata(project) {
     return (
@@ -38,17 +40,9 @@ export default function Project({ project }) {
             {project.elevatorPitch}
           </p>
           <div className="basis-full sm:basis-auto flex flex-1 flex-row flex-wrap items-center justify-start sm:justify-end">
-            {project.featuredTags.map((tag) => {
-              return (
-                <p
-                  id={tag}
-                  key={tag}
-                  className="inline px-2 py-1 mx-1 my-1 max-h-6 first-of-type:ml-0 rounded bg-primary-ultra-light text-primary text-xs "
-                >
-                  {tag}
-                </p>
-              );
-            })}
+            {project.featuredTags.map((tag) => (
+              <Tag key={tag} tag={tag} />
+            ))}
           </div>
         </div>
       </header>

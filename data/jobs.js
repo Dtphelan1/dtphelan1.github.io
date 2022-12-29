@@ -17,12 +17,12 @@ const jobs = [
     ],
     date: "2016 - Now",
     elevatorPitch:
-      "Technical lead, developer, intern lead, dept. brown-bag coordinator",
+      "Technical lead, developer, intern lead, dept. presentation coordinator",
     bullets: [
-      "Current technical lead & developer on MITRE's oncology moonshot, accelerating cancer data standards adoption with ETL tools, data visualizations, and data capture applications",
-      "Prior technical lead & developer for 3+ software teams in charge of web applications, CLIs, APIs, visualizations, rich-text editors, multiphase complex forms, and more",
+      "Current technical lead & developer on MITRE's oncology moonshot, accelerating cancer data-standards adoption by building applications for data capture, transformation, and visualization",
+      "Prior technical lead & developer for 3+ software teams in charge of web applications, CLIs, APIs, visualizations, rich-text editors, multipage forms, and more",
       "Developer for 12+ MITRE projects in oncology, social justice, benefits delivery, and COVID-19",
-      "Runs department brown-bag series, executed 20+ presentations and project feedback sessions",
+      "Runs department presentation series, executed 20+ presentations and project feedback sessions",
       "Co-leads department internship program, mentoring 12+ undergraduate and graduate interns",
     ],
   },

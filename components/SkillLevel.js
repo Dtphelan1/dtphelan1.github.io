@@ -1,4 +1,4 @@
-import { Star } from "react-feather";
+import { Circle } from "react-feather";
 import { skillLevels } from "../lib/skillLevel";
 
 export default function SkillLevel({ skill, level, className }) {
@@ -14,8 +14,8 @@ export default function SkillLevel({ skill, level, className }) {
     >
       {levelArray.map((levelMet, i) => {
         return (
-          <Star
-            size={14}
+          <Circle
+            size={13}
             key={skill + "-" + i}
             className={`text-primary inline ${levelMet ? "fill-primary" : ""}`}
           />

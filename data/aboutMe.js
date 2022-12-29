@@ -3,7 +3,7 @@ import { Globe, GitHub, Mail, Linkedin } from "react-feather";
 const aboutMe = {
   name: "Dylan Phelan",
   title: "Lead Web Developer @ MITRE",
-  elevatorPitch: `Hi, I'm Dylan! I'm a web developer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLIs and APIs using Node.js and Python, ML models using Python, and architecture diagrams/roadmaps to support projects as a technical lead. `,
+  elevatorPitch: `Hi, I'm Dylan! I'm a web developer with 6+ years experience working on healthcare, social justice, and benefits delivery projects. I've created UI's using React and Vue, CLIs and APIs using Node.js and Python, ML models using Python, and architecture diagrams/roadmaps to support projects as a technical lead.`,
   links: [
     {
       id: "website",
