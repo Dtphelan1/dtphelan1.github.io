@@ -20,8 +20,8 @@ export default function Index() {
           <p className="mb-2">
             I&apos;m a <span className="font-bold">web developer</span> and{" "}
             <span className="font-bold">technical lead</span> with an{" "}
-            <span className="font-bold">eye for design</span> who's worked for
-            6+ years on healthcare, social justice, and benefits delivery
+            <span className="font-bold">eye for design</span> who&apos;s worked
+            for 6+ years on healthcare, social justice, and benefits delivery
             projects.
           </p>
           <p className="mb-2">
