@@ -36,7 +36,7 @@ const projects = [
       "Designed a technical architecture enabling modularity across data sources and usecases",
       "Transformed data from proprietary healthsystem APIs and CSV files into mCODE standard",
       "Created, managed, and maintained 6+ GitHub repositories in support of multiple usecases",
-      "Enabled MITRE's ICAREdata project to compare routine health data with clinical trial data extracted by MEF",
+      "Enabled MITRE's ICAREdata project to compare routine health data with clinical trial data",
     ],
     featuredTags: ["React", "Bootstrap", "Node", "FHIR"],
     tags: ["React", "Bootstrap", "Node", "FHIR"],
@@ -328,7 +328,7 @@ const projects = [
         Icon: GitHub,
       },
     ],
-    elevatorPitch: "Explore RCV's impact on election representativeness",
+    elevatorPitch: "Explore RCV's impact on representativeness",
     bullets: [
       "Implemented a React web application and Python Flask API for running RCV election simulations",
       "Designed mockups for defining input parameters and visualizing election outcomes",

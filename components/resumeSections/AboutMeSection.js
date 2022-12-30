@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Printer } from "react-feather";
+import { Download } from "react-feather";
 import headshot from "../../public/headshot.jpeg";
 
 export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
@@ -21,7 +21,8 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
             className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
             onClick={handlePrint}
           >
-            <Printer size={12} className="mr-1" /> Print or PDF
+            <Download size={12} className="mr-1" />
+            Save PDF
           </button>
         )}
       </div>

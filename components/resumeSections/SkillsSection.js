@@ -5,8 +5,8 @@ export default function SkillsSection({ skills }) {
   return (
     <>
       <h2 className="text-xl font-bold ">
-        Skills
-        <span className="ml-1 text-xs italic font-normal basis-full print:hidden">
+        Skills{" "}
+        <span className="text-xs italic font-normal basis-full print:hidden">
           Hover bubbles for more info
         </span>
       </h2>

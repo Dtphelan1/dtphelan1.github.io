@@ -128,9 +128,9 @@ export default function Index() {
               Check out my CV
             </a>
           </Link>
-          <Link href="/resumes/r">
+          <Link href="/resumes">
             <a className="w-fit h-fit text-xl border-2 bg-primary text-neutral-main border-primary rounded p-4 transition-all hover:bg-neutral-main hover:text-primary cursor-pointer">
-              See more specific resumes
+              See specific resumes
             </a>
           </Link>
         </div>
