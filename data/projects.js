@@ -381,8 +381,7 @@ const projects = [
         Icon: GitHub,
       },
     ],
-    elevatorPitch:
-      "Use graph theory and simulations to identify gerrymandering",
+    elevatorPitch: "Use graph theory & simulations to identify gerrymandering",
     bullets: [
       "Used markov chain monte carlo simulation to quantify how likely a voting district was gerrymandered",
       // "Implemented Tufts MGGG lab's ReCombination algorithm using Python to generate district maps",
