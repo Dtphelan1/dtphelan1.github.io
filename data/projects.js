@@ -32,7 +32,7 @@ const projects = [
     ],
     elevatorPitch: "Bridge current cancer data to emerging data standard",
     bullets: [
-      "Built Node command line tool for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, allowing for exchange and reuse of cancer patient data",
+      "Built Node command line tool for translating healthcare data from proprietary formats to the minimal Common Oncology Data Elements (mCODE) standard, enabling exchange and reuse of patient data",
       "Designed a technical architecture enabling modularity across data sources and usecases",
       "Transformed data from proprietary healthsystem APIs and CSV files into mCODE standard",
       "Created, managed, and maintained 6+ GitHub repositories in support of multiple usecases",
