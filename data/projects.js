@@ -24,11 +24,11 @@ const projects = [
         title: "Code for ICAREdata Client",
         Icon: GitHub,
       },
-      {
-        url: "https://github.com/mcode/mcode-extraction-ui",
-        title: "Code for Extraction UI",
-        Icon: GitHub,
-      },
+      // {
+      //   url: "https://github.com/mcode/mcode-extraction-ui",
+      //   title: "Code for Extraction UI",
+      //   Icon: GitHub,
+      // },
     ],
     elevatorPitch: "Bridge current cancer data to emerging data standard",
     bullets: [
