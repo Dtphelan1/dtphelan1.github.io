@@ -21,7 +21,8 @@ export default function AboutMeHeader({
             alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
           />
         </div>
-        {/* {handlePrint && (
+        {/* If there is a print handler defined, use it to download */}
+        {handlePrint && (
           <button
             className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
             onClick={handlePrint}
@@ -29,8 +30,9 @@ export default function AboutMeHeader({
             <Download size={12} className="mr-1" />
             Save PDF
           </button>
-        )} */}
-        {handlePrint && (
+        )}
+        {/* If there is no handlePrint function, but this corresponds to a specific resume type, download a PDF */}
+        {!handlePrint && highlightSection && (
           <a
             className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
             href={`/pdfs/17-01-2023/${sectionName}.pdf`}

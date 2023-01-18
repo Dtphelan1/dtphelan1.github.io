@@ -21,16 +21,16 @@ export default function CommonResumeFormat({
   // Ref of the component to print
   const componentRef = useRef();
   // Date for file-name time stamping
-  const today = new Date();
+  // const today = new Date();
   // Set up printing hook
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-    documentTitle: `${[
-      today.getDate(),
-      today.getMonth() + 1,
-      today.getFullYear(),
-    ].join("-")}-Dylan-Phelan-Resume`,
-  });
+  // const handlePrint = useReactToPrint({
+  //   content: () => componentRef.current,
+  //   documentTitle: `${[
+  //     today.getDate(),
+  //     today.getMonth() + 1,
+  //     today.getFullYear(),
+  //   ].join("-")}-Dylan-Phelan-Resume`,
+  // });
 
   return (
     <PageFadeWrapper>
@@ -42,7 +42,7 @@ export default function CommonResumeFormat({
           <AboutMeSection
             aboutMe={aboutMe}
             highlightSection={highlightSection}
-            handlePrint={handlePrint}
+            // handlePrint={handlePrint}
           />
           <div
             id="content"
