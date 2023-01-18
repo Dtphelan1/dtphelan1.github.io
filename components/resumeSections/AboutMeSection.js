@@ -7,7 +7,9 @@ export default function AboutMeHeader({
   highlightSection,
   handlePrint,
 }) {
-  const sectionName = highlightSection.toLocaleLowerCase().split(" ").join("-");
+  const sectionName =
+    highlightSection &&
+    highlightSection.toLocaleLowerCase().split(" ").join("-");
   return (
     <div
       id="contact-and-high-level "

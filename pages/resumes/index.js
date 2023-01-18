@@ -44,7 +44,7 @@ export default function Resume() {
         </Link>
         <Link href="resumes/voting">
           <a className="my-2 px-2 rounded border border-primary w-full h-full flex flex-wrap justify-center items-center text-center hover:bg-primary hover:text-neutral-main cursor-pointer">
-            🗳 <span className="italic break-words ml-1">Voting Projects</span>
+            🗳️ <span className="italic break-words ml-1">Voting Projects</span>
           </a>
         </Link>
         <Link href="resumes/socialJustice">
