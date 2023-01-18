@@ -36,10 +36,10 @@ export default function Project({ project }) {
         </div>
         {/* Tags */}
         <div className="w-full flex flex-col-reverse items-start print:flex-row sm:flex-row print:flex-wrap sm:flex-wrap print:justify-between sm:justify-between print:items-center sm:items-center">
-          <p className="basis-full print:basis-auto sm:basis-auto text-base italic flex-1 pr-2">
+          <p className="basis-full print:basis-1/2 sm:basis-1/2 text-base italic flex-1 pr-2">
             {project.elevatorPitch}
           </p>
-          <div className="basis-full print:basis-auto sm:basis-auto flex flex-1 flex-row flex-wrap items-center justify-start print:justify-end sm:justify-end">
+          <div className="basis-full print:basis-1/2 sm:basis-1/2 flex flex-1 flex-row flex-wrap items-center justify-start print:justify-end sm:justify-end">
             {project.featuredTags.map((tag) => (
               <Tag key={tag} tag={tag} />
             ))}
