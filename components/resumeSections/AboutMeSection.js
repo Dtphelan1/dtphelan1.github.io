@@ -2,7 +2,12 @@ import Image from "next/image";
 import { Download } from "react-feather";
 import headshot from "../../public/headshot.jpeg";
 
-export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
+export default function AboutMeHeader({
+  aboutMe,
+  highlightSection,
+  handlePrint,
+}) {
+  const sectionName = highlightSection.toLocaleLowerCase().split(" ").join("-");
   return (
     <div
       id="contact-and-high-level "
@@ -16,7 +21,7 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
             alt="A photo of Dylan, taken in 2019 from a rooftop restaurant in Morocco. Pictured with medium length brown hair, slightly disheveled and parted on the viewer's right, is a wide-smiling, green-eye squinting Dylan wearing a black floral-print collared shirt. The image is neck-up, and the shirt is barely visible in the crop. A portrait style photo, the head makes way to slightly blurred shrubbery, offering a verdant contrast to the subject's peach-toned skin. Further in the photo's background we see the Old Town of Morocco stretch to the horizon, beige and reddish-brown buildings carrying our eyes to the gray-blue sky behind up."
           />
         </div>
-        {handlePrint && (
+        {/* {handlePrint && (
           <button
             className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
             onClick={handlePrint}
@@ -24,6 +29,16 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
             <Download size={12} className="mr-1" />
             Save PDF
           </button>
+        )} */}
+        {handlePrint && (
+          <a
+            className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
+            href={`/pdfs/17-01-2023/${sectionName}.pdf`}
+            download={`Dylan-Phelan-resume-${sectionName}.pdf`}
+          >
+            <Download size={12} className="mr-1" />
+            Save PDF
+          </a>
         )}
       </div>
       {/* Need the wrapping div so the HR can be the same length as the top-level bio info */}
@@ -53,12 +68,12 @@ export default function AboutMeHeader({ aboutMe, highlight, handlePrint }) {
         <p id="mission-statement" className="text-base print:text-sm">
           {aboutMe.elevatorPitch}
         </p>
-        {highlight && (
+        {highlightSection && (
           <div
-            id="highlighted-area"
+            id="highlight-area"
             className="text-base print:text-sm absolute -bottom-8 -right-4 xl:bottom-0 xl:right-0 print:bottom-0 print:right-0 border-t border-l p-1 px-2 border-neutral-50 text-neutral-main w-fit"
           >
-            {highlight} Resume
+            {highlightSection} Resume
           </div>
         )}
       </div>

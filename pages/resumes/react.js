@@ -14,7 +14,7 @@ export default function Resume() {
     <CommonResumeFormat
       workProjects={workProjects}
       personalProjects={personalProjects}
-      highlight={"React"}
+      highlightSection={"React"}
     />
   );
 }

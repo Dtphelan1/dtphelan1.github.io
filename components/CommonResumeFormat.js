@@ -15,7 +15,7 @@ import aboutMe from "../data/aboutMe";
 export default function CommonResumeFormat({
   workProjects,
   personalProjects,
-  highlight,
+  highlightSection,
 }) {
   // Printing logic
   // Ref of the component to print
@@ -41,7 +41,7 @@ export default function CommonResumeFormat({
         >
           <AboutMeSection
             aboutMe={aboutMe}
-            highlight={highlight}
+            highlightSection={highlightSection}
             handlePrint={handlePrint}
           />
           <div

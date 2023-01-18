@@ -15,7 +15,7 @@ export default function Resume() {
     <CommonResumeFormat
       workProjects={workProjects}
       personalProjects={personalProjects}
-      highlight={"Social Justice"}
+      highlightSection={"Social Justice"}
     />
   );
 }

@@ -19,7 +19,7 @@ export default function Resume() {
     <CommonResumeFormat
       workProjects={workProjects}
       personalProjects={personalProjects}
-      highlight={"Voting"}
+      highlightSection={"Voting"}
     />
   );
 }
