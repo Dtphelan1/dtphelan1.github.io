@@ -37,7 +37,7 @@ export default function AboutMeHeader({
         {!handlePrint && highlightSection && (
           <a
             className="absolute left-0 top-0 xl:relative  flex items-center justify-center w-[10rem] rounded border bg-primary transition-all xl:border-primary border-neutral-main text-neutral-main p-1 px-2 m-2 print:hidden hover:bg-neutral-main hover:text-primary "
-            href={`/pdfs/17-01-2023/dylan-phelan-resume-${resumeType}.pdf`}
+            href={`/pdfs/dylan-phelan-resume-${resumeType}.pdf`}
             download
           >
             <Download size={12} className="mr-1" />
